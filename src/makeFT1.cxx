@@ -3,7 +3,7 @@
  * @brief Convert merit ntuple to FT1 format using Goodi.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1.cxx,v 1.17 2003/12/07 17:18:30 cohen Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1.cxx,v 1.18 2003/12/07 21:08:22 richard Exp $
  */
 
 #include <cmath>
@@ -329,8 +329,6 @@ int main(int iargc, char * argv[]) {
      (calibVersion[i])[1] = 0.;
      (calibVersion[i])[2] = 0.;
 
-     //DC1 FIX:
-     imgammaprob[i]=1.;
 
      bool good_energy_cut   = (imgoodcalprob[i]>0.2); 
      bool zdir_cut          = (tkr1zdir[i]<-0.2);      
