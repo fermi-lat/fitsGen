@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Tue Apr 13 13:13:49 PDT 2004
+fitsGen/data
+
+Added Files:
+	ft1.tpl ft2.tpl 
+Log Message:
+tip conversion; reorganize directories and code
+    *
+------------------------------------------------------------
+User: jchiang  Tue Apr 13 13:13:49 PDT 2004
 fitsGen/cmt
 
 Modified Files:
