@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: cohen  Tue Nov 25 15:34:43 PST 2003
+fitsGen/cmt
+
+Removed Files:
+	filtered 
+Log Message:
+remove cmt/filtered
+    *
+------------------------------------------------------------
 User: cohen  Tue Nov 25 15:25:26 PST 2003
 fitsGen/src
 
