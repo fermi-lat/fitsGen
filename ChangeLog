@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: jchiang  Thu Oct 16 08:08:25 PDT 2003
+fitsGen/data
+
+Added Files:
+	pointing_history.txt 
+Removed Files:
+	asciiD2.dat 
+Log Message:
+use pointing_history.txt in makeFT2
+    *
+------------------------------------------------------------
 User: cohen  Thu Oct 16 03:51:36 PDT 2003
 fitsGen/src
 
