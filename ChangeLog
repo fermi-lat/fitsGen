@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: cohen  Mon Dec  1 15:37:14 PST 2003
+fitsGen/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+patch tag with fixed makeFT1
+    *
+------------------------------------------------------------
 User: cohen  Mon Dec  1 14:15:49 PST 2003
 fitsGen/src
 
