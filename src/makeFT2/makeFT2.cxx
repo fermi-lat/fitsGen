@@ -3,7 +3,7 @@
  * @brief Convert Root D2 data from Gleam to FT2 format using Goodi.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2.cxx,v 1.16 2004/01/22 21:04:30 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2/makeFT2.cxx,v 1.1 2004/04/13 20:13:51 jchiang Exp $
  */
 
 #include <iostream>
@@ -43,11 +43,11 @@ int main(int iargc, char * argv[]) {
       for (; pointing_iter != pointingTable->end(); 
            ++pointing_iter, ++ft2_iter) {
          ft2["start"].set(pointing["elapsed_time"].get());
-//       tip::Table::Vector<float> scPosition = ft2["sc_position"];
-// // @todo check units (FT2 specifies sc_position in m)
-//       scPosition[0] = pointing["posx"].get();
-//       scPosition[1] = pointing["posy"].get();
-//       scPosition[2] = pointing["posz"].get();
+         tip::Table::Vector<float> scPosition = ft2["sc_position"];
+// @todo check units (FT2 specifies sc_position in m)
+         scPosition[0] = pointing["posx"].get();
+         scPosition[1] = pointing["posy"].get();
+         scPosition[2] = pointing["posz"].get();
          ft2["lat_geo"].set(pointing["lat"].get());
          ft2["lon_geo"].set(pointing["lon"].get());
 // @todo check units (FT2 specifies rad_geo in km)
