@@ -3,7 +3,7 @@
  * @brief Convert ascii D2 data from Gleam to FT2 format using Goodi.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2.cxx,v 1.1 2003/10/15 18:31:19 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2.cxx,v 1.2 2003/10/16 10:51:36 cohen Exp $
  */
 
 #include <cmath>
@@ -48,7 +48,7 @@ int main(int iargc, char * argv[]) {
    std::string d2File;
    if (iargc == 1) {
       std::string fitsGenRoot = ::getenv("FITSGENROOT");
-      d2File = fitsGenRoot + "/data/asciiD2.dat";
+      d2File = fitsGenRoot + "/data/pointing_history.txt";
    } else if (iargc == 2) {
       if (argv[1] == "-h") {
          std::cout << "usage: " 
