@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Wed Oct 15 08:27:55 PDT 2003
+fitsGen/cmt
+
+Removed Files:
+	myLatData.fits 
+Log Message:
+use latest version of makeFT1.cxx
+    *
+------------------------------------------------------------
 User: jchiang  Wed Oct 15 08:16:57 PDT 2003
 fitsGen/doc
 
