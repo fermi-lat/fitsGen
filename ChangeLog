@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Mon Nov 10 12:05:01 PST 2003
+fitsGen/data
+
+Added Files:
+	pointing_history.root 
+Log Message:
+root-reading version of makeFT2
+    *
+------------------------------------------------------------
 User: jchiang  Mon Nov 10 12:05:00 PST 2003
 fitsGen/cmt
 
