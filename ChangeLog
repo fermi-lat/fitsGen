@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: richard  Sun Dec  7 08:35:27 PST 2003
+fitsGen/src
+
+Modified Files:
+	makeFT1.cxx 
+Log Message:
+fixes to bkg cuts
+    *
+------------------------------------------------------------
 User: richard  Sat Dec  6 16:10:06 PST 2003
 fitsGen/src
 
