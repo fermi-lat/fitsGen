@@ -3,13 +3,14 @@ version v0r5
 
 author James Chiang <jchiang@slac.stanford.edu>
 
-# $Id: requirements,v 1.13 2004/01/22 21:04:28 jchiang Exp $
+# $Id: requirements,v 1.14 2004/01/28 10:10:17 cohen Exp $
 
 branches cmt src doc
 
 use GlastPolicy v*
 use rootTuple v*
 use Goodi v*
+use tip v*
 use astro v*
 
 apply_pattern package_include
