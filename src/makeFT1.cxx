@@ -3,7 +3,7 @@
  * @brief Convert merit ntuple to FT1 format using Goodi.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/rootTuple/src/test/new_makeFT1.cxx,v 1.3 2003/10/15 12:55:07 cohen Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1.cxx,v 1.2 2003/10/15 15:27:56 jchiang Exp $
  */
 
 #include <cmath>
@@ -28,8 +28,8 @@ int main(int iargc, char * argv[]) {
 
    std::string rootFile;
    if (iargc == 1) {
-      std::string rootTupleRoot = ::getenv("ROOTTUPLEROOT");
-      rootFile = rootTupleRoot + "/data/new_merit.root";
+      std::string fitsGenRoot = ::getenv("FITSGENROOT");
+      rootFile = fitsGenRoot + "/data/merit.root";
    } else if (iargc == 2) {
       if (argv[1] == "-h") {
          std::cout << "usage: " 
