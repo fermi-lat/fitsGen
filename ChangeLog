@@ -1,0 +1,33 @@
+------------------------------------------------------------
+User: jchiang  Wed Oct 15 08:13:25 PDT 2003
+fitsGen
+
+Log Message:
+First import
+
+Status:
+
+Vendor Tag:	GLAST
+Release Tags:	v0
+		
+I fitsGen/rh72_gcc2953
+N fitsGen/.cvsignore
+N fitsGen/cmt/requirements
+N fitsGen/cmt/Makefile
+N fitsGen/cmt/filtered
+N fitsGen/cmt/setup.csh
+N fitsGen/cmt/setup.sh
+N fitsGen/cmt/cleanup.csh
+N fitsGen/cmt/cleanup.sh
+N fitsGen/cmt/myLatData.fits
+N fitsGen/cmt/rh72_gcc2953.make
+N fitsGen/data/merit.root
+N fitsGen/doc/release.notes
+N fitsGen/doc/Doxyfile
+N fitsGen/src/fitsGen.cxx
+N fitsGen/src/makeFT1.cxx
+I fitsGen/src/makeFT1.cxx~
+
+No conflicts created by this import
+
+    *
