@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: richard  Sat Dec  6 16:10:06 PST 2003
+fitsGen/src
+
+Modified Files:
+	makeFT1.cxx 
+Log Message:
+add new background cut in calibVersion
+    *
+------------------------------------------------------------
 User: jchiang  Fri Dec  5 12:36:40 PST 2003
 fitsGen/cmt
 
