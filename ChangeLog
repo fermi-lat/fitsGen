@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: cohen  Sun Dec 14 13:11:18 PST 2003
+fitsGen/src
+
+Modified Files:
+	makeFT1.cxx 
+Log Message:
+try to avoid loading the whole merit ntuple
+    *
+------------------------------------------------------------
 User: cohen  Fri Dec 12 08:34:42 PST 2003
 fitsGen/cmt
 
