@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: jchiang  Mon Nov 10 12:05:02 PST 2003
+fitsGen/src
+
+Modified Files:
+	makeFT2.cxx 
+Added Files:
+	makeFT2a.cxx 
+Log Message:
+root-reading version of makeFT2
+    *
+------------------------------------------------------------
 User: jchiang  Mon Nov 10 12:05:01 PST 2003
 fitsGen/doc
 
