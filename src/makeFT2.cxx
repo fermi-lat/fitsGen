@@ -3,7 +3,7 @@
  * @brief Convert Root D2 data from Gleam to FT2 format using Goodi.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2.cxx,v 1.9 2003/11/26 17:40:54 cohen Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2.cxx,v 1.10 2003/11/30 23:22:52 cohen Exp $
  */
 
 #include <cmath>
@@ -34,7 +34,7 @@ int main(int iargc, char * argv[]) {
    if (iargc == 1) 
      {
        std::string fitsGenRoot = ::getenv("FITSGENROOT");
-       rootFile = fitsGenRoot + "/data/pointing_history.root";
+       rootFile = fitsGenRoot + "/data/merit.root";
      } 
    else if (iargc == 2) 
        {
@@ -77,6 +77,8 @@ int main(int iargc, char * argv[]) {
 
 // Read the columns into Goodi.
    unsigned int npts = exposure.nrows();
+
+   std::cout << "Number of events: " << npts << std::endl;
 
 // Start and stop times.
    std::vector<double> startTime(npts);
