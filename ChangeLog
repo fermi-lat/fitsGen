@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Tue Apr 13 13:13:51 PDT 2004
+fitsGen/src/makeFT2
+
+Added Files:
+	makeFT2.cxx 
+Log Message:
+tip conversion; reorganize directories and code
+    *
+------------------------------------------------------------
+User: jchiang  Tue Apr 13 13:13:51 PDT 2004
 fitsGen/src/makeFT1
 
 Added Files:
