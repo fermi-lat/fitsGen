@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: jchiang  Tue Apr 13 13:13:51 PDT 2004
+fitsGen/src
+
+Added Files:
+	Util.cxx 
+Removed Files:
+	fitsGen.cxx makeFT1.cxx makeFT2.cxx 
+Log Message:
+tip conversion; reorganize directories and code
+    *
+------------------------------------------------------------
 User: jchiang  Tue Apr 13 13:13:50 PDT 2004
 fitsGen/fitsGen
 
