@@ -3,7 +3,7 @@
  * @brief Utilities for fitsGen applications.
  * @author J. Chiang
  *
- * $Header$
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/Util.cxx,v 1.1 2004/04/13 20:13:50 jchiang Exp $
  */
 
 #include <cstdlib>
@@ -33,7 +33,7 @@ void Util::getFileNames(int iargc, char * argv[], std::string & rootFile,
          std::cout << "usage: " 
                    << facilities::Util::basename(argv[0]) << " "
                    << "<root input file> " 
-                   << "<fits input file> " << std::endl;
+                   << "<fits output file> " << std::endl;
          std::exit(0);
       } else {
          rootFile = std::string(argv[1]);
