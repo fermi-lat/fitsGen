@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: cohen  Thu Oct 16 03:51:36 PDT 2003
+fitsGen/src
+
+Modified Files:
+	makeFT2.cxx 
+Log Message:
+small fixes
+    *
+------------------------------------------------------------
+User: cohen  Thu Oct 16 03:51:36 PDT 2003
 fitsGen/cmt
 
 Added Files:
