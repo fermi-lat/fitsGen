@@ -3,7 +3,7 @@
  * @brief Convert merit ntuple to FT1 format using Goodi.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1.cxx,v 1.3 2003/10/15 18:31:19 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1.cxx,v 1.4 2003/11/07 06:36:17 jchiang Exp $
  */
 
 #include <cmath>
@@ -220,6 +220,8 @@ int main(int iargc, char * argv[]) {
    data->setConvLayer( convLayer );
 
 // IM variables
+   assert(meritTuple("IMgoodCalProb").size() == nevts);
+
    std::vector<float> floatVector(nevts);
    std::copy( meritTuple("IMgoodCalProb").begin(),
               meritTuple("IMgoodCalProb").end(),
@@ -246,13 +248,13 @@ int main(int iargc, char * argv[]) {
               floatVector.begin() );
    data->setGammaProb( floatVector );
 
-// GltLayer (no doubt the same as ConvLayer)
-   std::vector<short> gltLayer(nevts);
-   std::transform( meritTuple("GltLayer").begin(), 
-                   meritTuple("GltLayer").end(),
-                   gltLayer.begin(), 
-                   std::bind2nd(std::multiplies<short>(), 1) );
-    data->setGltLayer( gltLayer );
+// // GltLayer (no doubt the same as ConvLayer)
+//    std::vector<short> gltLayer(nevts);
+//    std::transform( meritTuple("GltLayer").begin(), 
+//                    meritTuple("GltLayer").end(),
+//                    gltLayer.begin(), 
+//                    std::bind2nd(std::multiplies<short>(), 1) );
+//     data->setGltLayer( gltLayer );
 
 // CalEnergySum and CalTotRLn
    std::copy( meritTuple("CalEnergySum").begin(),
