@@ -1,9 +1,9 @@
 package fitsGen
-version v0r1
+version v0r2p2
 
 author James Chiang <jchiang@slac.stanford.edu>
 
-# $Id: requirements,v 1.4 2003/11/07 06:36:17 jchiang Exp $
+# $Id: requirements,v 1.5 2003/11/10 20:05:00 jchiang Exp $
 
 branches cmt src doc
 
