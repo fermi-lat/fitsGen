@@ -1,13 +1,13 @@
 package fitsGen
-version v1r0p2
+version v1r0p3
 
 author James Chiang <jchiang@slac.stanford.edu>
 
-# $Id: requirements,v 1.18 2004/04/13 20:21:31 jchiang Exp $
+# $Id: requirements,v 1.19 2004/06/09 20:30:43 jchiang Exp $
 
 use STpolicy v1r*
 use facilities v2r*
-use tip v1r*
+use tip v2*
 use astro v1r*
 
 apply_pattern ST_library option="-no_share "
