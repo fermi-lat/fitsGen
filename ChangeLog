@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: richard  Wed Dec 10 10:21:32 PST 2003
+fitsGen/src
+
+Modified Files:
+	makeFT2.cxx 
+Log Message:
+fix bogus position column names
+    *
+------------------------------------------------------------
 User: richard  Sun Dec  7 19:33:21 PST 2003
 fitsGen/src
 
