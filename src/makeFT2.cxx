@@ -3,7 +3,7 @@
  * @brief Convert ascii D2 data from Gleam to FT2 format using Goodi.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2.cxx,v 1.2 2003/10/16 10:51:36 cohen Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2.cxx,v 1.3 2003/10/16 15:08:25 jchiang Exp $
  */
 
 #include <cmath>
@@ -103,15 +103,15 @@ int main(int iargc, char * argv[]) {
          for (unsigned int i = 0; i < dataFields.size(); i++) {
             std::cout << dataFields[i] << std::endl;
          }
-         std::cout << raSCZ[0] << std::endl;
-         std::cout << decSCZ[0] << std::endl;
-         std::cout << raSCX[0] << std::endl;
-         std::cout << decSCX[0] << std::endl;
-         std::cout << raZenith[0] << std::endl;
-         std::cout << decZenith[0] << std::endl;
-         std::cout << lonGeo[0] << std::endl;
-         std::cout << latGeo[0] << std::endl;
-         std::cout << radGeo[0] << std::endl;
+         std::cout << "raSCZ: "     << raSCZ[0] << "\n"
+                   << "decSCZ: "    << decSCZ[0] << "\n"
+                   << "raSCX: "     << raSCX[0] << "\n"
+                   << "decSCX: "    << decSCX[0] << "\n"
+                   << "raZenith: "  << raZenith[0] << "\n"
+                   << "decZenith: " << decZenith[0] << "\n"
+                   << "lonGeo: "    << lonGeo[0] << "\n"
+                   << "latGeo: "    << latGeo[0] << "\n"
+                   << "radGeo: "    << radGeo[0] << std::endl;
       }
    }
    unsigned int npts = time.size();
@@ -155,6 +155,19 @@ int main(int iargc, char * argv[]) {
 //    scData->setLatMode(latMode);
 //    scData->setLivetime(livetime);
 //    scData->setDeadtime(deadtime);
+
+// Check that these set methods are implemented.
+   std::cout << scData->startTime()[0] << "\n"
+             << scData->stopTime()[0] << "\n"
+             << "raSCZ: "     << scData->raSCZ()[0] << "\n"
+             << "decSCZ: "    << scData->decSCZ()[0] << "\n"
+             << "raSCX: "     << scData->raSCX()[0] << "\n"
+             << "decSCX: "    << scData->decSCX()[0] << "\n"
+             << "raZenith: "  << scData->raZenith()[0] << "\n"
+             << "decZenith: " << scData->decZenith()[0] << "\n"
+             << "lonGeo: "    << scData->lonGeo()[0] << "\n"
+             << "latGeo: "    << scData->latGeo()[0] << "\n"
+             << "radGeo: "    << scData->radGeo()[0] << std::endl;
 
 // Goodi I/O service object.
    Goodi::IDataIOService *goodiIoService = iosvcCreator.create();
