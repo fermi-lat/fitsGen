@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Sat Apr 17 08:30:05 PDT 2004
+fitsGen/src/makeFT2
+
+Modified Files:
+	makeFT2.cxx 
+Log Message:
+set Vector quantities; tagging v1r0p1
+    *
+------------------------------------------------------------
+User: jchiang  Sat Apr 17 08:30:05 PDT 2004
 fitsGen/src/makeFT1
 
 Modified Files:
