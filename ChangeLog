@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: cohen  Tue Nov 25 15:25:26 PST 2003
+fitsGen/src
+
+Modified Files:
+	makeFT2.cxx 
+Log Message:
+fix pos fields
+    *
+------------------------------------------------------------
 User: cohen  Tue Nov 25 08:01:46 PST 2003
 fitsGen/src
 
