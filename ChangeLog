@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: richard  Sun Dec  7 19:33:21 PST 2003
+fitsGen/src
+
+Modified Files:
+	makeFT1.cxx 
+Log Message:
+undo setting IMgammaProb to 1
+    *
+------------------------------------------------------------
 User: richard  Sun Dec  7 13:08:22 PST 2003
 fitsGen/src
 
