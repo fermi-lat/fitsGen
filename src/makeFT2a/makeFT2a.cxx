@@ -3,7 +3,7 @@
  * @brief Convert ascii D2 data from Gleam to FT2 format using Goodi.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2a/makeFT2a.cxx,v 1.2 2004/11/16 00:56:21 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2a/makeFT2a.cxx,v 1.3 2004/12/01 19:24:09 jchiang Exp $
  */
 
 #include <cmath>
@@ -80,9 +80,10 @@ int main(int iargc, char * argv[]) {
          facilities::Util::stringTokenize(line, "\t ", dataFields);
          ft2["start"].set(std::atof(dataFields[0].c_str()));
          tip::Table::Vector<float> scPosition = ft2["sc_position"];
-         scPosition[0] = std::atof(dataFields[1].c_str());
-         scPosition[1] = std::atof(dataFields[2].c_str());
-         scPosition[2] = std::atof(dataFields[3].c_str());
+// convert the spacecraft position from km to meters.
+         scPosition[0] = std::atof(dataFields[1].c_str())*1e3;
+         scPosition[1] = std::atof(dataFields[2].c_str())*1e3;
+         scPosition[2] = std::atof(dataFields[3].c_str())*1e3;
          ft2["ra_scz"].set(std::atof(dataFields[4].c_str()));
          ft2["dec_scz"].set(std::atof(dataFields[5].c_str()));
          ft2["ra_scx"].set(std::atof(dataFields[6].c_str()));
