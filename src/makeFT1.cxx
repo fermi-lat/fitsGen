@@ -3,7 +3,7 @@
  * @brief Convert merit ntuple to FT1 format using Goodi.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1.cxx,v 1.11 2003/12/03 02:16:30 cohen Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1.cxx,v 1.12 2003/12/03 17:17:09 cohen Exp $
  */
 
 #include <cmath>
@@ -14,6 +14,8 @@
 #include <algorithm>
 #include <functional>
 #include <sstream>
+
+#include "assert.h"
 
 #include "Goodi/GoodiConstants.h"
 #include "Goodi/DataIOServiceFactory.h"
