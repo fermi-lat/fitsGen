@@ -3,7 +3,7 @@
  * @brief Convert ascii D2 data from Gleam to FT2 format using Goodi.
  * @author J. Chiang
  *
- * $Header$
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2.cxx,v 1.1 2003/10/15 18:31:19 jchiang Exp $
  */
 
 #include <cmath>
@@ -79,7 +79,7 @@ int main(int iargc, char * argv[]) {
 //    std::vector<double> livetime;
 //    std::vector<double> deadtime;
 
-   ifstream d2(d2File.c_str());
+   std::ifstream d2(d2File.c_str());
    std::string line;
    std::vector<std::string> dataFields;
    std::valarray<float> pos(3);
