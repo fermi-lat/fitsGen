@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Tue Apr 13 13:13:50 PDT 2004
+fitsGen/fitsGen
+
+Added Files:
+	Util.h 
+Log Message:
+tip conversion; reorganize directories and code
+    *
+------------------------------------------------------------
 User: jchiang  Tue Apr 13 13:13:49 PDT 2004
 fitsGen/data
 
