@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: jchiang  Fri Oct 17 10:53:41 PDT 2003
+fitsGen/cmt
+
+Modified Files:
+	.cvsignore 
+Added Files:
+	Makefile 
+Log Message:
+it's still nice to have a Makefile
+    *
+------------------------------------------------------------
 User: jchiang  Thu Oct 16 15:52:07 PDT 2003
 fitsGen/data
 
