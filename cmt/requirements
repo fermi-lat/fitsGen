@@ -3,7 +3,7 @@ version v0
 
 author James Chiang <jchiang@slac.stanford.edu>
 
-# $Id: requirements,v 1.2 2003/10/15 15:56:24 jchiang Exp $
+# $Id: requirements,v 1.3 2003/10/15 18:31:00 jchiang Exp $
 
 branches cmt src doc
 
@@ -20,6 +20,9 @@ use RootPolicy v2*
 
 # Allow use of internal path.
 macro_append fitsGen_cppflags "" Linux "-I ../src -g -pedantic " WIN32 "/I..\src  /wd4290"
+
+# suppress warning messages (from Goodi package) on linux:
+macro_prepend cppflags "-I ../src " Linux "-w " WIN32 "/I..\src "
 
 macro_append ROOT_libs "" Linux " -lTreePlayer -lProof -lGX11 " WIN32 " libTreePlayer.lib libProof.lib "
 
@@ -39,4 +42,4 @@ set INFILES "$(GOODIROOT)/Data"
 
 # The applications:
 application makeFT1 makeFT1.cxx
-application makeFT2 makeFT2.cxx
+#application makeFT2 makeFT2.cxx
