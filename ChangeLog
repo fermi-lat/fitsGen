@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: cohen  Sun Nov 30 15:22:52 PST 2003
+fitsGen/src
+
+Modified Files:
+	makeFT2.cxx 
+Log Message:
+add fits file naming option
+    *
+------------------------------------------------------------
 User: cohen  Wed Nov 26 09:40:54 PST 2003
 fitsGen/src
 
