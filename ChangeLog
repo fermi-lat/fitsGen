@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Thu Jan 22 13:04:29 PST 2004
+fitsGen/doc
+
+Modified Files:
+	Doxyfile release.notes 
+Log Message:
+use astro/JulianDate in makeFT2; tagging v0r5
+    *
+------------------------------------------------------------
+User: jchiang  Thu Jan 22 13:04:29 PST 2004
 fitsGen/cmt
 
 Modified Files:
