@@ -3,7 +3,7 @@ version v0r3p0
 
 author James Chiang <jchiang@slac.stanford.edu>
 
-# $Id: requirements,v 1.7 2003/12/01 23:44:10 cohen Exp $
+# $Id: requirements,v 1.8 2003/12/04 14:36:48 cohen Exp $
 
 branches cmt src doc
 
@@ -39,9 +39,10 @@ library fitsGen -no_share $(my_headers) fitsGen.cxx
 #
 # Need this environment variable for Goodi templates.
 #
+set TPLDIR "$(GOODIROOT)/Templates"
 set INFILES "$(GOODIROOT)/Data"
 
 # The applications:
-application makeFT1 makeFT1.cxx
 application makeFT2 makeFT2.cxx
+application makeFT1 makeFT1.cxx
 application makeFT2a makeFT2a.cxx
