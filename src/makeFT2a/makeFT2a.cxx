@@ -3,7 +3,7 @@
  * @brief Convert ascii D2 data from Gleam to FT2 format using Goodi.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2a/makeFT2a.cxx,v 1.1 2004/04/13 20:21:10 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2a/makeFT2a.cxx,v 1.2 2004/11/16 00:56:21 jchiang Exp $
  */
 
 #include <cmath>
@@ -77,7 +77,7 @@ int main(int iargc, char * argv[]) {
       std::string line;
       std::vector<std::string> dataFields;
       while (std::getline(d2, line, '\n')) {
-         facilities::Util::stringTokenize(line, "\t", dataFields);
+         facilities::Util::stringTokenize(line, "\t ", dataFields);
          ft2["start"].set(std::atof(dataFields[0].c_str()));
          tip::Table::Vector<float> scPosition = ft2["sc_position"];
          scPosition[0] = std::atof(dataFields[1].c_str());
