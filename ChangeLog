@@ -1,4 +1,16 @@
 ------------------------------------------------------------
+User: jchiang  Wed Oct 15 11:31:19 PDT 2003
+fitsGen/src
+
+Modified Files:
+	makeFT1.cxx 
+Added Files:
+	makeFT2.cxx 
+Log Message:
+build makeFT2
+
+    *
+------------------------------------------------------------
 User: jchiang  Wed Oct 15 11:31:00 PDT 2003
 fitsGen/cmt
 
