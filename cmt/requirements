@@ -3,13 +3,14 @@ version v0r4p6
 
 author James Chiang <jchiang@slac.stanford.edu>
 
-# $Id: requirements,v 1.10 2003/12/05 20:36:40 jchiang Exp $
+# $Id: requirements,v 1.11 2003/12/12 16:34:42 cohen Exp $
 
 branches cmt src doc
 
 use GlastPolicy v*
 use rootTuple v*
 use Goodi v*
+use astro v*
 
 apply_pattern package_include
 apply_pattern package_linkopts
@@ -43,6 +44,6 @@ set TPLDIR "$(GOODIROOT)/Templates"
 set INFILES "$(GOODIROOT)/Data"
 
 # The applications:
-application makeFT2 makeFT2.cxx
 application makeFT1 makeFT1.cxx
-application makeFT2a makeFT2a.cxx
+application makeFT2 makeFT2.cxx
+#application makeFT2a makeFT2a.cxx
