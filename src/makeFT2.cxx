@@ -3,7 +3,7 @@
  * @brief Convert Root D2 data from Gleam to FT2 format using Goodi.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2.cxx,v 1.13 2003/12/05 12:09:15 cohen Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2.cxx,v 1.14 2003/12/05 20:34:46 jchiang Exp $
  */
 
 #include <cmath>
@@ -124,9 +124,9 @@ int main(int iargc, char * argv[]) {
 // Spacecraft position.
    std::vector< std::valarray<float> > scPosition(npts);
    std::vector< std::valarray<float> >::iterator scPosIt = scPosition.begin();
-   std::vector<double>::const_iterator posx = exposure("PtPosx").begin();
-   std::vector<double>::const_iterator posy = exposure("PtPosy").begin();
-   std::vector<double>::const_iterator posz = exposure("PtPosz").begin();
+   std::vector<double>::const_iterator posx = exposure("posx").begin();
+   std::vector<double>::const_iterator posy = exposure("posy").begin();
+   std::vector<double>::const_iterator posz = exposure("posz").begin();
    for ( ; scPosIt != scPosition.end(); scPosIt++) {
       (*scPosIt).resize(3);
       (*scPosIt)[0] = static_cast<float>(*posx++);
