@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: cohen  Mon Dec  1 14:15:49 PST 2003
+fitsGen/src
+
+Modified Files:
+	makeFT1.cxx 
+Log Message:
+fix an oops
+    *
+------------------------------------------------------------
 User: cohen  Mon Dec  1 09:26:13 PST 2003
 fitsGen/doc
 
