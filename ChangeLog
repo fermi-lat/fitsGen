@@ -1,4 +1,32 @@
 ------------------------------------------------------------
+TAG
+Tag name: v1r1p1, operation: add
+Package: fitsGen
+User: jchiang  Wed Dec  1 12:12:13 2004
+Files:
+  fitsGen/.cvsignore  1.1.1.1
+  fitsGen/ChangeLog  1.99
+  fitsGen/cmt/.cvsignore  1.3
+  fitsGen/cmt/requirements  1.23
+  fitsGen/data/pointing_history.txt  1.1
+  fitsGen/data/ft1.tpl  1.1
+  fitsGen/data/pointing_history.root  1.1
+  fitsGen/data/merit_rocking.root  1.1
+  fitsGen/data/makeD2.py  1.1
+  fitsGen/data/ft2.tpl  1.2
+  fitsGen/data/merit.root  1.2
+  fitsGen/data/jobOptions_rocking.txt  1.1
+  fitsGen/doc/release.notes  1.15
+  fitsGen/doc/FT1_Documentation.html  1.2
+  fitsGen/doc/Doxyfile  1.6
+  fitsGen/fitsGen/Util.h  1.1
+  fitsGen/src/Util.cxx  1.2
+  fitsGen/src/makeFT1/makeFT1.cxx  1.3
+  fitsGen/src/makeFT2/makeFT2.cxx  1.2
+  fitsGen/src/makeFT2a/makeFT2a.cxx  1.3
+
+    *
+------------------------------------------------------------
 User: jchiang  Wed Dec  1 12:11:51 PST 2004
 fitsGen/doc
 
