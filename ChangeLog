@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Fri Dec  5 12:34:46 PST 2003
+fitsGen/src
+
+Modified Files:
+	makeFT2.cxx 
+Log Message:
+fix for FT2 start stop times
+    *
+------------------------------------------------------------
 User: cohen  Fri Dec  5 04:09:15 PST 2003
 fitsGen/src
 
