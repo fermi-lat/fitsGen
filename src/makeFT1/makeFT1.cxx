@@ -3,7 +3,7 @@
  * @brief Convert merit ntuple to FT1 format.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.1 2004/04/13 20:13:51 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.2 2004/04/13 20:21:09 jchiang Exp $
  */
 
 #include <iostream>
@@ -66,15 +66,15 @@ int main(int iargc, char * argv[]) {
 
          short isGamma, goodPsf, goodEnergy;
          getEventFlags(merit, isGamma, goodPsf, goodEnergy);
-//          tip::Table::Vector<short> calibVersion = ft1["calib_version"];
-//          calibVersion[0] = isGamma;
-//          calibVersion[1] = goodPsf;
-//          calibVersion[2] = goodEnergy;
+         tip::Table::Vector<short> calibVersion = ft1["calib_version"];
+         calibVersion[0] = isGamma;
+         calibVersion[1] = goodPsf;
+         calibVersion[2] = goodEnergy;
 
-//          tip::Table::Vector<double> convPoint = ft1["conversion_point"];
-//          convPoint[0] = merit["FT1ConvPointX"].get();
-//          convPoint[1] = merit["FT1ConvPointY"].get();
-//          convPoint[2] = merit["FT1ConvPointZ"].get();
+         tip::Table::Vector<double> convPoint = ft1["conversion_point"];
+         convPoint[0] = merit["FT1ConvPointX"].get();
+         convPoint[1] = merit["FT1ConvPointY"].get();
+         convPoint[2] = merit["FT1ConvPointZ"].get();
       }
 
       merit_iter = meritTable->begin();
