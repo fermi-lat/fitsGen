@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: cohen  Tue Nov 25 08:01:46 PST 2003
+fitsGen/cmt
+
+Modified Files:
+	.cvsignore 
+Removed Files:
+	Makefile 
+Log Message:
+follow changes in merit
+    *
+------------------------------------------------------------
 User: jchiang  Fri Nov 14 16:47:25 PST 2003
 fitsGen/src
 
