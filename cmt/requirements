@@ -1,9 +1,9 @@
 package fitsGen
-version v1r1
+version v1r1p1
 
 author James Chiang <jchiang@slac.stanford.edu>
 
-# $Id: requirements,v 1.21 2004/11/16 00:56:18 jchiang Exp $
+# $Id: requirements,v 1.22 2004/11/16 00:57:23 jchiang Exp $
 
 use STpolicy v1r*
 use facilities v2r*
