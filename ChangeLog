@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: cohen  Wed Nov 26 09:40:54 PST 2003
+fitsGen/src
+
+Modified Files:
+	makeFT1.cxx makeFT2.cxx 
+Log Message:
+reverted merit field names, fixed a problem with string comparison and added possibility to pass output FITS file name as argument
+    *
+------------------------------------------------------------
 User: cohen  Tue Nov 25 15:34:43 PST 2003
 fitsGen/cmt
 
