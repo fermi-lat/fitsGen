@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: cohen  Thu Dec  4 06:25:58 PST 2003
+fitsGen/src
+
+Modified Files:
+	makeFT1.cxx 
+Log Message:
+add assert to fix windows build
+    *
+------------------------------------------------------------
 User: cohen  Wed Dec  3 09:17:09 PST 2003
 fitsGen/src
 
