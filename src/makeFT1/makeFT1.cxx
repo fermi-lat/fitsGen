@@ -3,7 +3,7 @@
  * @brief Convert merit ntuple to FT1 format.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1.cxx,v 1.23 2004/04/13 15:53:28 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.1 2004/04/13 20:13:51 jchiang Exp $
  */
 
 #include <iostream>
@@ -113,6 +113,7 @@ void getEventFlags(tip::Table::Record & merit, short & isGamma,
                       || merit["CalTotRLn"].get() < 2.);
    bool thin_cut = (merit["Tkr1FirstLayer"].get() != 0 
                     && merit["Tkr1FirstLayer"].get() < 15);
+   (void)(thin_cut);
 
    bool global_cut = good_energy_cut && zdir_cut && !no_cal_cut;
 
