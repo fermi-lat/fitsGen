@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: cohen  Tue Dec  2 14:38:43 PST 2003
+fitsGen/src
+
+Modified Files:
+	makeFT1.cxx 
+Log Message:
+add selection cut in CALIB_VERSION
+    *
+------------------------------------------------------------
 User: cohen  Mon Dec  1 15:44:11 PST 2003
 fitsGen/doc
 
