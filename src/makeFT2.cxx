@@ -3,7 +3,7 @@
  * @brief Convert Root D2 data from Gleam to FT2 format using Goodi.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2.cxx,v 1.10 2003/11/30 23:22:52 cohen Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2.cxx,v 1.11 2003/12/03 17:17:09 cohen Exp $
  */
 
 #include <cmath>
@@ -94,7 +94,11 @@ int main(int iargc, char * argv[]) {
    scData->setStartTime(startTime);
    scData->setStopTime(stopTime);
 
-//    scData->setGTI(gti);
+   std::vector<double> vect_times = exposure("elapsed_time");
+   std::stable_sort(vect_times.begin(),vect_times.end());
+   std::vector<std::pair<double,double> > gti;
+   gti.push_back(std::make_pair(vect_times.front(),vect_times.back()));
+   scData->setGTI(gti);
 
 // Spacecraft position.
    std::vector< std::valarray<float> > scPosition(npts);
