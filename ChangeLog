@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Fri Oct 17 12:39:11 PDT 2003
+fitsGen/src
+
+Modified Files:
+	makeFT2.cxx 
+Log Message:
+add tests of Goodi to makeFT2.cxx
+    *
+------------------------------------------------------------
 User: jchiang  Fri Oct 17 10:53:41 PDT 2003
 fitsGen/cmt
 
