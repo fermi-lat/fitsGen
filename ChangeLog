@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Tue Apr 13 13:21:09 PDT 2004
+fitsGen/src/makeFT1
+
+Modified Files:
+	makeFT1.cxx 
+Log Message:
+move makeFT2a to subdir
+    *
+------------------------------------------------------------
+User: jchiang  Tue Apr 13 13:21:09 PDT 2004
 fitsGen/src
 
 Removed Files:
