@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Mon Apr 12 21:25:21 PDT 2004
+fitsGen/src
+
+Modified Files:
+	makeFT1.cxx 
+Log Message:
+begin tip conversion
+    *
+------------------------------------------------------------
+User: jchiang  Mon Apr 12 21:25:21 PDT 2004
 fitsGen/data
 
 Modified Files:
