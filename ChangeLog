@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Mon Nov 10 12:05:01 PST 2003
+fitsGen/doc
+
+Modified Files:
+	Doxyfile release.notes 
+Log Message:
+root-reading version of makeFT2
+    *
+------------------------------------------------------------
+User: jchiang  Mon Nov 10 12:05:01 PST 2003
 fitsGen/data
 
 Added Files:
