@@ -3,7 +3,7 @@
  * @brief Convert ascii D2 data from Gleam to FT2 format using Goodi.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2.cxx,v 1.3 2003/10/16 15:08:25 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2.cxx,v 1.4 2003/10/17 19:39:10 jchiang Exp $
  */
 
 #include <cmath>
@@ -140,7 +140,7 @@ int main(int iargc, char * argv[]) {
    scData->setStartTime(startTime);
    scData->setStopTime(stopTime);
 //    scData->setGTI(gti);
-//    scData->setSCposition(scPosition);
+   scData->setSCposition(scPosition);
    scData->setLatGeo(latGeo);
    scData->setLonGeo(lonGeo);
    scData->setRadGeo(radGeo);
@@ -176,5 +176,9 @@ int main(int iargc, char * argv[]) {
    scData->write(goodiIoService, outputFile);
 
    delete goodiIoService;
+
+// Test for consistency: read in the data just written out and ensure
+// that it is the same.
+
 
 }
