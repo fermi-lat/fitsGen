@@ -3,7 +3,7 @@ version v1r0p3
 
 author James Chiang <jchiang@slac.stanford.edu>
 
-# $Id: requirements,v 1.19 2004/06/09 20:30:43 jchiang Exp $
+# $Id: requirements,v 1.20 2004/10/30 05:05:21 jchiang Exp $
 
 use STpolicy v1r*
 use facilities v2r*
@@ -14,3 +14,4 @@ apply_pattern ST_library option="-no_share "
 
 application makeFT1 makeFT1/makeFT1.cxx
 application makeFT2 makeFT2/makeFT2.cxx
+application makeFT2a makeFT2a/makeFT2a.cxx
