@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Sun Sep 25 14:55:38 PDT 2005
+fitsGen/src
+
+Modified Files:
+	Util.cxx 
+Log Message:
+set livetime to zero during SAA passages; set mission start time to Jan 1 2001
+    *
+------------------------------------------------------------
 TAG
 Tag name: v1r2, operation: add
 Package: fitsGen
