@@ -3,7 +3,7 @@
  * @brief Convert ascii D2 data from Gleam to FT2 format using Goodi.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2a/makeFT2a.cxx,v 1.4 2005/01/27 22:07:03 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2a/makeFT2a.cxx,v 1.5 2005/08/25 00:27:33 jchiang Exp $
  */
 
 #include <cmath>
@@ -132,6 +132,13 @@ int main(int iargc, char * argv[]) {
          double full_interval(ft2["stop"].get() - ft2["start"].get());
          double fraction(0.90);
          ft2["livetime"].set(fraction*full_interval);
+         ft2["deadtime"].set(full_interval*(1. - fraction));
+         bool in_saa;
+         ft2["in_saa"].get(in_saa);
+         if (true == in_saa) {
+            ft2["livetime"].set(0);
+            ft2["deadtime"].set(full_interval);
+         }
       }
 
       Util::writeDateKeywords(scDataTable, start_time, stop_time);
