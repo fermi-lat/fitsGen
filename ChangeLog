@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Wed Nov 30 10:12:24 PST 2005
+fitsGen/data
+
+Modified Files:
+	ft1.tpl ft2.tpl 
+Log Message:
+incorporate proposed updates to ft1.tpl
+    *
+------------------------------------------------------------
 TAG
 Tag name: v1r2p1, operation: add
 Package: fitsGen
