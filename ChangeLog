@@ -1,4 +1,16 @@
 ------------------------------------------------------------
+User: mcenery  Sun Dec  4 12:39:08 PST 2005
+fitsGen/src/makeFT1
+
+Modified Files:
+	makeFT1.cxx 
+Log Message:
+Make some minimal changes so that makeFT1 will run and produce a FT1 fits file.
+Several variables (IM*, CALIB_VERSION) are filled with dummy values.
+
+
+    *
+------------------------------------------------------------
 User: jchiang  Wed Nov 30 10:12:24 PST 2005
 fitsGen/data
 
