@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Tue Dec  6 17:07:37 PST 2005
+fitsGen/data
+
+Modified Files:
+	ft1.tpl 
+Log Message:
+remove calenergysum, caltotrln, conversion_layer columns; add event_class, l, b
+    *
+------------------------------------------------------------
 User: mcenery  Sun Dec  4 12:39:08 PST 2005
 fitsGen/src/makeFT1
 
