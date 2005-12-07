@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Tue Dec  6 17:31:16 PST 2005
+fitsGen/src/makeFT1
+
+Modified Files:
+	makeFT1.cxx 
+Log Message:
+use new template variables
+    *
+------------------------------------------------------------
 User: jchiang  Tue Dec  6 17:07:37 PST 2005
 fitsGen/data
 
