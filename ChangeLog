@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Thu Dec  8 09:57:11 PST 2005
+fitsGen/fitsGen
+
+Added Files:
+	Ft1File.h 
+Log Message:
+add FT1 file abstraction and Egret SMDB converter
+    *
+------------------------------------------------------------
 User: jchiang  Thu Dec  8 09:57:10 PST 2005
 fitsGen/cmt
 
