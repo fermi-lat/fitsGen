@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Thu Dec  8 09:57:10 PST 2005
+fitsGen/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+add FT1 file abstraction and Egret SMDB converter
+    *
+------------------------------------------------------------
 User: jchiang  Thu Dec  8 09:56:16 PST 2005
 fitsGen/src/egret2FT1
 
