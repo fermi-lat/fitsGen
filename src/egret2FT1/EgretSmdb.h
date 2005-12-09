@@ -3,7 +3,7 @@
  * @brief Declaration for EGRET summary database class interface.
  * @author J. Chiang
  *
- * $Header$
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/egret2FT1/EgretSmdb.h,v 1.1 2005/12/08 17:57:12 jchiang Exp $
  */
 
 #ifndef fitsGen_EgretSmdb_h
@@ -50,6 +50,8 @@ public:
    double arrivalTjd() const;
 
    bool tascIn() const;
+
+   bool zenAngleCut(double nsigma=2.5) const;
 
    int eventClass() const;
    
