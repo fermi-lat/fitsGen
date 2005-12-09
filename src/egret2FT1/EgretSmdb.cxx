@@ -3,8 +3,12 @@
  * @brief Implementation for EGRET summary database file interface class.
  * @author J. Chiang
  *
- * $Header$
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/egret2FT1/EgretSmdb.cxx,v 1.1 2005/12/08 17:57:12 jchiang Exp $
  */
+
+#include <cmath>
+
+#include <algorithm>
 
 #include "tip/IFileSvc.h"
 
@@ -66,6 +70,15 @@ bool EgretSmdb::tascIn() const {
       return true;
    }
    return false;
+}
+
+bool EgretSmdb::zenAngleCut(double nsigma) const {
+   static const double sig0(5.85);
+   static const double indx(-0.534);
+   double energy(m_row["gamma_ray_energy"].get());
+   double maxZenAngle(110. - nsigma*sig0*std::pow(energy/100., indx));
+   maxZenAngle = std::min(maxZenAngle, 105.);
+   return m_row["zenith_direction"].get()*180./M_PI <= maxZenAngle;
 }
 
 int EgretSmdb::eventClass() const {
