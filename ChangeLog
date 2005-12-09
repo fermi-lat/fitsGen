@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Thu Dec  8 23:48:41 PST 2005
+fitsGen/data
+
+Added Files:
+	egret_gtis_tjd.dat 
+Log Message:
+add egret gti data
+    *
+------------------------------------------------------------
+User: jchiang  Thu Dec  8 23:48:41 PST 2005
 fitsGen/cmt
 
 Modified Files:
