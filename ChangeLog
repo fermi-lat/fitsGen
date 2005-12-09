@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Fri Dec  9 08:34:08 PST 2005
+fitsGen/data
+
+Modified Files:
+	egret_gtis_tjd.dat 
+Log Message:
+fix y2k problem in generating gtis
+    *
+------------------------------------------------------------
 User: jchiang  Thu Dec  8 23:48:41 PST 2005
 fitsGen/data
 
