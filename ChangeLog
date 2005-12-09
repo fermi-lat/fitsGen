@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: jchiang  Fri Dec  9 14:47:49 PST 2005
+fitsGen/src
+
+Modified Files:
+	Ft1File.cxx 
+Added Files:
+	MeritFile.cxx 
+Log Message:
+add MeritFile class
+    *
+------------------------------------------------------------
 User: jchiang  Fri Dec  9 14:47:48 PST 2005
 fitsGen/fitsGen
 
