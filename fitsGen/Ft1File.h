@@ -3,7 +3,7 @@
  * @brief Declaration of FT1 file abstraction
  * @author J. Chiang
  *
- * $Header$
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/Ft1File.h,v 1.1 2005/12/08 17:57:11 jchiang Exp $
  */
 
 #ifndef fitsGen_Ft1File_h
@@ -59,6 +59,7 @@ public:
 private:
 
    tip::Table * m_table;
+   tip::Table * m_gtiTable;
    tip::Table::Iterator m_it;
    long m_nrows;
 
