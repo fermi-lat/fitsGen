@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Thu Dec  8 23:48:41 PST 2005
+fitsGen/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+add egret gti data
+    *
+------------------------------------------------------------
 User: jchiang  Thu Dec  8 23:47:14 PST 2005
 fitsGen/src/egret2FT1
 
