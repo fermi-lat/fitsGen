@@ -3,7 +3,7 @@
  * @brief Convert merit ntuple to FT1 format.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.6 2005/12/07 01:31:15 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.7 2005/12/09 22:47:49 jchiang Exp $
  */
 
 #include <iostream>
@@ -14,6 +14,8 @@
 #include "dataSubselector/Cuts.h"
 
 #include "astro/SkyDir.h"
+
+#include "st_facilities/FitsUtil.h"
 
 #include "fitsGen/Ft1File.h"
 #include "fitsGen/MeritFile.h"
@@ -71,5 +73,6 @@ int main(int iargc, char * argv[]) {
       return 1;
    }
    my_cuts.writeGtiExtension(fitsFile);
+   st_facilities::FitsUtil::writeChecksums(fitsFile);
 }
 

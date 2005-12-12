@@ -1,9 +1,9 @@
 /**
  * @file makeFT2.cxx
- * @brief Convert Root D2 data from Gleam to FT2 format using Goodi.
+ * @brief Convert Root D2 data from Gleam to FT2 format.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2/makeFT2.cxx,v 1.1 2004/04/13 20:13:51 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2/makeFT2.cxx,v 1.2 2004/04/17 15:30:05 jchiang Exp $
  */
 
 #include <iostream>
