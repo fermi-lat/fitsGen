@@ -3,7 +3,7 @@
  * @brief Implementation for merit tuple file abstraction using tip.
  * @author J. Chiang
  *
- * $Header$
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/MeritFile.cxx,v 1.1 2005/12/09 22:47:49 jchiang Exp $
  */
 
 #include "tip/IFileSvc.h"
@@ -43,6 +43,10 @@ void MeritFile::next() {
    ++m_it;
 }
 
+void MeritFile::prev() {
+   --m_it;
+}
+
 double MeritFile::operator[](const std::string & fieldname) const {
    return m_row[fieldname].get();
 }
@@ -55,7 +59,7 @@ tip::Table::ConstIterator MeritFile::end() const {
    return m_table->end();
 }
 
-tip::Table::ConstIterator MeritFile::itor() const {
+tip::Table::ConstIterator & MeritFile::itor() {
    return m_it;
 }
 
