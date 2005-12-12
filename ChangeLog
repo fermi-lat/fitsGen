@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Sun Dec 11 17:59:17 PST 2005
+fitsGen/fitsGen
+
+Modified Files:
+	Ft1File.h Util.h 
+Log Message:
+mods for observationSim
+    *
+------------------------------------------------------------
 User: jchiang  Fri Dec  9 14:47:49 PST 2005
 fitsGen/src/makeFT1
 
