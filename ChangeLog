@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Mon Dec 12 13:12:48 PST 2005
+fitsGen/src/makeFT2a
+
+Modified Files:
+	makeFT2a.cxx 
+Log Message:
+continue to convert over to *File abstractions
+    *
+------------------------------------------------------------
+User: jchiang  Mon Dec 12 13:12:48 PST 2005
 fitsGen/src/makeFT2
 
 Modified Files:
