@@ -3,7 +3,7 @@
  * @brief Declaration of FT1 file abstraction
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/Ft1File.h,v 1.2 2005/12/09 22:47:48 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/Ft1File.h,v 1.3 2005/12/12 01:59:17 jchiang Exp $
  */
 
 #ifndef fitsGen_Ft1File_h
@@ -53,7 +53,7 @@ public:
 
    tip::Table::Iterator end();
 
-   tip::Table::Iterator itor();
+   tip::Table::Iterator & itor();
 
    /// @return The EVENTS extension FITS header.
    tip::Header & header();
