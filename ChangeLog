@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Mon Dec 12 13:12:48 PST 2005
+fitsGen/src
+
+Modified Files:
+	Ft1File.cxx MeritFile.cxx 
+Log Message:
+continue to convert over to *File abstractions
+    *
+------------------------------------------------------------
 User: jchiang  Mon Dec 12 13:12:47 PST 2005
 fitsGen/fitsGen
 
