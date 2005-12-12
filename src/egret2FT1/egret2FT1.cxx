@@ -3,13 +3,15 @@
  * @brief EGRET SMDB to FT1 converter
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/egret2FT1/egret2FT1.cxx,v 1.2 2005/12/09 02:27:47 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/egret2FT1/egret2FT1.cxx,v 1.3 2005/12/09 07:47:14 jchiang Exp $
  */
 
 #include <cmath>
 
 #include <iostream>
 #include <stdexcept>
+
+#include "st_facilities/FitsUtil.h"
 
 #include "dataSubselector/Gti.h"
 #include "dataSubselector/Cuts.h"
@@ -59,4 +61,5 @@ int main(int iargc, char * argv[]) {
       std::cout << eObj.what() << std::endl;
    }
    my_cuts.writeGtiExtension(argv[2]);
+   st_facilities::FitsUtil::writeChecksums(argv[2]);
 }

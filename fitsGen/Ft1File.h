@@ -3,7 +3,7 @@
  * @brief Declaration of FT1 file abstraction
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/Ft1File.h,v 1.1 2005/12/08 17:57:11 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/Ft1File.h,v 1.2 2005/12/09 22:47:48 jchiang Exp $
  */
 
 #ifndef fitsGen_Ft1File_h
@@ -33,6 +33,8 @@ public:
 
    ~Ft1File();
 
+   void close();
+
    void next();
 
    tip::TableCell & operator[](const std::string & fieldname) {
@@ -56,12 +58,19 @@ public:
    /// @return The EVENTS extension FITS header.
    tip::Header & header();
 
+   void setObsTimes(double start, double stop);
+
 private:
 
+   std::string m_outfile;
    tip::Table * m_table;
-   tip::Table * m_gtiTable;
    tip::Table::Iterator m_it;
    long m_nrows;
+
+   double m_startTime;
+   double m_stopTime;
+
+   void verifyObsTimes();
 
 };
 
