@@ -3,7 +3,7 @@
  * @brief Implementation of FT1 file abstraction.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/Ft1File.cxx,v 1.4 2005/12/12 21:12:48 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/Ft1File.cxx,v 1.5 2005/12/13 05:16:09 jchiang Exp $
  */
 
 #include <iostream>
@@ -18,9 +18,10 @@
 
 namespace fitsGen {
 
-Ft1File::Ft1File(const std::string & outfile, long nrows) 
+Ft1File::Ft1File(const std::string & outfile, long nrows, 
+                 const std::string & templateFile) 
    : FtFileBase(outfile, nrows) {
-   init("ft1.tpl", "EVENTS");
+   init(templateFile, "EVENTS");
 }
 
 void Ft1File::close() {
