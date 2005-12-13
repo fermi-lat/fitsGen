@@ -3,7 +3,7 @@
  * @brief Convert merit ntuple to FT1 format.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.7 2005/12/09 22:47:49 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.8 2005/12/12 01:59:18 jchiang Exp $
  */
 
 #include <iostream>
@@ -45,6 +45,8 @@ int main(int iargc, char * argv[]) {
          double dec = merit["FT1Dec"];
          ft1["ra"].set(ra);
          ft1["dec"].set(dec);
+//          ft1["l"].set(merit["FT1L"]);
+//          ft1["b"].set(merit["FT1B"]);
          astro::SkyDir dir(ra, dec);
          ft1["l"].set(dir.l());
          ft1["b"].set(dir.b());
@@ -61,6 +63,7 @@ int main(int iargc, char * argv[]) {
             ft1["event_class"].set(1);
             ft1["conversion_type"].set(1);
          }
+//         ft1["livetime"].set(merit["FT1Livetime"]);
          ncount++;
       }
       std::cout << "number of rows processed: " << ncount << std::endl;
