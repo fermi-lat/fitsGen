@@ -3,7 +3,7 @@
  * @brief Declaration of FT1 file abstraction
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/Ft1File.h,v 1.4 2005/12/12 21:12:47 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/Ft1File.h,v 1.5 2005/12/13 05:16:09 jchiang Exp $
  */
 
 #ifndef fitsGen_Ft1File_h
@@ -25,7 +25,8 @@ class Ft1File : public FtFileBase {
 
 public:
 
-   Ft1File(const std::string & outfile, long nrows=0);
+   Ft1File(const std::string & outfile, long nrows=0,
+           const std::string & templateFile="ft1.tpl");
 
    virtual void close();
 
