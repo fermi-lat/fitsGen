@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Mon Dec 12 21:16:10 PST 2005
+fitsGen/src/egret2FT1
+
+Modified Files:
+	EgretSmdb.cxx EgretSmdb.h 
+Log Message:
+add FtFileBase class; tagging v2
+    *
+------------------------------------------------------------
 User: jchiang  Mon Dec 12 21:16:09 PST 2005
 fitsGen/src
 
