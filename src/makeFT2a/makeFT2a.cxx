@@ -3,7 +3,7 @@
  * @brief Convert ascii D2 data from Gleam to FT2.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2a/makeFT2a.cxx,v 1.6 2005/09/25 21:55:38 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2a/makeFT2a.cxx,v 1.7 2005/12/12 21:12:48 jchiang Exp $
  */
 
 #include <cmath>
@@ -70,11 +70,12 @@ int main(int iargc, char * argv[]) {
       while (std::getline(d2, line, '\n')) {
          facilities::Util::stringTokenize(line, "\t ", dataFields);
          ft2["start"].set(std::atof(dataFields[0].c_str()));
-         tip::Table::Vector<float> scPosition = ft2["sc_position"];
+         std::vector<float> scPosition(3);
 // convert the spacecraft position from km to meters.
          scPosition[0] = std::atof(dataFields[1].c_str())*1e3;
          scPosition[1] = std::atof(dataFields[2].c_str())*1e3;
          scPosition[2] = std::atof(dataFields[3].c_str())*1e3;
+         ft2["sc_position"].set(scPosition);
          ft2["ra_scz"].set(std::atof(dataFields[4].c_str()));
          ft2["dec_scz"].set(std::atof(dataFields[5].c_str()));
          ft2["ra_scx"].set(std::atof(dataFields[6].c_str()));

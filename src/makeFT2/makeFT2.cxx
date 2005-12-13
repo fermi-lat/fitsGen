@@ -3,15 +3,11 @@
  * @brief Convert Root D2 data from Gleam to FT2 format.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2/makeFT2.cxx,v 1.4 2005/12/12 21:12:48 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2/makeFT2.cxx,v 1.5 2005/12/13 00:06:40 jchiang Exp $
  */
 
 #include <iostream>
 #include <string>
-
-#include "tip/IFileSvc.h"
-#include "tip/Table.h"
-#include "tip/Header.h"
 
 #include "fitsGen/Ft2File.h"
 #include "fitsGen/MeritFile.h"
@@ -32,12 +28,9 @@ int main(int iargc, char * argv[]) {
       for ( ; pointing.itor() != pointing.end(); pointing.next(), ft2.next()) {
          ft2["start"].set(pointing["start"]);
          ft2["stop"].set(pointing["stop"]);
-         tip::Table::Vector<float> scPosition = ft2["sc_position"];
-         const tip::Table::Vector<float> merit_position =
-            const_cast<tip::TableCell&>(pointing.row()["sc_position"]);
-         scPosition[0] = merit_position[0];
-         scPosition[1] = merit_position[1];
-         scPosition[2] = merit_position[2];
+         std::vector<float> scPosition;
+         pointing.row()["sc_position"].get(scPosition);
+         ft2["sc_position"].set(scPosition);
          ft2["lat_geo"].set(pointing["lat_geo"]);
          ft2["lon_geo"].set(pointing["lon_geo"]);
          ft2["rad_geo"].set(pointing["rad_geo"]*1e3); // convert to m

@@ -3,7 +3,7 @@
  * @brief Declaration for EGRET summary database class interface.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/egret2FT1/EgretSmdb.h,v 1.2 2005/12/09 02:27:47 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/egret2FT1/EgretSmdb.h,v 1.3 2005/12/09 07:47:14 jchiang Exp $
  */
 
 #ifndef fitsGen_EgretSmdb_h
@@ -47,7 +47,7 @@ public:
 
    tip::Table::ConstIterator end() const;
 
-   tip::Table::ConstIterator itor() const;
+   tip::Table::ConstIterator & itor();
 
    double arrivalTime() const;
 
