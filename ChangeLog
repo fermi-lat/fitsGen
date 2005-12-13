@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Mon Dec 12 23:11:41 PST 2005
+fitsGen/src
+
+Modified Files:
+	Ft1File.cxx FtFileBase.cxx 
+Log Message:
+add converter for existing FT1 files
+    *
+------------------------------------------------------------
+User: jchiang  Mon Dec 12 23:11:41 PST 2005
 fitsGen/fitsGen
 
 Modified Files:
