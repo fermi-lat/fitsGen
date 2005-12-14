@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Tue Dec 13 21:31:06 PST 2005
+fitsGen/src
+
+Modified Files:
+	MeritFile.cxx 
+Log Message:
+allow TCut to be specified at the command line or read from a file
+    *
+------------------------------------------------------------
+User: jchiang  Tue Dec 13 21:31:06 PST 2005
 fitsGen/fitsGen
 
 Modified Files:
