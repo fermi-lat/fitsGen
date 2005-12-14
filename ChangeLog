@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Tue Dec 13 18:41:44 PST 2005
+fitsGen/src
+
+Modified Files:
+	FtFileBase.cxx 
+Log Message:
+update merit.root for GR v7r3p4; bug fix to FtFileBase
+    *
+------------------------------------------------------------
+User: jchiang  Tue Dec 13 18:41:44 PST 2005
 fitsGen/data
 
 Modified Files:
