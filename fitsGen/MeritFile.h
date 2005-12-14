@@ -3,7 +3,7 @@
  * @brief Declaration for MeritTuple abstraction.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/MeritFile.h,v 1.1 2005/12/09 22:47:48 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/MeritFile.h,v 1.2 2005/12/12 21:12:47 jchiang Exp $
  */
 
 #ifndef fitsGen_MeritFile_h
@@ -30,7 +30,8 @@ class MeritFile {
 public:
 
    MeritFile(const std::string & meritfile,
-             const std::string & tree="MeritTuple");
+             const std::string & tree="MeritTuple",
+             const std::string & filter="");
 
    ~MeritFile();
 
