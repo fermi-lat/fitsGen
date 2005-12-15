@@ -3,7 +3,7 @@
  * @brief Implementation of FT1 file abstraction.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/Ft1File.cxx,v 1.6 2005/12/13 07:11:41 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/Ft1File.cxx,v 1.7 2005/12/15 04:38:01 jchiang Exp $
  */
 
 #include <iostream>
@@ -22,6 +22,10 @@ Ft1File::Ft1File(const std::string & outfile, long nrows,
                  const std::string & templateFile) 
    : FtFileBase(outfile, nrows) {
    init(templateFile, "EVENTS");
+}
+
+Ft1File::~Ft1File() {
+   close();
 }
 
 void Ft1File::close() {
