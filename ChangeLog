@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Wed Dec 14 20:38:00 PST 2005
+fitsGen/fitsGen
+
+Modified Files:
+	Ft1File.h FtFileBase.h Util.h 
+Log Message:
+allow mission start time to be set by clients
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceToolsv6r2, operation: add
 Package: fitsGen
