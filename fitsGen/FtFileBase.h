@@ -3,13 +3,15 @@
  * @brief Declaration of FT1/2 file base class
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/FtFileBase.h,v 1.4 2005/12/12 21:12:47 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/FtFileBase.h,v 1.1 2005/12/13 05:16:09 jchiang Exp $
  */
 
 #ifndef fitsGen_FtFileBase_h
 #define fitsGen_FtFileBase_h
 
 #include "tip/Table.h"
+
+#include "astro/JulianDate.h"
 
 namespace tip {
    class Header;
@@ -62,6 +64,8 @@ public:
 
    void setObsTimes(double start, double stop);
 
+   static void setMissionStart(int year, int month, int day, int sec);
+
 protected:
 
    std::string m_outfile;
@@ -71,6 +75,8 @@ protected:
 
    double m_startTime;
    double m_stopTime;
+
+   static astro::JulianDate s_missionStart;
 
    void init(const std::string & templateFile,
              const std::string & extname);

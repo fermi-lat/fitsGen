@@ -3,11 +3,13 @@
  * @brief Declaration of FT1 file abstraction
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/Ft1File.h,v 1.5 2005/12/13 05:16:09 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/Ft1File.h,v 1.6 2005/12/13 07:11:41 jchiang Exp $
  */
 
 #ifndef fitsGen_Ft1File_h
 #define fitsGen_Ft1File_h
+
+#include "astro/JulianDate.h"
 
 #include "fitsGen/FtFileBase.h"
 

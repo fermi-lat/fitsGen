@@ -3,7 +3,7 @@
  * @brief Utilities for fitsGen apps.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/Util.h,v 1.1 2004/04/13 20:13:50 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/Util.h,v 1.2 2005/12/12 01:59:17 jchiang Exp $
  */
 
 #ifndef fitsGen_Util_h
@@ -24,7 +24,7 @@ namespace fitsGen {
  * @brief Static function utilities for fitsGen applications.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/Util.h,v 1.1 2004/04/13 20:13:50 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/Util.h,v 1.2 2005/12/12 01:59:17 jchiang Exp $
  */
 
 class Util {
@@ -35,7 +35,9 @@ public:
                             std::string & fitsFile);
 
    static void writeDateKeywords(tip::Extension * table, double start_time,
-                                 double stop_time, bool extension=true);
+                                 double stop_time, bool extension=true,
+                                 const astro::JulianDate & mission_start
+                                 =astro::JulianDate(2001, 1, 1, 0));
 
    static astro::JulianDate currentTime();
 
