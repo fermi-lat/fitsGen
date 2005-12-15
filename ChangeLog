@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Thu Dec 15 07:03:11 PST 2005
+fitsGen/fitsGen
+
+Modified Files:
+	Ft1File.h 
+Log Message:
+implement ~Ft1File
+    *
+------------------------------------------------------------
 User: jchiang  Wed Dec 14 20:38:01 PST 2005
 fitsGen/src/egret2FT1
 
