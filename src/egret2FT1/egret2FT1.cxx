@@ -3,7 +3,7 @@
  * @brief EGRET SMDB to FT1 converter
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/egret2FT1/egret2FT1.cxx,v 1.4 2005/12/12 01:59:18 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/egret2FT1/egret2FT1.cxx,v 1.5 2005/12/15 04:38:01 jchiang Exp $
  */
 
 #include <cmath>
@@ -59,7 +59,6 @@ int main(int iargc, char * argv[]) {
       ft1.setNumRows(nrows);
       my_cuts.addGtiCut(egret.gti());
       my_cuts.writeDssKeywords(ft1.header());
-      ft1.close();
    } catch (std::exception & eObj) {
       std::cout << eObj.what() << std::endl;
    }
