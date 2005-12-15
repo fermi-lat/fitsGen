@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Wed Dec 14 20:38:01 PST 2005
+fitsGen/src/egret2FT1
+
+Modified Files:
+	egret2FT1.cxx 
+Log Message:
+allow mission start time to be set by clients
+    *
+------------------------------------------------------------
+User: jchiang  Wed Dec 14 20:38:01 PST 2005
 fitsGen/src
 
 Modified Files:
