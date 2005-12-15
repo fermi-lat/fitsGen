@@ -3,7 +3,7 @@
  * @brief Utilities for fitsGen applications.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/Util.cxx,v 1.4 2005/09/25 21:55:38 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/Util.cxx,v 1.5 2005/12/12 01:59:18 jchiang Exp $
  */
 
 #include <cstdlib>
@@ -45,7 +45,8 @@ void Util::getFileNames(int iargc, char * argv[], std::string & rootFile,
 }
 
 void Util::writeDateKeywords(tip::Extension * table, double start_time, 
-                             double stop_time, bool extension) {
+                             double stop_time, bool extension,
+                             const astro::JulianDate & mission_start) {
    static double secsPerDay(8.64e4);
    tip::Header & header = table->getHeader();
    astro::JulianDate current_time = currentTime();
@@ -54,7 +55,7 @@ void Util::writeDateKeywords(tip::Extension * table, double start_time,
    } catch (...) {
    }
 // The official mission start time is Jan 1 2001:
-   astro::JulianDate mission_start(2001, 1, 1, 0);
+//   astro::JulianDate mission_start(2001, 1, 1, 0);
    astro::JulianDate date_start(mission_start + start_time/secsPerDay);
    astro::JulianDate date_stop(mission_start + stop_time/secsPerDay);
    try {
