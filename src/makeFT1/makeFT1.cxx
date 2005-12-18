@@ -3,8 +3,10 @@
  * @brief Convert merit ntuple to FT1 format.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.9 2005/12/13 00:06:39 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.10 2005/12/14 05:31:06 jchiang Exp $
  */
+
+#include <cstdlib>
 
 #include <iostream>
 #include <sstream>
@@ -54,6 +56,9 @@ int main(int iargc, char * argv[]) {
       fitsGen::MeritFile merit(rootFile, "MeritTuple", filter.str());
       fitsGen::Ft1File ft1(fitsFile, merit.nrows());
    
+      ft1.header().addHistory("Input merit file: " + rootFile);
+      ft1.header().addHistory("Filter string: " + filter.str());
+
       int ncount(0);
       for ( ; merit.itor() != merit.end(); merit.next(), ft1.next()) {
          ft1["energy"].set(merit["FT1Energy"]);
@@ -93,5 +98,8 @@ int main(int iargc, char * argv[]) {
    }
    my_cuts.writeGtiExtension(fitsFile);
    st_facilities::FitsUtil::writeChecksums(fitsFile);
+   if (st_facilities::Util::fileExists("dummy.root")) {
+      std::remove("dummy.root");
+   }
 }
 

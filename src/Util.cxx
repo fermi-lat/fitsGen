@@ -3,7 +3,7 @@
  * @brief Utilities for fitsGen applications.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/Util.cxx,v 1.5 2005/12/12 01:59:18 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/Util.cxx,v 1.6 2005/12/15 04:38:01 jchiang Exp $
  */
 
 #include <cstdlib>
@@ -38,7 +38,7 @@ void Util::getFileNames(int iargc, char * argv[], std::string & rootFile,
       } else {
          rootFile = std::string(argv[1]);
       }
-   } else if (iargc == 3) {
+   } else if (iargc >= 3) {
       rootFile = std::string(argv[1]);
       fitsFile = std::string(argv[2]);     
    }
