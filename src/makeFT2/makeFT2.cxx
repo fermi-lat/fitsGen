@@ -3,7 +3,7 @@
  * @brief Convert Root D2 data from Gleam to FT2 format.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2/makeFT2.cxx,v 1.5 2005/12/13 00:06:40 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2/makeFT2.cxx,v 1.6 2005/12/13 05:16:10 jchiang Exp $
  */
 
 #include <iostream>
@@ -25,6 +25,7 @@ int main(int iargc, char * argv[]) {
       fitsGen::MeritFile pointing(rootFile, "pointing_history");
       fitsGen::Ft2File ft2(fitsFile, pointing.nrows());
 
+      ft2.header().addHistory("Input merit file: " + rootFile);
       for ( ; pointing.itor() != pointing.end(); pointing.next(), ft2.next()) {
          ft2["start"].set(pointing["start"]);
          ft2["stop"].set(pointing["stop"]);
@@ -33,7 +34,7 @@ int main(int iargc, char * argv[]) {
          ft2["sc_position"].set(scPosition);
          ft2["lat_geo"].set(pointing["lat_geo"]);
          ft2["lon_geo"].set(pointing["lon_geo"]);
-         ft2["rad_geo"].set(pointing["rad_geo"]*1e3); // convert to m
+         ft2["rad_geo"].set(pointing["rad_geo"]*1e3); // convert to meters
          ft2["ra_zenith"].set(pointing["ra_zenith"]);
          ft2["dec_zenith"].set(pointing["dec_zenith"]);
          ft2["b_mcilwain"].set(pointing["B_McIlwain"]);
