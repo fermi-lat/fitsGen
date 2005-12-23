@@ -1,5 +1,5 @@
 # Definition of LAT Pointing & Livetime History File (FT2)
-# $Header$
+# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/ft2.tpl,v 1.5 2005/11/30 18:12:24 jchiang Exp $
 SIMPLE      = T                           / file does conform to FITS standard
 BITPIX      = 8                           / number of bits per data pixel
 NAXIS       = 0                           / number of data axes
@@ -38,7 +38,7 @@ RADECSYS     = 'FK5'                       / world coord. system for this file (
 DATE         =                             / file creation date (YYYY-MM-DDThh:mm:ss UT)
 DATE-OBS     =                             / start date and time of the observation (UTC)
 DATE-END     =                             / end date and time of the observation (UTC)
-EXTNAME      = 'Ext1'                      / name of this binary table extension
+EXTNAME      = 'SC_DATA'                   / name of this binary table extension
 TSTART       =                             / mission time of the start of the observation
 TSTOP        =                             / mission time of the end of the observation
 MJDREF       = 51910.0                     / MJD corresponding to SC clock start
