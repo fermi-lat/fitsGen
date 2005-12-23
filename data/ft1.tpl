@@ -1,5 +1,5 @@
 # Definition of LAT Event Summary File (FT1)
-# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/ft1.tpl,v 1.6 2005/12/07 01:07:36 jchiang Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/ft1.tpl,v 1.7 2005/12/09 02:27:42 jchiang Exp $
 SIMPLE      = T                              / file does conform to FITS standard
 BITPIX      = 8                              / number of bits per data pixel
 NAXIS       = 0                              / number of data axes
@@ -49,7 +49,6 @@ TIMEUNIT    = 's'                                       / units for the time rel
 TIMEZERO    = 0.0                                       / clock correction
 TIMESYS     = 'TT'                                      / type of time system that is used
 TIMEREF     = 'LOCAL'                                   / reference frame used for times
-TASSIGN     = 'SATELLITE'                               / location where time assignment performed
 CLOCKAPP    =                                           / whether a clock drift correction has been applied
 GPS_OUT     =                                           / whether GPS time was unavailable at any time during this interval
 NDSKEYS     = 0                                         / number of data subspace keywords in header
@@ -126,16 +125,6 @@ TFORM16     = 'D'                                       / data format of field: 
 TUNIT16     = 's'                                       / physical unit of field
 TLMIN16     = 0.0                                       / minimum value
 TLMAX16     = 1.0D+10                                   / maximum value
-TTYPE17     = 'PULSE_PHASE'                             / pulse phase of event arrival time
-TFORM17     = 'D'                                       / data format of field: 8-byte DOUBLE
-TUNIT17     = ''                                        / physical unit of field
-TLMIN17     = 0.0                                       / minimum value
-TLMAX17     = 1.0                                       / maximum value
-TTYPE18     = 'ORBITAL_PHASE'                           / orbital phase of binary system at event arrival time
-TFORM18     = 'D'                                       / data format of field: 8-byte DOUBLE
-TUNIT18     = ''                                        / physical unit of field
-TLMIN18     = 0.0                                       / minimum value
-TLMAX18     = 1.0                                       / maximum value
 END
 
 XTENSION     = 'BINTABLE'                  / binary table extension
@@ -166,7 +155,6 @@ TIMEUNIT     = 's'                         / units for the time related keywords
 TIMEZERO     = 0.0                         / clock correction
 TIMESYS      = 'TT'                        / type of time system that is used
 TIMEREF      = 'LOCAL'                     / reference frame used for times
-TASSIGN      = 'SATELLITE'                 / location where time assignment performed
 CLOCKAPP     =                             / whether a clock drift correction has been applied
 GPS_OUT      =                             / whether GPS time was unavailable at any time during this interval
 ONTIME       =                             / sum of GTI lengths
