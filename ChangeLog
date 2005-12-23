@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Fri Dec 23 11:51:50 PST 2005
+fitsGen/fitsGen
+
+Modified Files:
+	Ft1File.h Ft2File.h 
+Log Message:
+delete PULSE_PHASE, ORBITAL_PHASE, TASSIGN columns; change Ext1 to SC_DATA; allow extension name to be specified in Ft*File constructors
+    *
+------------------------------------------------------------
 User: jchiang  Fri Dec 23 11:51:49 PST 2005
 fitsGen/data
 
