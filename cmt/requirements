@@ -3,7 +3,7 @@ version v2r2
 
 author James Chiang <jchiang@slac.stanford.edu>
 
-# $Id: requirements,v 1.32 2005/12/14 05:35:57 jchiang Exp $
+# $Id: requirements,v 1.33 2005/12/24 01:58:47 jchiang Exp $
 
 use GlastPolicy v*
 use facilities v*
@@ -26,5 +26,5 @@ application makeFT2 makeFT2/makeFT2.cxx
 application makeFT2a makeFT2a/makeFT2a.cxx
 
 application egret2FT1 egret2FT1/*.cxx
-
 application convertFT1 convertFT1/convertFT1.cxx
+application partition partition/partition.cxx
