@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jchiang  Tue Jan 10 10:42:02 PST 2006
+fitsGen/src
+
+Modified Files:
+	FtFileBase.cxx 
+Log Message:
+added missionStart access
+
+    *
+------------------------------------------------------------
 User: jchiang  Tue Jan 10 10:41:30 PST 2006
 fitsGen/fitsGen
 
