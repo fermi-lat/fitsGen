@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jchiang  Tue Jan 10 10:41:30 PST 2006
+fitsGen/fitsGen
+
+Modified Files:
+	FtFileBase.h 
+Log Message:
+slight reformatting
+
+    *
+------------------------------------------------------------
 User: jchiang  Tue Jan 10 10:41:09 PST 2006
 fitsGen/cmt
 
