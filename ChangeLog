@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jchiang  Tue Jan 10 10:42:57 PST 2006
+fitsGen/src/partition
+
+Added Files:
+	partition.cxx 
+Log Message:
+new application to divide large FT1 files for parallel processing
+
+    *
+------------------------------------------------------------
 User: jchiang  Tue Jan 10 10:42:25 PST 2006
 fitsGen/src/makeFT2a
 
