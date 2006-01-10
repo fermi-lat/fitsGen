@@ -3,7 +3,7 @@
  * @brief Declaration of FT1/2 file base class
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/FtFileBase.h,v 1.1 2005/12/13 05:16:09 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/FtFileBase.h,v 1.2 2005/12/15 04:38:00 jchiang Exp $
  */
 
 #ifndef fitsGen_FtFileBase_h
@@ -65,6 +65,10 @@ public:
    void setObsTimes(double start, double stop);
 
    static void setMissionStart(int year, int month, int day, int sec);
+
+   static const astro::JulianDate & missionStart() {
+      return s_missionStart;
+   }
 
 protected:
 
