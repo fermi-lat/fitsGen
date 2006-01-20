@@ -3,7 +3,7 @@
  * @brief Implementation of FT1 file abstraction.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/Ft1File.cxx,v 1.8 2005/12/15 15:03:11 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/Ft1File.cxx,v 1.9 2005/12/23 19:51:50 jchiang Exp $
  */
 
 #include <iostream>
@@ -40,10 +40,13 @@ void Ft1File::close() {
 
       tip::IFileSvc & fileSvc(tip::IFileSvc::instance());
 
-      tip::Table * gtiTable(fileSvc.editTable(m_outfile, "GTI"));
-      Util::writeDateKeywords(gtiTable, m_startTime, m_stopTime, true,
-                              s_missionStart);
-      delete gtiTable;
+      try {
+         tip::Table * gtiTable(fileSvc.editTable(m_outfile, "GTI"));
+         Util::writeDateKeywords(gtiTable, m_startTime, m_stopTime, true,
+                                 s_missionStart);
+         delete gtiTable;
+      } catch (...) {
+      }
 
       tip::Image * phdu(fileSvc.editImage(m_outfile, ""));
       Util::writeDateKeywords(phdu, m_startTime, m_stopTime, false,

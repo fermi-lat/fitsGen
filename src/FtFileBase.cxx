@@ -3,7 +3,7 @@
  * @brief Implementation of FT1/2 file base class.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/FtFileBase.cxx,v 1.4 2005/12/15 04:38:01 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/FtFileBase.cxx,v 1.5 2006/01/10 18:42:02 jchiang Exp $
  */
 
 #include <iostream>
@@ -14,6 +14,8 @@
 #include "tip/Image.h"
 
 #include "astro/JulianDate.h"
+
+#include "st_facilities/Util.h"
 
 #include "fitsGen/FtFileBase.h"
 #include "fitsGen/Util.h"
@@ -39,7 +41,11 @@ void FtFileBase::init(const std::string & templateFile,
          + std::string("/data/") + templateFile;
    } 
    tip::IFileSvc & fileSvc(tip::IFileSvc::instance());
-   fileSvc.createFile(m_outfile, ft_template);
+   if (ft_template != "") {
+      fileSvc.createFile(m_outfile, ft_template);
+   } else {
+      fileSvc.appendTable(m_outfile, extname);
+   }
    m_table = fileSvc.editTable(m_outfile, extname);
    setNumRows(m_nrows);
    m_it = m_table->begin();
