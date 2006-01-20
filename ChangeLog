@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Thu Jan 19 22:23:18 PST 2006
+fitsGen/src
+
+Modified Files:
+	Ft1File.cxx FtFileBase.cxx 
+Log Message:
+add irfTuple application
+    *
+------------------------------------------------------------
+User: jchiang  Thu Jan 19 22:23:18 PST 2006
 fitsGen/data
 
 Added Files:
