@@ -3,7 +3,7 @@
  * @brief Implementation of FT1/2 file base class.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/FtFileBase.cxx,v 1.5 2006/01/10 18:42:02 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/FtFileBase.cxx,v 1.6 2006/01/20 06:23:18 jchiang Exp $
  */
 
 #include <iostream>
@@ -15,6 +15,7 @@
 
 #include "astro/JulianDate.h"
 
+#include "st_facilities/Env.h"
 #include "st_facilities/Util.h"
 
 #include "fitsGen/FtFileBase.h"
@@ -37,8 +38,8 @@ void FtFileBase::init(const std::string & templateFile,
                       const std::string & extname) {
    std::string ft_template(templateFile);
    if (templateFile == "ft1.tpl" || templateFile == "ft2.tpl") {
-      ft_template = std::getenv("FITSGENROOT") 
-         + std::string("/data/") + templateFile;
+      ft_template = st_facilities::Env::appendFileName(
+         st_facilities::Env::getDataDir("fitsGen"), templateFile);
    } 
    tip::IFileSvc & fileSvc(tip::IFileSvc::instance());
    if (ft_template != "") {

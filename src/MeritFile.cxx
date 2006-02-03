@@ -3,7 +3,7 @@
  * @brief Implementation for merit tuple file abstraction using tip.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/MeritFile.cxx,v 1.2 2005/12/12 21:12:48 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/MeritFile.cxx,v 1.3 2005/12/14 05:31:06 jchiang Exp $
  */
 
 #include "tip/IFileSvc.h"
@@ -66,6 +66,18 @@ tip::Table::ConstIterator & MeritFile::itor() {
 
 const dataSubselector::Gti & MeritFile::gti() const {
    return *m_gti;
+}
+
+short int MeritFile::eventType() const {
+   return conversionType();
+}
+
+short int MeritFile::conversionType() const {
+   if (17 - m_row["Tkr1FirstLayer"].get() < 11.5) { // Front converting
+      return 0;
+   } else { // Back converting
+      return 1;
+   }
 }
 
 } // namespace fitsGen
