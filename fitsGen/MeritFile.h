@@ -3,7 +3,7 @@
  * @brief Declaration for MeritTuple abstraction.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/MeritFile.h,v 1.2 2005/12/12 21:12:47 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/MeritFile.h,v 1.3 2005/12/14 05:31:06 jchiang Exp $
  */
 
 #ifndef fitsGen_MeritFile_h
@@ -57,7 +57,13 @@ public:
 
    /// @return A Gti object containing the GTIs for this merit file.
    /// This comprises just the beginning and end times for the data.
-   const dataSubselector::Gti & gti() const; 
+   const dataSubselector::Gti & gti() const;
+
+   /// @return Event type of current row.
+   short int eventType() const;
+
+   /// @return Conversion type (e.g., front=0, back=1) of current row.
+   short int conversionType() const;
 
 private:
 
