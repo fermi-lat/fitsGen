@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Thu Feb  2 22:03:43 PST 2006
+fitsGen/src/makeFT1
+
+Modified Files:
+	makeFT1.cxx 
+Log Message:
+more flexible makeFT1 imp
+    *
+------------------------------------------------------------
+User: jchiang  Thu Feb  2 22:03:43 PST 2006
 fitsGen/src/egret2FT1
 
 Modified Files:
