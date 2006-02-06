@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jchiang  Sun Feb  5 16:37:45 PST 2006
+fitsGen/src/makeFT1
+
+Modified Files:
+	makeFT1.cxx 
+Log Message:
+update to use MeritFile::eventType and conversionType methods
+
+    *
+------------------------------------------------------------
 User: jchiang  Sun Feb  5 16:37:13 PST 2006
 fitsGen/src
 
