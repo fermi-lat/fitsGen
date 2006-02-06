@@ -3,7 +3,7 @@
  * @brief Convert merit ntuple to FT1 format.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.12 2006/02/02 17:49:14 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.13 2006/02/03 06:03:43 jchiang Exp $
  */
 
 #include <cstdlib>
@@ -92,6 +92,8 @@ int main(int iargc, char * argv[]) {
               variable != ft1Dict.end(); ++variable) {
             ft1[variable->first].set(merit[variable->second]);
          }
+         ft1["event_class"].set(merit.eventType());
+         ft1["conversion_type"].set(merit.conversionType());
          ncount++;
       }
       std::cout << "number of rows processed: " << ncount << std::endl;
