@@ -3,13 +3,14 @@
  * @brief Declaration for MeritTuple abstraction.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/MeritFile.h,v 1.3 2005/12/14 05:31:06 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/MeritFile.h,v 1.4 2006/02/03 06:03:41 jchiang Exp $
  */
 
 #ifndef fitsGen_MeritFile_h
 #define fitsGen_MeritFile_h
 
 namespace dataSubselector {
+   class Cuts;
    class Gti;
 }
 
@@ -73,6 +74,9 @@ private:
    long m_nrows;
 
    dataSubselector::Gti * m_gti;
+
+   dataSubselector::Cuts * m_goodEvent1;
+   dataSubselector::Cuts * m_goodEvent3;
 };
 
 } // namespace fitsGen
