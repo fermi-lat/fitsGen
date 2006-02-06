@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jchiang  Sun Feb  5 16:37:13 PST 2006
+fitsGen/src
+
+Modified Files:
+	MeritFile.cxx 
+Log Message:
+Implement eventType to use FrontA, BackA, FrontB, BackB class definitions
+
+    *
+------------------------------------------------------------
 User: jchiang  Sun Feb  5 16:37:00 PST 2006
 fitsGen/fitsGen
 
