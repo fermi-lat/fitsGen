@@ -1,4 +1,16 @@
 ------------------------------------------------------------
+User: jchiang  Sun Feb  5 16:36:11 PST 2006
+fitsGen/data
+
+Modified Files:
+	FT1variables ft1.tpl std_cuts 
+Log Message:
+update translation table (include FT1L, FT1B explicitly); correct EVENT_CLASS
+comments; include all of the DC2 cuts so that only Class A and B events are
+retained
+
+    *
+------------------------------------------------------------
 User: jchiang  Thu Feb  2 22:03:43 PST 2006
 fitsGen/src/makeFT1
 
