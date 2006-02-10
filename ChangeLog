@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Fri Feb 10 15:12:16 PST 2006
+fitsGen/data
+
+Modified Files:
+	FT1variables ft1.tpl std_cuts 
+Log Message:
+redefine class B with ctbbep > 0.3; add run_id to ft1
+    *
+------------------------------------------------------------
 TAG
 Tag name: v2r3, operation: add
 Package: fitsGen
