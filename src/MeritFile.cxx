@@ -3,7 +3,7 @@
  * @brief Implementation for merit tuple file abstraction using tip.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/MeritFile.cxx,v 1.4 2006/02/03 06:03:42 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/MeritFile.cxx,v 1.5 2006/02/06 00:37:13 jchiang Exp $
  */
 
 #include "tip/IFileSvc.h"
@@ -36,8 +36,8 @@ MeritFile::MeritFile(const std::string & meritfile,
       
       // CTBCORE > 0.1
       m_goodEvent1->addRangeCut("CTBCORE", "N/A", 0.1, 1.1);
-      // CTBBestEnergyProb > 0.1
-      m_goodEvent1->addRangeCut("CTBBestEnergyProb", "N/A", 0.1, 1.1);
+      // CTBBestEnergyProb > 0.3
+      m_goodEvent1->addRangeCut("CTBBestEnergyProb", "N/A", 0.3, 1.1);
       // CTBGAM > 0.35
       m_goodEvent1->addRangeCut("CTBGAM", "N/A", 0.35, 1.1);
 
