@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Fri Feb 10 15:12:17 PST 2006
+fitsGen/src
+
+Modified Files:
+	MeritFile.cxx 
+Log Message:
+redefine class B with ctbbep > 0.3; add run_id to ft1
+    *
+------------------------------------------------------------
 User: jchiang  Fri Feb 10 15:12:16 PST 2006
 fitsGen/data
 
