@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Fri Feb 17 08:17:23 PST 2006
+fitsGen/data
+
+Modified Files:
+	FT1variables std_cuts 
+Log Message:
+update cuts; set LIVETIME from EvtLivetime
+    *
+------------------------------------------------------------
 TAG
 Tag name: v2r3p1, operation: add
 Package: fitsGen
