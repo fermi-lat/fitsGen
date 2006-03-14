@@ -3,7 +3,7 @@
  * @brief Implementation of FT1/2 file base class.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/FtFileBase.cxx,v 1.6 2006/01/20 06:23:18 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/FtFileBase.cxx,v 1.7 2006/02/03 06:03:42 jchiang Exp $
  */
 
 #include <iostream>
@@ -86,6 +86,10 @@ void FtFileBase::setNumRows(long nrows) {
 void FtFileBase::appendField(const std::string & colname,
                              const std::string & format) {
    m_table->appendField(colname, format);
+}
+
+const std::vector<std::string> & FtFileBase::getFieldNames() const {
+   return m_table->getValidFields();
 }
 
 tip::Table::Iterator FtFileBase::begin() {

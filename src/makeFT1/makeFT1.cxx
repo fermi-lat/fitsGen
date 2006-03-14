@@ -3,7 +3,7 @@
  * @brief Convert merit ntuple to FT1 format.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.14 2006/02/06 00:37:45 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.15 2006/02/06 00:54:24 jchiang Exp $
  */
 
 #include <cstdlib>
@@ -31,6 +31,11 @@
 using namespace fitsGen;
 
 namespace {
+   void toLower(std::string & name) {
+      for (std::string::iterator it = name.begin(); it != name.end(); ++it) {
+         *it = std::tolower(*it);
+      }
+   }
    void getFT1Dict(const std::string & inputFile,
                    std::map<std::string, std::string> & ft1Dict) {
       ft1Dict.clear();
@@ -50,6 +55,20 @@ namespace {
          filter << lines.at(i);
       }
       return filter.str();
+   }
+   void addNeededFields(Ft1File & ft1,
+                        const std::map<std::string, std::string> & ft1Dict) {
+      const std::vector<std::string> & validFields(ft1.getFieldNames());
+      std::map<std::string, std::string>::const_iterator ft1_entry;
+      for (ft1_entry = ft1Dict.begin(); ft1_entry != ft1Dict.end();
+           ++ft1_entry) {
+         std::string candidate(ft1_entry->first);
+         toLower(candidate);
+         if (std::find(validFields.begin(), validFields.end(), 
+                       candidate) == validFields.end()) {
+            ft1.appendField(ft1_entry->first, "E");
+         }
+      }
    }
 }
 
@@ -91,6 +110,8 @@ int main(int iargc, char * argv[]) {
    try {
       fitsGen::MeritFile merit(rootFile, "MeritTuple", filter);
       fitsGen::Ft1File ft1(fitsFile, merit.nrows());
+
+      ::addNeededFields(ft1, ft1Dict);
    
       ft1.header().addHistory("Input merit file: " + rootFile);
       ft1.header().addHistory("Filter string: " + filter);
@@ -120,4 +141,3 @@ int main(int iargc, char * argv[]) {
       std::remove("dummy.root");
    }
 }
-
