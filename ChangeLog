@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Tue Mar 14 09:33:18 PST 2006
+fitsGen/fitsGen
+
+Modified Files:
+	FtFileBase.h 
+Log Message:
+allow optional fields to be added to FT1 via the dictionary file
+    *
+------------------------------------------------------------
 TAG
 Tag name: v2r3p3, operation: add
 Package: fitsGen
