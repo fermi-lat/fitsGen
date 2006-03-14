@@ -3,7 +3,7 @@
  * @brief Declaration of FT1/2 file base class
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/FtFileBase.h,v 1.2 2005/12/15 04:38:00 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/FtFileBase.h,v 1.3 2006/01/10 18:41:30 jchiang Exp $
  */
 
 #ifndef fitsGen_FtFileBase_h
@@ -50,6 +50,8 @@ public:
    }
 
    void setNumRows(long nrows);
+
+   const std::vector<std::string> & getFieldNames() const;
 
    void appendField(const std::string & colname, const std::string & format);
 
