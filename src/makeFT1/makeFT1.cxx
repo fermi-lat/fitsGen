@@ -3,11 +3,13 @@
  * @brief Convert merit ntuple to FT1 format.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.15 2006/02/06 00:54:24 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.16 2006/03/14 17:33:20 jchiang Exp $
  */
 
+#include <cctype>
 #include <cstdlib>
 
+#include <algorithm>
 #include <iostream>
 #include <sstream>
 #include <stdexcept>
