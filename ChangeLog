@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Wed Mar 15 21:21:49 PST 2006
+fitsGen/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+include cctype and algorithm; tagging v2r3p4
+    *
+------------------------------------------------------------
 TAG
 Tag name: v2r3p4, operation: add
 Package: fitsGen
