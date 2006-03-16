@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Wed Mar 15 21:21:49 PST 2006
+fitsGen/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+include cctype and algorithm; tagging v2r3p4
+    *
+------------------------------------------------------------
+User: jchiang  Wed Mar 15 21:21:49 PST 2006
 fitsGen/cmt
 
 Modified Files:
