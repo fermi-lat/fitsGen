@@ -1,11 +1,10 @@
 # Definition of LAT Event Summary File (FT1)
-# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/ft1.tpl,v 1.9 2006/02/06 00:36:11 jchiang Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/ft1.tpl,v 1.10 2006/02/10 23:12:16 jchiang Exp $
 SIMPLE      = T                              / file does conform to FITS standard
 BITPIX      = 8                              / number of bits per data pixel
 NAXIS       = 0                              / number of data axes
 EXTEND      = T                              / FITS dataset may contain extensions
 CHECKSUM    =                                / checksum for entire HDU
-DATASUM     =                                / checksum for data table
 TELESCOP    = 'GLAST'                        / name of telescope generating data
 INSTRUME    = 'LAT'                          / name of instrument generating data
 EQUINOX     = 2000.0                         / equinox for ra and dec

@@ -1,11 +1,10 @@
 # Definition of LAT Pointing & Livetime History File (FT2)
-# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/ft2.tpl,v 1.5 2005/11/30 18:12:24 jchiang Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/ft2.tpl,v 1.6 2005/12/23 19:51:49 jchiang Exp $
 SIMPLE      = T                           / file does conform to FITS standard
 BITPIX      = 8                           / number of bits per data pixel
 NAXIS       = 0                           / number of data axes
 EXTEND      = T                           / FITS dataset may contain extensions
 CHECKSUM    =                             / checksum for entire HDU
-DATASUM     =                             / checksum for data table
 TELESCOP    = 'GLAST'                     / name of telescope generating data
 INSTRUME    = 'LAT'                       / name of instrument generating data
 EQUINOX     = 2000.0                      / equinox for ra and dec
