@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Tue Mar 28 11:02:50 PST 2006
+fitsGen/data
+
+Modified Files:
+	ft1.tpl ft2.tpl 
+Log Message:
+remove DATASUM keywords from primary header
+    *
+------------------------------------------------------------
 TAG
 Tag name: v2r3p5, operation: add
 Package: fitsGen
