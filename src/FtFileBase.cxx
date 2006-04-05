@@ -3,7 +3,7 @@
  * @brief Implementation of FT1/2 file base class.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/FtFileBase.cxx,v 1.7 2006/02/03 06:03:42 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/FtFileBase.cxx,v 1.8 2006/03/14 17:33:19 jchiang Exp $
  */
 
 #include <iostream>
@@ -19,7 +19,6 @@
 #include "st_facilities/Util.h"
 
 #include "fitsGen/FtFileBase.h"
-#include "fitsGen/Util.h"
 
 namespace fitsGen {
 
@@ -58,14 +57,14 @@ FtFileBase::~FtFileBase() {
 
 void FtFileBase::close() {
    if (m_table) {
-      Util::writeDateKeywords(m_table, m_startTime, m_stopTime, true,
-                              s_missionStart);
+      st_facilities::Util::writeDateKeywords(m_table, m_startTime, m_stopTime,
+                                             true, s_missionStart);
       delete m_table;
       m_table = 0;
 
       tip::Image * phdu(tip::IFileSvc::instance().editImage(m_outfile, ""));
-      Util::writeDateKeywords(phdu, m_startTime, m_stopTime, false,
-                              s_missionStart);
+      st_facilities::Util::writeDateKeywords(phdu, m_startTime, m_stopTime, 
+                                             false, s_missionStart);
       delete phdu;
    }
 }
