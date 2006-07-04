@@ -3,7 +3,7 @@
  * @brief Convert merit ntuple to FT1 format.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.16 2006/03/14 17:33:20 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.17 2006/03/16 05:21:49 jchiang Exp $
  */
 
 #include <cctype>
@@ -45,7 +45,7 @@ namespace {
       st_facilities::Util::readLines(inputFile, lines, "#", true);
       for (size_t i = 0; i < lines.size(); i++) {
          std::vector<std::string> tokens;
-         facilities::Util::stringTokenize(lines.at(i), " ", tokens);
+         facilities::Util::stringTokenize(lines.at(i), " \t", tokens);
          ft1Dict[tokens.at(0)] = tokens.at(1);
       }
    }
