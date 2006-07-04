@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Mon Jul  3 18:30:50 PDT 2006
+fitsGen/data
+
+Modified Files:
+	FT1variables 
+Log Message:
+allow tabs (blech) in FT1variables
+    *
+------------------------------------------------------------
 TAG
 Tag name: v2r4, operation: add
 Package: fitsGen
