@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Mon Jul  3 18:30:51 PDT 2006
+fitsGen/src/makeFT1
+
+Modified Files:
+	makeFT1.cxx 
+Log Message:
+allow tabs (blech) in FT1variables
+    *
+------------------------------------------------------------
 User: jchiang  Mon Jul  3 18:30:50 PDT 2006
 fitsGen/data
 
