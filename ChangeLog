@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Thu Jul 13 13:05:58 PDT 2006
+fitsGen/src/makeFT1
+
+Modified Files:
+	makeFT1.cxx 
+Log Message:
+convert makeFT1 to an FTOOL; modify PHDU header keywords; tagging v3
+    *
+------------------------------------------------------------
+User: jchiang  Thu Jul 13 13:05:58 PDT 2006
 fitsGen/src
 
 Modified Files:
