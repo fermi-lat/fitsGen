@@ -3,15 +3,12 @@
  * @brief Implementation of FT1/2 file base class.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/FtFileBase.cxx,v 1.8 2006/03/14 17:33:19 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/FtFileBase.cxx,v 1.9 2006/04/05 22:08:43 jchiang Exp $
  */
 
 #include <iostream>
 #include <stdexcept>
 #include <string>
-
-#include "tip/IFileSvc.h"
-#include "tip/Image.h"
 
 #include "astro/JulianDate.h"
 
