@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Thu Jul 13 13:05:56 PDT 2006
+fitsGen/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+convert makeFT1 to an FTOOL; modify PHDU header keywords; tagging v3
+    *
+------------------------------------------------------------
 TAG
 Tag name: v2r4p1, operation: add
 Package: fitsGen
