@@ -1,9 +1,9 @@
 package fitsGen
-version v2r4p1
+version v3
 
 author James Chiang <jchiang@slac.stanford.edu>
 
-# $Id: requirements,v 1.43 2006/04/05 22:08:42 jchiang Exp $
+# $Id: requirements,v 1.44 2006/07/04 01:31:46 jchiang Exp $
 
 use GlastPolicy v*
 use facilities v*
@@ -11,6 +11,8 @@ use tip v*
 use astro v*
 use st_facilities v*
 use dataSubselector v*
+use st_app v*
+use st_stream v*
 
 apply_pattern package_include
 apply_pattern package_linkopts
@@ -21,7 +23,9 @@ macro source *.cxx WIN32 "*.h *.cxx"
 
 library fitsGen -no_share $(source)
 
-application makeFT1 makeFT1/makeFT1.cxx
+apply_pattern ST_pfiles
+
+apply_pattern ST_app name=makeFT1
 application makeFT2 makeFT2/makeFT2.cxx
 application makeFT2a makeFT2a/makeFT2a.cxx
 
