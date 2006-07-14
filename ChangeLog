@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Thu Jul 13 21:57:10 PDT 2006
+fitsGen/src/makeFT1
+
+Modified Files:
+	makeFT1.cxx 
+Log Message:
+set FILENAME; tagging v3r0p1
+    *
+------------------------------------------------------------
+User: jchiang  Thu Jul 13 21:57:10 PDT 2006
 fitsGen/doc
 
 Modified Files:
