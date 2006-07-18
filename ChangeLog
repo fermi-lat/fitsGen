@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Tue Jul 18 07:40:43 PDT 2006
+fitsGen/fitsGen
+
+Modified Files:
+	FtFileBase.h 
+Log Message:
+omit SOFTWARE keyword from FT1/2 headers
+    *
+------------------------------------------------------------
+User: jchiang  Tue Jul 18 07:40:43 PDT 2006
 fitsGen/data
 
 Modified Files:
