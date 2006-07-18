@@ -3,7 +3,7 @@
  * @brief Declaration of FT1/2 file base class
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/FtFileBase.h,v 1.4 2006/03/14 17:33:17 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/FtFileBase.h,v 1.5 2006/07/13 20:05:57 jchiang Exp $
  */
 
 #ifndef fitsGen_FtFileBase_h
@@ -81,6 +81,10 @@ public:
 
    static const astro::JulianDate & missionStart() {
       return s_missionStart;
+   }
+
+   const std::string & filename() const {
+      return m_outfile;
    }
 
 protected:

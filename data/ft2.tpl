@@ -1,5 +1,5 @@
 # Definition of LAT Pointing & Livetime History File (FT2)
-# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/ft2.tpl,v 1.7 2006/03/28 19:02:49 jchiang Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/ft2.tpl,v 1.8 2006/07/14 15:57:49 jchiang Exp $
 SIMPLE      = T                           / file does conform to FITS standard
 BITPIX      = 8                           / number of bits per data pixel
 NAXIS       = 0                           / number of data axes
@@ -17,7 +17,7 @@ ORIGIN      = 'LISOC'                     / name of organization making file
 #AUTHOR      =                             / name of person responsible for file generation
 CREATOR     =                             / software and version creating file
 VERSION     = 1                           / release version of the file
-SOFTWARE    =                             / version of the processing software
+#SOFTWARE    =                             / version of the processing software
 END
 
 XTENSION     = 'BINTABLE'                  / binary table extension

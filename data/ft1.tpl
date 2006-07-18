@@ -1,5 +1,5 @@
 # Definition of LAT Event Summary File (FT1)
-# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/ft1.tpl,v 1.12 2006/07/13 20:05:57 jchiang Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/ft1.tpl,v 1.13 2006/07/14 15:57:49 jchiang Exp $
 SIMPLE      = T                              / file does conform to FITS standard
 BITPIX      = 8                              / number of bits per data pixel
 NAXIS       = 0                              / number of data axes
@@ -16,7 +16,7 @@ FILENAME    =                                / name of this file
 ORIGIN      = 'LISOC'                        / name of organization making file
 CREATOR     =                                / software and version creating file
 VERSION     = 1                              / release version of the file
-SOFTWARE    =                                / version of the processing software
+#SOFTWARE    =                                / version of the processing software
 END
 
 XTENSION    = 'BINTABLE'                                / binary table extension
