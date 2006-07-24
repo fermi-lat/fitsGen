@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Mon Jul 24 13:07:22 PDT 2006
+fitsGen/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+set CLOCKAPP, GPS_OUT keywords in template files; strip path info from FILENAME value; tagging v3r0p4
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r0p3, operation: add
 Package: fitsGen
