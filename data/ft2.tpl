@@ -1,5 +1,5 @@
 # Definition of LAT Pointing & Livetime History File (FT2)
-# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/ft2.tpl,v 1.8 2006/07/14 15:57:49 jchiang Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/ft2.tpl,v 1.9 2006/07/18 14:40:42 jchiang Exp $
 SIMPLE      = T                           / file does conform to FITS standard
 BITPIX      = 8                           / number of bits per data pixel
 NAXIS       = 0                           / number of data axes
@@ -46,8 +46,8 @@ TIMEZERO     = 0.0                         / clock correction
 TIMESYS      = 'TT'                        / type of time system that is used
 TIMEREF      = 'LOCAL'                     / reference frame used for times
 TASSIGN      = 'SATELLITE'                 / location where time assignment performed
-CLOCKAPP     =                             / whether a clock drift correction has been applied
-GPS_OUT      =                             / whether GPS time was unavailable at any time during this interval
+CLOCKAPP     = F                           / whether a clock drift correction has been applied
+GPS_OUT      = F                           / whether GPS time was unavailable at any time during this interval
 TTYPE1       = 'START'                     / starting time of interval (Mission Elapsed Time)
 TFORM1       = 'D'                         / data format of field: 8-byte DOUBLE
 TUNIT1       = 's'                         / physical unit of field

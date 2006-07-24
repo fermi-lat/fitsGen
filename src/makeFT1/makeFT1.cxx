@@ -3,7 +3,7 @@
  * @brief Convert merit ntuple to FT1 format.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.20 2006/07/14 04:57:10 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.21 2006/07/18 14:40:43 jchiang Exp $
  */
 
 #include <cctype>
@@ -179,7 +179,8 @@ void MakeFt1::run() {
    ft1.setPhduKeyword("CREATOR", creator.str());
    std::string version = m_pars["file_version"];
    ft1.setPhduKeyword("VERSION", version);
-   ft1.setPhduKeyword("FILENAME", fitsFile);
+   std::string filename(facilities::Util::basename(fitsFile));
+   ft1.setPhduKeyword("FILENAME", filename);
 
    my_cuts.writeGtiExtension(fitsFile);
    st_facilities::FitsUtil::writeChecksums(fitsFile);
