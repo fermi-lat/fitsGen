@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Mon Jul 24 13:07:23 PDT 2006
+fitsGen/data
+
+Modified Files:
+	ft1.tpl ft2.tpl 
+Log Message:
+set CLOCKAPP, GPS_OUT keywords in template files; strip path info from FILENAME value; tagging v3r0p4
+    *
+------------------------------------------------------------
 User: jchiang  Mon Jul 24 13:07:22 PDT 2006
 fitsGen/cmt
 
