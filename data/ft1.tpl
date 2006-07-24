@@ -1,5 +1,5 @@
 # Definition of LAT Event Summary File (FT1)
-# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/ft1.tpl,v 1.13 2006/07/14 15:57:49 jchiang Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/ft1.tpl,v 1.14 2006/07/18 14:40:42 jchiang Exp $
 SIMPLE      = T                              / file does conform to FITS standard
 BITPIX      = 8                              / number of bits per data pixel
 NAXIS       = 0                              / number of data axes
@@ -47,8 +47,8 @@ TIMEUNIT    = 's'                                       / units for the time rel
 TIMEZERO    = 0.0                                       / clock correction
 TIMESYS     = 'TT'                                      / type of time system that is used
 TIMEREF     = 'LOCAL'                                   / reference frame used for times
-CLOCKAPP    =                                           / whether a clock drift correction has been applied
-GPS_OUT     =                                           / whether GPS time was unavailable at any time during this interval
+CLOCKAPP    = F                                         / whether a clock drift correction has been applied
+GPS_OUT     = F                                         / whether GPS time was unavailable at any time during this interval
 NDSKEYS     = 0                                         / number of data subspace keywords in header
 TTYPE1      = 'ENERGY'                                  / energy of event
 TFORM1      = 'E'                                       / data format of field: 4-byte REAL
