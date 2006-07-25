@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Mon Jul 24 17:56:53 PDT 2006
+fitsGen/data
+
+Modified Files:
+	ft1.tpl ft2.tpl std_cuts 
+Log Message:
+add a bunch of redundant information to template files; restore std_cuts to DC2 def
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r0p4, operation: add
 Package: fitsGen
