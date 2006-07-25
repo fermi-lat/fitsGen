@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Mon Jul 24 21:42:32 PDT 2006
+fitsGen/src/makeFT2
+
+Modified Files:
+	makeFT2.cxx 
+Log Message:
+convert makeFT2 to FTOOL
+    *
+------------------------------------------------------------
+User: jchiang  Mon Jul 24 21:42:32 PDT 2006
 fitsGen/pfiles
 
 Modified Files:
