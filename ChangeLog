@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Thu Aug  3 13:00:44 PDT 2006
+fitsGen/data
+
+Modified Files:
+	ft2.tpl 
+Log Message:
+add OBSERVER and ORIGIN keywords to SC_DATA header
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r1, operation: add
 Package: fitsGen
