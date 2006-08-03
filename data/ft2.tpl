@@ -1,5 +1,5 @@
 # Definition of LAT Pointing & Livetime History File (FT2)
-# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/ft2.tpl,v 1.10 2006/07/24 20:07:23 jchiang Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/ft2.tpl,v 1.11 2006/07/25 00:56:52 jchiang Exp $
 SIMPLE      = T                           / file does conform to FITS standard
 BITPIX      = 8                           / number of bits per data pixel
 NAXIS       = 0                           / number of data axes
@@ -42,6 +42,8 @@ RADECSYS     = 'FK5'                       / world coord. system for this file (
 DATE         =                             / file creation date (YYYY-MM-DDThh:mm:ss UT)
 DATE-OBS     =                             / start date and time of the observation (UTC)
 DATE-END     =                             / end date and time of the observation (UTC)
+OBSERVER    = 'Peter Michelson'            / GLAST/LAT PI
+ORIGIN      = 'LISOC'                      / name of organization making file
 EXTNAME      = 'SC_DATA'                   / name of this binary table extension
 TSTART       =                             / mission time of the start of the observation
 TSTOP        =                             / mission time of the end of the observation
