@@ -1,5 +1,5 @@
 # Definition of LAT Event Summary File (FT1)
-# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/ft1.tpl,v 1.17 2006/07/25 14:59:31 jchiang Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/ft1.tpl,v 1.18 2006/07/25 16:04:43 jchiang Exp $
 SIMPLE      = T                              / file does conform to FITS standard
 BITPIX      = 8                              / number of bits per data pixel
 NAXIS       = 0                              / number of data axes
@@ -16,6 +16,7 @@ TSTART      =                                / mission time of the start of the 
 TSTOP       =                                / mission time of the end of the observation
 TIMEUNIT    = 's'                            / units for the time related keywords
 TIMESYS     = 'TT'                           / type of time system that is used
+GPS_OUT     = F                                         / whether GPS time was unavailable at any time during this interval
 MJDREFI     = 51910.                         / Integer part of MJD corresponding to SC clock start
 MJDREFF     = 7.428703703703703D-4           / Fractional part of MJD corresponding to SC clock start
 OBSERVER    = 'Peter Michelson'              / GLAST/LAT PI
