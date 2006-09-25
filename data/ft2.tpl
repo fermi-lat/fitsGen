@@ -1,5 +1,5 @@
 # Definition of LAT Pointing & Livetime History File (FT2)
-# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/ft2.tpl,v 1.11 2006/07/25 00:56:52 jchiang Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/ft2.tpl,v 1.12 2006/08/03 20:00:44 jchiang Exp $
 SIMPLE      = T                           / file does conform to FITS standard
 BITPIX      = 8                           / number of bits per data pixel
 NAXIS       = 0                           / number of data axes
@@ -14,6 +14,9 @@ DATE-OBS    =                             / start date and time of the observati
 DATE-END    =                             / end date and time of the observation (UTC)
 TSTART      =                                / mission time of the start of the observation
 TSTOP       =                                / mission time of the end of the observation
+TIMESYS     = 'TT'                           / type of time system that is used
+TIMEUNIT    = 's'                            / units for TSTART and TSTOP keywords
+GPS_OUT     = F                              / whether GPS time was unavailable at any time during this interval
 MJDREFI     = 51910.                         / Integer part of MJD corresponding to SC clock start
 MJDREFF     = 7.428703703703703D-4           / Fractional part of MJD corresponding to SC clock start
 OBSERVER    = 'Peter Michelson'              / GLAST/LAT PI
