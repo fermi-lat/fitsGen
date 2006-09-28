@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Thu Sep 28 09:42:06 PDT 2006
+fitsGen/src
+
+Removed Files:
+	Util.cxx 
+Log Message:
+remove fitsGen/Util
+    *
+------------------------------------------------------------
 User: jchiang  Thu Sep 28 09:42:05 PDT 2006
 fitsGen/fitsGen
 
