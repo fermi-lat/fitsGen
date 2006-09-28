@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Thu Sep 28 09:42:07 PDT 2006
+fitsGen/src/makeFT2
+
+Modified Files:
+	makeFT2.cxx 
+Log Message:
+remove fitsGen/Util
+    *
+------------------------------------------------------------
 User: jchiang  Thu Sep 28 09:42:06 PDT 2006
 fitsGen/src/makeFT1
 
