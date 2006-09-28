@@ -3,7 +3,7 @@
  * @brief Convert merit ntuple to FT1 format.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.21 2006/07/18 14:40:43 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.22 2006/07/24 20:07:23 jchiang Exp $
  */
 
 #include <cctype>
@@ -34,7 +34,6 @@
 
 #include "fitsGen/Ft1File.h"
 #include "fitsGen/MeritFile.h"
-#include "fitsGen/Util.h"
 
 using namespace fitsGen;
 
@@ -90,7 +89,7 @@ public:
          std::cerr << eObj.what() << std::endl;
          std::exit(1);
       } catch (...) {
-         std::cerr << "Caught unknown exception in DataFilter constructor." 
+         std::cerr << "Caught unknown exception in MakeFT1 constructor." 
                    << std::endl;
          std::exit(1);
       }
