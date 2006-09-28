@@ -3,7 +3,7 @@
  * @brief Convert ascii D2 data from Gleam to FT2.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2a/makeFT2a.cxx,v 1.9 2005/12/18 05:51:53 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2a/makeFT2a.cxx,v 1.10 2006/01/10 18:42:25 jchiang Exp $
  */
 
 #include <cmath>
@@ -22,7 +22,6 @@
 #include "astro/EarthCoordinate.h"
 
 #include "fitsGen/Ft2File.h"
-#include "fitsGen/Util.h"
 
 using namespace fitsGen;
 

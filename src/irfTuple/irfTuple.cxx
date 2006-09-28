@@ -4,7 +4,7 @@
  * ntuple to a FITS file
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/irfTuple/irfTuple.cxx,v 1.11 2005/12/18 05:51:53 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/irfTuple/irfTuple.cxx,v 1.1 2006/01/20 06:23:19 jchiang Exp $
  */
 
 #include <cstdlib>
@@ -25,7 +25,6 @@
 
 #include "fitsGen/Ft1File.h"
 #include "fitsGen/MeritFile.h"
-#include "fitsGen/Util.h"
 
 using namespace fitsGen;
 

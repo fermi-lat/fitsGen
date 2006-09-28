@@ -3,7 +3,7 @@
  * @brief Convert Root D2 data from Gleam to FT2 format.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2/makeFT2.cxx,v 1.7 2005/12/18 05:51:53 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2/makeFT2.cxx,v 1.8 2006/07/25 04:42:32 jchiang Exp $
  */
 
 #include <iostream>
@@ -32,7 +32,7 @@ public:
          std::cerr << eObj.what() << std::endl;
          std::exit(1);
       } catch (...) {
-         std::cerr << "Caught unknown exception in DataFilter constructor." 
+         std::cerr << "Caught unknown exception in MakeFt2 constructor." 
                    << std::endl;
          std::exit(1);
       }
