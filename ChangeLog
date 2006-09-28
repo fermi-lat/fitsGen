@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Thu Sep 28 09:42:06 PDT 2006
+fitsGen/src/makeFT1
+
+Modified Files:
+	makeFT1.cxx 
+Log Message:
+remove fitsGen/Util
+    *
+------------------------------------------------------------
+User: jchiang  Thu Sep 28 09:42:06 PDT 2006
 fitsGen/src/irfTuple
 
 Modified Files:
