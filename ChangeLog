@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Sun Dec 10 15:15:55 PST 2006
+fitsGen/fitsGen
+
+Added Files:
+	EventClassifier.h 
+Log Message:
+add EventClassifier class, using embed_python to execute underlying EventClassifier python script
+    *
+------------------------------------------------------------
+User: jchiang  Sun Dec 10 15:15:55 PST 2006
 fitsGen/cmt
 
 Modified Files:
