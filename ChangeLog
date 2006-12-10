@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Sun Dec 10 15:15:55 PST 2006
+fitsGen/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+add EventClassifier class, using embed_python to execute underlying EventClassifier python script
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r1p3, operation: add
 Package: fitsGen
