@@ -3,7 +3,7 @@ version v3r1p3
 
 author James Chiang <jchiang@slac.stanford.edu>
 
-# $Id: requirements,v 1.53 2006/09/25 17:30:10 jchiang Exp $
+# $Id: requirements,v 1.54 2006/09/28 16:43:36 jchiang Exp $
 
 use GlastPolicy v*
 use facilities v*
@@ -13,6 +13,7 @@ use st_facilities v*
 use dataSubselector v*
 use st_app v*
 use st_stream v*
+use embed_python v*
 
 apply_pattern package_include
 apply_pattern package_linkopts
