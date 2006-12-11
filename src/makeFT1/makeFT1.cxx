@@ -3,7 +3,7 @@
  * @brief Convert merit ntuple to FT1 format.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.22 2006/07/24 20:07:23 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.23 2006/09/28 16:42:06 jchiang Exp $
  */
 
 #include <cctype>
@@ -34,6 +34,7 @@
 
 #include "fitsGen/Ft1File.h"
 #include "fitsGen/MeritFile.h"
+#include "fitsGen/EventClassifier.h"
 
 using namespace fitsGen;
 
@@ -124,6 +125,7 @@ void MakeFt1::run() {
    m_pars.Save();
    std::string rootFile = m_pars["rootFile"];
    std::string fitsFile = m_pars["fitsFile"];
+   std::string eventClassifier = m_pars["event_classifier"];
    std::string defaultFilter = m_pars["TCuts"];
 
    std::string dataDir(st_facilities::Env::getDataDir("fitsGen"));
@@ -157,6 +159,8 @@ void MakeFt1::run() {
    
    ft1.header().addHistory("Input merit file: " + rootFile);
    ft1.header().addHistory("Filter string: " + filter);
+
+   EventClassifier eventClass(eventClassifier);
    
    int ncount(0);
    for ( ; merit.itor() != merit.end(); merit.next(), ft1.next()) {
@@ -164,7 +168,8 @@ void MakeFt1::run() {
            variable != ft1Dict.end(); ++variable) {
          ft1[variable->first].set(merit[variable->second]);
       }
-      ft1["event_class"].set(merit.eventType());
+//      ft1["event_class"].set(merit.eventType());
+      ft1["event_class"].set(eventClass(merit.row()));
       ft1["conversion_type"].set(merit.conversionType());
       ncount++;
    }
