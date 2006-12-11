@@ -2,13 +2,14 @@
 @brief Python code for parsing ROOT TCuts and partitioning Gleam
 events into event classes.  A function object eventClassifier should
 be created as an instance of EventClassifier with the desired TCuts
-defining the various classes. The function eventClassifier will be
+defining the various classes. The eventClassifier functor will be
 called from makeFT1 via embed_python and the fitsGen::EventClassifier
 class.
+
 @author J. Chiang <jchiang@slac.stanford.edu>
 """
 #
-# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/python/EventClassifier.py,v 1.2 2006/12/11 05:53:58 jchiang Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/python/EventClassifier.py,v 1.3 2006/12/11 19:09:51 jchiang Exp $
 #
 
 class EventClassifier(object):
@@ -24,12 +25,12 @@ class EventClassifier(object):
         return -1
 
 if __name__ == '__main__':
-    cuts = ['CTBSummedCTBGAM>=0.5 && CTBCORE>=0.8',
-            'CTBSummedCTBGAM>=0.5 && CTBCORE>=0.5 && CTBCORE<0.8',
-            'CTBSummedCTBGAM>=0.5 && CTBCORE<0.5',
-            'CTBSummedCTBGAM>=0.1 && CTBSummedCTBGAM<0.5',
-            'CTBSummedCTBGAM<0.1']
-    eventClassifier = EventClassifier(cuts)
+    TCuts = ['CTBSummedCTBGAM>=0.5 && CTBCORE>=0.8',
+             'CTBSummedCTBGAM>=0.5 && CTBCORE>=0.5 && CTBCORE<0.8',
+             'CTBSummedCTBGAM>=0.5 && CTBCORE<0.5',
+             'CTBSummedCTBGAM>=0.1 && CTBSummedCTBGAM<0.5',
+             'CTBSummedCTBGAM<0.1']
+    eventClassifier = EventClassifier(TCuts)
     rows = [{'CTBSummedCTBGAM' : 0.5,
              'CTBCORE' : 0.8},
             {'CTBSummedCTBGAM' : 0.5,
@@ -40,5 +41,5 @@ if __name__ == '__main__':
              'CTBCORE' : 0.8},
             {'CTBSummedCTBGAM' : 0.05,
              'CTBCORE' : 0.8}]
-    for row in rows:
-        print eventClassifier(row)
+    for i, row in enumerate(rows):
+        assert(i == eventClassifier(row))

@@ -5,7 +5,7 @@ partitioning Gleam events into event classes.
 @author J. Chiang <jchiang@slac.stanford.edu>
 """
 #
-# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/python/DC2_Classifier.py,v 1.2 2006/12/11 07:14:35 jchiang Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/python/DC2_Classifier.py,v 1.3 2006/12/11 19:09:51 jchiang Exp $
 #
 
 from EventClassifier import EventClassifier
@@ -16,8 +16,8 @@ Tkr1FirstLayer  CTBCORE  CTBGAM  CTBBestEnergyProb
 
 #
 # DC2 Event class cuts.  Note that the ordering ensures that class A
-# events are assigned first, so that class B event need only be
-# defined by lower their looser limits.  Defining the cuts using an
+# events are assigned first, so that class B events need only be
+# defined by their looser lower limits.  Defining the cuts using an
 # order from more to less restrictive also helps ensure that the
 # events are properly partitioned.
 #
