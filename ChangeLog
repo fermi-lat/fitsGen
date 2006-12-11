@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Sun Dec 10 23:14:35 PST 2006
+fitsGen/python
+
+Modified Files:
+	DC2_Classifier.py 
+Log Message:
+small changes to EventClassifier as fallout from trying Py_DECREF(args); document DC2_Classifier.py
+    *
+------------------------------------------------------------
+User: jchiang  Sun Dec 10 23:14:35 PST 2006
 fitsGen/fitsGen
 
 Modified Files:
