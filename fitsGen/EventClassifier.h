@@ -5,7 +5,7 @@
  * partitioning and event class number assignment.
  * @author J. Chiang
  *
- * $Header$
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/EventClassifier.h,v 1.1 2006/12/10 23:15:55 jchiang Exp $
  */
 
 #ifndef fitsGen_EventClassifier_h
@@ -39,9 +39,9 @@ public:
 
    ~EventClassifier() throw();
 
-   long eventClass(tip::ConstTableRecord & row);
+   long operator()(tip::ConstTableRecord & row);
 
-   long eventClass(const std::map<std::string, double> & row);
+   long operator()(const std::map<std::string, double> & row);
 
 private:
 
@@ -58,7 +58,7 @@ private:
 
    public:
 
-      MeritDict() {}
+      MeritDict() : m_dict(0) {}
 
       MeritDict(embed_python::Module * module);
 
@@ -75,7 +75,7 @@ private:
          return m_keys;
       }
 
-      PyObject * operator()() {
+      PyObject * pyDict() {
          return m_dict;
       }
 
@@ -85,7 +85,7 @@ private:
 
       PyObject * m_dict;
 
-   } m_meritDict;
+   } * m_meritDict;
 
    std::string pythonPath() const;
 
