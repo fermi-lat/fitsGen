@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Mon Dec 11 11:09:52 PST 2006
+fitsGen/src/test
+
+Modified Files:
+	test.cxx 
+Log Message:
+add Py_DECREFs; refactor EventClassifier.py et al.
+    *
+------------------------------------------------------------
 User: jchiang  Mon Dec 11 11:09:51 PST 2006
 fitsGen/src
 
