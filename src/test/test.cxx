@@ -3,7 +3,7 @@
  * @brief Scaffolding for EventClassifier code.
  * @author J. Chiang
  *
- * $Header$
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/test/test.cxx,v 1.1 2006/12/11 03:55:52 jchiang Exp $
  */
 
 #include <iostream>
@@ -23,7 +23,7 @@ void run(fitsGen::EventClassifier & eventClass,
 
 int main() {
    try {
-      fitsGen::EventClassifier foo("EventClassifier");
+      fitsGen::EventClassifier foo("Pass4_Classifier");
       run(foo, 0.5, 0.8);
       run(foo, 0.5, 0.7);
       run(foo, 0.5, 0.3);
