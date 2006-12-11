@@ -7,14 +7,18 @@ EventClassifier class from makeFT1.
 @author J. Chiang <jchiang@slac.stanford.edu>
 """
 #
-# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/python/EventClassifier.py,v 1.1 2006/12/11 03:55:52 jchiang Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/python/DC2_Classifier.py,v 1.1 2006/12/11 05:53:58 jchiang Exp $
 #
 meritVariables = """
 Tkr1FirstLayer  CTBCORE  CTBGAM  CTBBestEnergyProb
 """.split()
 
 #
-# Example event class cuts.
+# DC2 Event class cuts.  Note that the ordering ensures that class A
+# events are assigned first, so that class B event need only be
+# defined by lower their looser limits.  Defining the cuts using an
+# order from more to less restrictive also helps ensure that the
+# events are properly partitioned.
 #
 eventClassCuts = ["CTBCORE > 0.35 && CTBBestEnergyProb > 0.35 && "
                   + " CTBGAM > 0.50 && Tkr1FirstLayer > 5.5",

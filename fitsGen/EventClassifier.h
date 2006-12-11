@@ -5,7 +5,7 @@
  * partitioning and event class number assignment.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/EventClassifier.h,v 1.1 2006/12/10 23:15:55 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/EventClassifier.h,v 1.2 2006/12/11 03:55:52 jchiang Exp $
  */
 
 #ifndef fitsGen_EventClassifier_h
@@ -51,7 +51,7 @@ private:
 
    /**
     * @class Nested class to encapsulate relevant merit variables for
-    * access to from event classifier script.
+    * access from event classifier script.
     */
 
    class MeritDict {
