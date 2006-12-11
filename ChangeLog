@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Sun Dec 10 21:53:59 PST 2006
+fitsGen/src
+
+Modified Files:
+	EventClassifier.cxx 
+Log Message:
+use python event classifier script in makeFT1
+    *
+------------------------------------------------------------
 User: jchiang  Sun Dec 10 21:53:58 PST 2006
 fitsGen/python
 
