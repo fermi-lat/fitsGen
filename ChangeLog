@@ -1,5 +1,16 @@
 ------------------------------------------------------------
 User: jchiang  Sun Dec 10 21:53:58 PST 2006
+fitsGen/python
+
+Modified Files:
+	EventClassifier.py 
+Added Files:
+	DC2_Classifier.py 
+Log Message:
+use python event classifier script in makeFT1
+    *
+------------------------------------------------------------
+User: jchiang  Sun Dec 10 21:53:58 PST 2006
 fitsGen/pfiles
 
 Modified Files:
