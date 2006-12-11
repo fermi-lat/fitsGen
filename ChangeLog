@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: jchiang  Mon Dec 11 11:09:51 PST 2006
+fitsGen/python
+
+Modified Files:
+	DC2_Classifier.py EventClassifier.py 
+Added Files:
+	Pass4_Classifier.py 
+Log Message:
+add Py_DECREFs; refactor EventClassifier.py et al.
+    *
+------------------------------------------------------------
 User: jchiang  Sun Dec 10 23:14:36 PST 2006
 fitsGen/src
 
