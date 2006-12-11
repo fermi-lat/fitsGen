@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Sun Dec 10 19:55:52 PST 2006
+fitsGen/src
+
+Modified Files:
+	EventClassifier.cxx 
+Log Message:
+add test code and python implementation for EventClassifier
+    *
+------------------------------------------------------------
+User: jchiang  Sun Dec 10 19:55:52 PST 2006
 fitsGen/python
 
 Added Files:
