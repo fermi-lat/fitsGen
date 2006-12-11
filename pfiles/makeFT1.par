@@ -1,8 +1,9 @@
 # @file makeFT1.par
-# $Header$
+# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/pfiles/makeFT1.par,v 1.2 2006/07/25 04:42:32 jchiang Exp $
 #
 rootFile,fr,a,"",,,merit filename
 fitsFile,f,a,"",,,FT1 filename
+event_classifier,s,a,DC2_Classifier,,,Event classifier script
 TCuts,s,h,DEFAULT,,,TCut to apply
 dict_file,s,h,DEFAULT,,,merit-to-FT1 dictionary file
 file_version,s,h,1,,,Version of FT1 file

@@ -5,7 +5,7 @@
  * partitioning and event class number assignment.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/EventClassifier.cxx,v 1.1 2006/12/10 23:15:55 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/EventClassifier.cxx,v 1.2 2006/12/11 03:55:52 jchiang Exp $
  */
 
 #include <iostream>
@@ -21,7 +21,8 @@ namespace fitsGen {
 
 EventClassifier::EventClassifier(const std::string & classifierScript) 
    : m_module(0), m_meritDict(0) {
-   m_module = new embed_python::Module(pythonPath(), classifierScript);
+   m_module = new embed_python::Module("", classifierScript, false,
+                                       pythonPath());
    m_meritDict = new MeritDict(m_module);
    m_classifier = m_module->attribute("eventClassifier");
 }

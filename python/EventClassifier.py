@@ -6,9 +6,8 @@ called via embed_python and the EventClassifier class from makeFT1.
 @author J. Chiang <jchiang@slac.stanford.edu>
 """
 #
-# $Header$
+# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/python/EventClassifier.py,v 1.1 2006/12/11 03:55:52 jchiang Exp $
 #
-
 meritVariables = """
 EvtRun    EvtEnergyCorr 
 McEnergy  McXDir  McYDir  McZDir   
