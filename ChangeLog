@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Mon Dec 11 17:22:31 PST 2006
+fitsGen/src
+
+Modified Files:
+	EventClassifier.cxx 
+Log Message:
+refactoring
+    *
+------------------------------------------------------------
+User: jchiang  Mon Dec 11 17:22:31 PST 2006
 fitsGen/fitsGen
 
 Modified Files:
