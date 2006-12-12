@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Mon Dec 11 17:22:31 PST 2006
+fitsGen/fitsGen
+
+Modified Files:
+	EventClassifier.h 
+Log Message:
+refactoring
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r2, operation: add
 Package: fitsGen
