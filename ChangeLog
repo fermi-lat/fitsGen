@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Sun Apr  8 12:49:03 PDT 2007
+fitsGen/data
+
+Added Files:
+	pass4_cuts 
+Log Message:
+corrections for classifier script, add default pass4 cuts
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r2p1, operation: add
 Package: fitsGen
