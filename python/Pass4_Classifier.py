@@ -4,7 +4,7 @@
 @author J. Chiang <jchiang@slac.stanford.edu>
 """
 #
-# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/python/Pass4_Classifier.py,v 1.1 2006/12/11 19:09:51 jchiang Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/python/Pass4_Classifier.py,v 1.2 2007/03/18 21:59:45 jchiang Exp $
 #
 from EventClassifier import EventClassifier
 
@@ -22,11 +22,9 @@ CTBCORE  CTBSummedCTBGAM  CTBBestEnergyProb
 # Event class cuts for standard/front, standard/back
 #
 
-eventClassCuts = ['(GltWord&&10)>0 && (GltWord!=35) && (FilterStatus_HI==0) &&'
-                  +'CTBBestEnergyProb>0.1 && CTBCORE>0.1 && CTBSummedCTBGAM>0.5'
-                  + 'Tkr1FirstLayer>5.5',
-                  '(GltWord&&10)>0 && (GltWord!=35) && (FilterStatus_HI==0) &&'
-                  +'CTBBestEnergyProb>0.1 && CTBCORE>0.1 && CTBSummedCTBGAM>0.5'
-                  + 'Tkr1FirstLayer<5.5']
+eventClassCuts = ['&&'.join(('(CTBBestEnergyProb>0.1)', '(CTBCORE>0.1)',
+                             '(CTBSummedCTBGAM>0.5)', '(Tkr1FirstLayer>5.5)')),
+                  '&&'.join(('(CTBBestEnergyProb>0.1)', '(CTBCORE>0.1)',
+                             '(CTBSummedCTBGAM>0.5)', '(Tkr1FirstLayer<5.5)'))]
 
 eventClassifier = EventClassifier(eventClassCuts)
