@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Mon Apr 23 09:18:06 PDT 2007
+fitsGen/pfiles
+
+Modified Files:
+	makeFT1.par 
+Log Message:
+set Pass4_Classifier as the default
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r2p2, operation: add
 Package: fitsGen
