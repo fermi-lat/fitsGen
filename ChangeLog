@@ -1,4 +1,56 @@
 ------------------------------------------------------------
+TAG
+Tag name: v3r3, operation: add
+Package: fitsGen
+User: jchiang  Wed May 16 09:01:18 2007
+Files:
+  fitsGen/.cvsignore  1.1.1.1
+  fitsGen/ChangeLog  1.364
+  fitsGen/cmt/.cvsignore  1.3
+  fitsGen/cmt/requirements  1.62
+  fitsGen/data/pointing_history.txt  1.1
+  fitsGen/data/ft1.tpl  1.19
+  fitsGen/data/egret_gtis_tjd.dat  1.2
+  fitsGen/data/merit_rocking.root  1.1
+  fitsGen/data/ft2.tpl  1.15
+  fitsGen/data/FT1variables  1.6
+  fitsGen/data/std_cuts  1.7
+  fitsGen/data/irfTupleNames  1.2
+  fitsGen/data/pass4_cuts  1.2
+  fitsGen/data/pointing_history.root  1.1
+  fitsGen/data/makeD2.py  1.1
+  fitsGen/data/merit.root  1.3
+  fitsGen/data/jobOptions_rocking.txt  1.1
+  fitsGen/doc/release.notes  1.46
+  fitsGen/doc/FT1_Documentation.html  1.2
+  fitsGen/doc/Doxyfile  1.6
+  fitsGen/fitsGen/FtFileBase.h  1.6
+  fitsGen/fitsGen/EventClassifier.h  1.4
+  fitsGen/fitsGen/Ft1File.h  1.9
+  fitsGen/fitsGen/Ft2File.h  1.2
+  fitsGen/fitsGen/MeritFile.h  1.5
+  fitsGen/pfiles/makeFT1.par  1.4
+  fitsGen/pfiles/makeFT2.par  1.1
+  fitsGen/python/Pass4_Classifier.py  1.3
+  fitsGen/python/EventClassifier.py  1.4
+  fitsGen/python/DC2_Classifier.py  1.4
+  fitsGen/src/MeritFile.cxx  1.6
+  fitsGen/src/EventClassifier.cxx  1.6
+  fitsGen/src/FtFileBase.cxx  1.10
+  fitsGen/src/Ft1File.cxx  1.11
+  fitsGen/src/convertFT1/convertFT1.cxx  1.2
+  fitsGen/src/egret2FT1/EgretSmdb.h  1.4
+  fitsGen/src/egret2FT1/EgretSmdb.cxx  1.5
+  fitsGen/src/egret2FT1/egret2FT1.cxx  1.7
+  fitsGen/src/irfTuple/irfTuple.cxx  1.2
+  fitsGen/src/makeFT1/makeFT1.cxx  1.25
+  fitsGen/src/makeFT2/makeFT2.cxx  1.10
+  fitsGen/src/makeFT2a/makeFT2a.cxx  1.12
+  fitsGen/src/partition/partition.cxx  1.1
+  fitsGen/src/test/test.cxx  1.3
+
+    *
+------------------------------------------------------------
 User: jchiang  Wed May 16 09:00:55 PDT 2007
 fitsGen/doc
 
