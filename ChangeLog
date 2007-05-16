@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Wed May 16 08:58:57 PDT 2007
+fitsGen/src/makeFT2a
+
+Modified Files:
+	makeFT2a.cxx 
+Log Message:
+fill GEOMAG_LAT column
+    *
+------------------------------------------------------------
+User: jchiang  Wed May 16 08:58:57 PDT 2007
 fitsGen/src/makeFT2
 
 Modified Files:
