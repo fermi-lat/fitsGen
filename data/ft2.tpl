@@ -1,5 +1,5 @@
 # Definition of LAT Pointing & Livetime History File (FT2)
-# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/ft2.tpl,v 1.12 2006/08/03 20:00:44 jchiang Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/ft2.tpl,v 1.13 2006/09/25 17:27:55 jchiang Exp $
 SIMPLE      = T                           / file does conform to FITS standard
 BITPIX      = 8                           / number of bits per data pixel
 NAXIS       = 0                           / number of data axes
@@ -138,9 +138,4 @@ TFORM17      = 'D'                         / data format of field: 8-byte DOUBLE
 TUNIT17      = 's'                         / physical unit of field
 TLMIN17      = 0.0                         / minimum value
 TLMAX17      = 1.0D+10                     / maximum value
-TTYPE18      = 'DEADTIME'                  / deadtime accumulated since start of mission
-TFORM18      = 'D'                         / data format of field: 8-byte DOUBLE
-TUNIT18      = 's'                         / physical unit of field
-TLMIN18      = 0.0                         / minimum value
-TLMAX18      = 1.0D+10                     / maximum value
 END
