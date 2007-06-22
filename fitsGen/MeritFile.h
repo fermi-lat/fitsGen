@@ -3,7 +3,7 @@
  * @brief Declaration for MeritTuple abstraction.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/MeritFile.h,v 1.4 2006/02/03 06:03:41 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/MeritFile.h,v 1.5 2006/02/06 00:36:59 jchiang Exp $
  */
 
 #ifndef fitsGen_MeritFile_h
@@ -72,6 +72,8 @@ private:
    tip::Table::ConstIterator m_it;
    tip::ConstTableRecord & m_row;
    long m_nrows;
+
+   bool m_haveTime;
 
    dataSubselector::Gti * m_gti;
 

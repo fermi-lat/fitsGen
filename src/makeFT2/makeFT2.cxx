@@ -3,10 +3,11 @@
  * @brief Convert Root D2 data from Gleam to FT2 format.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2/makeFT2.cxx,v 1.9 2006/09/28 16:42:07 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2/makeFT2.cxx,v 1.10 2007/05/16 15:58:57 jchiang Exp $
  */
 
 #include <iostream>
+#include <stdexcept>
 #include <string>
 
 #include "facilities/Util.h"
@@ -72,6 +73,10 @@ void MakeFt2::run() {
    std::string fitsFile = m_pars["fitsFile"];
 
    fitsGen::MeritFile pointing(rootFile, "pointing_history");
+   if (pointing.nrows() == 0) {
+      throw std::runtime_error("There are zero rows in the pointing_history "
+                               "tree of the input root file.");
+   }
    fitsGen::Ft2File ft2(fitsFile, pointing.nrows());
 
    ft2.header().addHistory("Input merit file: " + rootFile);
