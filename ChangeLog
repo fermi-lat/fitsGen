@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Fri Jun 22 11:40:10 PDT 2007
+fitsGen/src
+
+Modified Files:
+	MeritFile.cxx 
+Log Message:
+trap for zero entries in input pointing_history tree; workaround for merit tuples without EvtElapsedTime
+    *
+------------------------------------------------------------
 User: jchiang  Fri Jun 22 11:40:09 PDT 2007
 fitsGen/fitsGen
 
