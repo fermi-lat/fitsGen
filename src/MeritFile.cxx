@@ -3,8 +3,10 @@
  * @brief Implementation for merit tuple file abstraction using tip.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/MeritFile.cxx,v 1.5 2006/02/06 00:37:13 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/MeritFile.cxx,v 1.6 2006/02/10 23:12:17 jchiang Exp $
  */
+
+#include <algorithm>
 
 #include "tip/IFileSvc.h"
 
@@ -17,16 +19,20 @@ namespace fitsGen {
 
 MeritFile::MeritFile(const std::string & meritfile,
                      const std::string & tree,
-                     const std::string & filter) :
-   m_table(tip::IFileSvc::instance().readTable(meritfile, tree, filter)),
-   m_it(m_table->begin()),
-   m_row(*m_it),
-   m_nrows(m_table->getNumRecords()),
-   m_gti(new dataSubselector::Gti()),
-   m_goodEvent1(new dataSubselector::Cuts()),
-   m_goodEvent3(new dataSubselector::Cuts())
-{
-   try {
+                     const std::string & filter) 
+   : m_table(tip::IFileSvc::instance().readTable(meritfile, tree, filter)),
+     m_it(m_table->begin()),
+     m_row(*m_it),
+     m_nrows(m_table->getNumRecords()),
+     m_haveTime(true),
+     m_gti(new dataSubselector::Gti()),
+     m_goodEvent1(new dataSubselector::Cuts()),
+     m_goodEvent3(new dataSubselector::Cuts()) {
+   const std::vector<std::string> & validFields(m_table->getValidFields());
+   if (std::find(validFields.begin(), validFields.end(), "EvtElapsedTime") 
+       == validFields.end()) {
+      m_haveTime = false;
+   } else {
       double start(m_row["EvtElapsedTime"].get());
       m_it = end();
       --m_it;
@@ -47,8 +53,6 @@ MeritFile::MeritFile(const std::string & meritfile,
       m_goodEvent3->addRangeCut("CTBBestEnergyProb", "N/A", 0.35, 1.1);
       // CTBGAM > 0.50
       m_goodEvent3->addRangeCut("CTBGAM", "N/A", 0.50, 1.1);
-   } catch (...) { 
-// assume there is no EvtElapsedTime, so do not insert any intervals
    }
 }
 
@@ -68,6 +72,9 @@ void MeritFile::prev() {
 }
 
 double MeritFile::operator[](const std::string & fieldname) const {
+   if (fieldname == "EvtElapsedTime" && !m_haveTime) {
+      return 0;
+   }
    return m_row[fieldname].get();
 }
 
