@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Wed Jun 27 09:29:12 PDT 2007
+fitsGen/src
+
+Modified Files:
+	FtFileBase.cxx 
+Log Message:
+remove spurious TNULL keywords when appendField is called
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r4, operation: add
 Package: fitsGen
