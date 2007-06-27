@@ -3,10 +3,11 @@
  * @brief Implementation of FT1/2 file base class.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/FtFileBase.cxx,v 1.9 2006/04/05 22:08:43 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/FtFileBase.cxx,v 1.10 2006/07/13 20:05:58 jchiang Exp $
  */
 
 #include <iostream>
+#include <sstream>
 #include <stdexcept>
 #include <string>
 
@@ -82,6 +83,17 @@ void FtFileBase::setNumRows(long nrows) {
 void FtFileBase::appendField(const std::string & colname,
                              const std::string & format) {
    m_table->appendField(colname, format);
+// Repair field by removing TNULL keyword that is added by tip. The
+// null value is usually ok for integers, but is inappropriate for
+// floats and is not needed by either, so we remove it in every case.
+   int fieldIndex = m_table->getFieldIndex(colname) + 1;
+   std::ostringstream nullkeyword;
+   nullkeyword << "TNULL" << fieldIndex;
+   try {
+      m_table->getHeader().erase(nullkeyword.str());
+   } catch (...) {
+      // do nothing if tip fails us again
+   }
 }
 
 const std::vector<std::string> & FtFileBase::getFieldNames() const {
