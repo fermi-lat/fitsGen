@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Wed Jun 27 09:54:59 PDT 2007
+fitsGen/src/makeFT2a
+
+Modified Files:
+	makeFT2a.cxx 
+Log Message:
+fill CREATOR keyword from makeFT2a; tagging v3r4p2
+    *
+------------------------------------------------------------
+User: jchiang  Wed Jun 27 09:54:59 PDT 2007
 fitsGen/doc
 
 Modified Files:
