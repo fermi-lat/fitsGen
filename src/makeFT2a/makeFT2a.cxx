@@ -3,7 +3,7 @@
  * @brief Convert ascii D2 data from Gleam to FT2.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2a/makeFT2a.cxx,v 1.11 2006/09/28 16:42:07 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2a/makeFT2a.cxx,v 1.12 2007/05/16 15:58:57 jchiang Exp $
  */
 
 #include <cmath>
@@ -164,6 +164,8 @@ int main(int iargc, char * argv[]) {
       ft2.prev();
       double stop(ft2["stop"].get());
       ft2.setObsTimes(start, stop);
+
+      ft2.setPhduKeyword("CREATOR", "makeFT2a");
    } catch (std::exception & eObj) {
       std::cout << eObj.what() << std::endl;
       std::exit(1);
