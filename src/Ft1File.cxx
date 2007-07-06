@@ -3,7 +3,7 @@
  * @brief Implementation of FT1 file abstraction.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/Ft1File.cxx,v 1.10 2006/01/20 06:23:18 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/Ft1File.cxx,v 1.11 2006/04/05 22:08:43 jchiang Exp $
  */
 
 #include <iostream>
@@ -31,7 +31,7 @@ Ft1File::~Ft1File() {
 }
 
 void Ft1File::close() {
-   verifyObsTimes();
+//    verifyObsTimes();
 
    if (m_table) {
       st_facilities::Util::writeDateKeywords(m_table, m_startTime, m_stopTime,

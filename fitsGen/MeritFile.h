@@ -3,7 +3,7 @@
  * @brief Declaration for MeritTuple abstraction.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/MeritFile.h,v 1.5 2006/02/06 00:36:59 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/MeritFile.h,v 1.6 2007/06/22 18:40:09 jchiang Exp $
  */
 
 #ifndef fitsGen_MeritFile_h
@@ -60,8 +60,13 @@ public:
    /// This comprises just the beginning and end times for the data.
    const dataSubselector::Gti & gti() const;
 
-   /// @return Event type of current row.
-   short int eventType() const;
+   /// @brief Set the start and stop times of the GTI by hand.
+   /// This filter will be applied to the data in addition to the 
+   /// filter string.
+   void setStartStop(double tstart, double tstop);
+   
+//    /// @return Event type of current row.
+//    short int eventType() const;
 
    /// @return Conversion type (e.g., front=0, back=1) of current row.
    short int conversionType() const;
@@ -77,8 +82,8 @@ private:
 
    dataSubselector::Gti * m_gti;
 
-   dataSubselector::Cuts * m_goodEvent1;
-   dataSubselector::Cuts * m_goodEvent3;
+//    dataSubselector::Cuts * m_goodEvent1;
+//    dataSubselector::Cuts * m_goodEvent3;
 };
 
 } // namespace fitsGen
