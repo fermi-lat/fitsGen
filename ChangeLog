@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Fri Jul  6 15:01:46 PDT 2007
+fitsGen/pfiles
+
+Modified Files:
+	makeFT1.par 
+Log Message:
+user will set tstart and tstop for makeFT1 via command line options
+    *
+------------------------------------------------------------
 User: jchiang  Fri Jul  6 15:01:45 PDT 2007
 fitsGen/fitsGen
 
