@@ -3,6 +3,6 @@
 #
 # See http://confluence.slac.stanford.edu/display/DC2/Trigger+and+Filter+settings+and+Event+classes
 #
-# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/pass4_cuts,v 1.1 2007/04/08 19:49:03 jchiang Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/pass4_cuts,v 1.2 2007/04/23 16:46:06 jchiang Exp $
 #
-((GltWord&10)>0) && (GltWord!=35)  && (FilterStatus_HI==0) && (CTBBestEnergyProb>0.1) && (CTBCORE>0.1) && (CTBSummedCTBGAM>0.5)
+((GltWord&10)>0) && ((GltWord&7)!=3)  && (FilterStatus_HI==0) && (CTBBestEnergyProb>0.1) && (CTBCORE>0.1) && (CTBSummedCTBGAM>0.5)
