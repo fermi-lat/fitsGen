@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Mon Jul  9 10:24:26 PDT 2007
+fitsGen/src/makeFT1
+
+Modified Files:
+	makeFT1.cxx 
+Log Message:
+allow data type to be specified in FT1variables for added fields; tagging v3r6
+    *
+------------------------------------------------------------
+User: jchiang  Mon Jul  9 10:24:26 PDT 2007
 fitsGen/doc
 
 Modified Files:
