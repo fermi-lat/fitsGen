@@ -3,7 +3,7 @@
  * @brief Convert merit ntuple to FT1 format.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.26 2007/07/06 22:01:46 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.27 2007/07/09 17:24:26 jchiang Exp $
  */
 
 #include <cctype>
@@ -190,7 +190,13 @@ void MakeFt1::run() {
    fitsGen::Ft1File ft1(fitsFile, 0);
    try {
       fitsGen::MeritFile merit(rootFile, "MeritTuple", filter);
-      merit.setStartStop(tstart, tstop);
+      if (tstart != 0 && tstop != 0) {
+         merit.setStartStop(tstart, tstop);
+         ft1.setObsTimes(tstart, tstop);
+      } else {
+         const dataSubselector::Gti & gti = merit.gti();
+         ft1.setObsTimes(gti.minValue(), gti.maxValue());
+      }
 
       ft1.setNumRows(merit.nrows());
 
