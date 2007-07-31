@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Tue Jul 31 12:47:14 PDT 2007
+fitsGen/src/makeFT1
+
+Modified Files:
+	makeFT1.cxx 
+Log Message:
+fix logic error, include filtering on EvtElapsedTime; tagging v3r6p2
+    *
+------------------------------------------------------------
+User: jchiang  Tue Jul 31 12:47:14 PDT 2007
 fitsGen/doc
 
 Modified Files:
