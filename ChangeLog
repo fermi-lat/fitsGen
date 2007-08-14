@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Tue Aug 14 09:15:17 PDT 2007
+fitsGen/python
+
+Added Files:
+	Ft1Validator.py 
+Log Message:
+add FT1 file validator
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r6p2, operation: add
 Package: fitsGen
