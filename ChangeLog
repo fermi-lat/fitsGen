@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Thu Sep 20 14:17:59 PDT 2007
+fitsGen/python
+
+Added Files:
+	Pass5_Classifier.py 
+Log Message:
+Pass 5 IRF implementation using temporary CTBCLASSLEVEL column in FT1 to enable different analysis class selections
+    *
+------------------------------------------------------------
+User: jchiang  Thu Sep 20 14:17:59 PDT 2007
 fitsGen/pfiles
 
 Modified Files:
