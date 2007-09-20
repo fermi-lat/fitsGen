@@ -3,7 +3,7 @@
  * @brief Convert merit ntuple to FT1 format.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.28 2007/07/31 16:45:01 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.29 2007/07/31 19:47:14 jchiang Exp $
  */
 
 #include <cctype>
@@ -166,7 +166,7 @@ void MakeFt1::run() {
 
    if (defaultFilter == "DEFAULT") {
       defaultFilter = st_facilities::Env::appendFileName(dataDir,
-                                                         "pass4_cuts");
+                                                         "pass5_cuts");
    }
    std::string filter;
    if (!st_facilities::Util::fileExists(defaultFilter)) {
