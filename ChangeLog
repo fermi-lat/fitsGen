@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Thu Sep 20 14:17:59 PDT 2007
+fitsGen/pfiles
+
+Modified Files:
+	makeFT1.par 
+Log Message:
+Pass 5 IRF implementation using temporary CTBCLASSLEVEL column in FT1 to enable different analysis class selections
+    *
+------------------------------------------------------------
 User: jchiang  Thu Sep 20 14:17:58 PDT 2007
 fitsGen/data
 
