@@ -1,12 +1,12 @@
 # @file makeFT1.par
-# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/pfiles/makeFT1.par,v 1.5 2007/07/06 22:01:46 jchiang Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/pfiles/makeFT1.par,v 1.6 2007/07/31 16:45:01 jchiang Exp $
 #
 rootFile,fr,a,"",,,merit filename
 fitsFile,f,a,"",,,FT1 filename
-event_classifier,s,a,Pass4_Classifier,,,Event classifier script
+event_classifier,s,a,Pass5_Classifier,,,Event classifier script
 tstart,r,a,0,,,,"start time (MET s)"
 tstop,r,a,0,,,,"stop time (MET s)"
-TCuts,s,h,DEFAULT,,,TCut to apply
+TCuts,s,a,DEFAULT,,,TCut to apply
 dict_file,s,h,DEFAULT,,,merit-to-FT1 dictionary file
 file_version,s,h,1,,,Version of FT1 file
 
