@@ -3,13 +3,14 @@
  * @brief Convert merit ntuple to FT1 format.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.29 2007/07/31 19:47:14 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.30 2007/09/20 21:17:59 jchiang Exp $
  */
 
 #include <cctype>
 #include <cstdlib>
 
 #include <algorithm>
+#include <iomanip>
 #include <iostream>
 #include <sstream>
 #include <stdexcept>
@@ -177,6 +178,7 @@ void MakeFt1::run() {
 
    if (tstart != 0 || tstop != 0) {
       std::ostringstream time_cut;
+      time_cut << std::setprecision(10);
       time_cut << " && (EvtElapsedTime >= " << tstart << ") "
                << " && (EvtElapsedTime <= " << tstop << ")";
       filter += time_cut.str();
