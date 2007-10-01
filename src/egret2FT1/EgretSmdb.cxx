@@ -3,7 +3,7 @@
  * @brief Implementation for EGRET summary database file interface class.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/egret2FT1/EgretSmdb.cxx,v 1.4 2005/12/13 05:16:10 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/egret2FT1/EgretSmdb.cxx,v 1.5 2006/02/03 06:03:42 jchiang Exp $
  */
 
 #include <cmath>
@@ -19,6 +19,7 @@
 #include "st_facilities/Env.h"
 #include "st_facilities/Util.h"
 
+#include "facilities/commonUtilities.h"
 #include "dataSubselector/Gti.h"
 
 #include "EgretSmdb.h"
@@ -123,8 +124,8 @@ void EgretSmdb::readEgretGtis(dataSubselector::Gti & gti) {
 //    }
 //    std::string infile(fitsGenroot);
 //    infile += "/data/egret_gtis_tjd.dat";
-   std::string infile(st_facilities::Env::getDataDir("fitsGen") 
-                      + "egret_gtis_tjd.dat");
+   std::string infile = facilities::commonUtilities::joinPath(
+     facilities::commonUtilities::getDataPath("fitsGen"), "egret_gtis_tjd.dat");
    std::vector<std::string> lines;
    st_facilities::Util::file_ok(infile);
    st_facilities::Util::readLines(infile, lines);

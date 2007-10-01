@@ -3,7 +3,7 @@
  * @brief Implementation of FT1/2 file base class.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/FtFileBase.cxx,v 1.10 2006/07/13 20:05:58 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/FtFileBase.cxx,v 1.11 2007/06/27 16:29:12 jchiang Exp $
  */
 
 #include <iostream>
@@ -15,6 +15,8 @@
 
 #include "st_facilities/Env.h"
 #include "st_facilities/Util.h"
+
+#include "facilities/commonUtilities.h"
 
 #include "fitsGen/FtFileBase.h"
 
@@ -35,8 +37,8 @@ void FtFileBase::init(const std::string & templateFile,
                       const std::string & extname) {
    std::string ft_template(templateFile);
    if (templateFile == "ft1.tpl" || templateFile == "ft2.tpl") {
-      ft_template = st_facilities::Env::appendFileName(
-         st_facilities::Env::getDataDir("fitsGen"), templateFile);
+      ft_template = facilities::commonUtilities::joinPath(
+         facilities::commonUtilities::getDataPath("fitsGen"), templateFile);
    } 
    tip::IFileSvc & fileSvc(tip::IFileSvc::instance());
    if (ft_template != "") {

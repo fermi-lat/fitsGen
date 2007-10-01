@@ -4,7 +4,7 @@
  * ntuple to a FITS file
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/irfTuple/irfTuple.cxx,v 1.1 2006/01/20 06:23:19 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/irfTuple/irfTuple.cxx,v 1.2 2006/09/28 16:42:06 jchiang Exp $
  */
 
 #include <cstdlib>
@@ -22,6 +22,8 @@
 #include "st_facilities/Env.h"
 #include "st_facilities/FitsUtil.h"
 #include "st_facilities/Util.h"
+
+#include "facilities/commonUtilities.h"
 
 #include "fitsGen/Ft1File.h"
 #include "fitsGen/MeritFile.h"
@@ -50,8 +52,8 @@ int main(int iargc, char * argv[]) {
       }
       std::cout << "applying TCut: " << filter.str() << std::endl;
    }
-   std::string irfTupleNameFile(st_facilities::Env::getEnv("FITSGENROOT") 
-                                + "/data/irfTupleNames");
+   std::string irfTupleNameFile(facilities::commonUtilities::joinPath(
+      facilities::commonUtilities::getDataPath("fitsGen"), "irfTupleNames");
    if (iargc == 5) {
       irfTupleNameFile = argv[4];
    }
