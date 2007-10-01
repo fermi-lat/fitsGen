@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: golpa  Mon Oct  1 11:57:14 PDT 2007
+fitsGen/src/makeFT1
+
+Modified Files:
+	makeFT1.cxx 
+Log Message:
+use commonUtilities
+    *
+------------------------------------------------------------
+User: golpa  Mon Oct  1 11:57:14 PDT 2007
 fitsGen/src/irfTuple
 
 Modified Files:
