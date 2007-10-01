@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: golpa  Mon Oct  1 11:57:14 PDT 2007
+fitsGen/src
+
+Modified Files:
+	EventClassifier.cxx FtFileBase.cxx 
+Log Message:
+use commonUtilities
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r7p1, operation: add
 Package: fitsGen
