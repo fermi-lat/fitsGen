@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: golpa  Mon Oct  1 11:57:14 PDT 2007
+fitsGen/src/egret2FT1
+
+Modified Files:
+	EgretSmdb.cxx 
+Log Message:
+use commonUtilities
+    *
+------------------------------------------------------------
+User: golpa  Mon Oct  1 11:57:14 PDT 2007
 fitsGen/src
 
 Modified Files:
