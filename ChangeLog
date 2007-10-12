@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Fri Oct 12 16:24:38 PDT 2007
+fitsGen/data
+
+Modified Files:
+	pass5_cuts 
+Log Message:
+remove CTBBestZDir and FT1ZenithTheta cuts; make tstart and tstop to makeFT1 hidden parameters and even more optional
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r7p3, operation: add
 Package: fitsGen
