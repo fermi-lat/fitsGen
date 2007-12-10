@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: golpa  Mon Dec 10 13:24:43 PST 2007
+fitsGen
+
+Added Files:
+	SConscript fitsGenLib.py 
+Log Message:
+Initial import of SCons files
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r8p1, operation: add
 Package: fitsGen
