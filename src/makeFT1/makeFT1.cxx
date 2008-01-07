@@ -3,7 +3,7 @@
  * @brief Convert merit ntuple to FT1 format.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.31 2007/09/29 21:54:25 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.32 2007/10/01 18:57:14 golpa Exp $
  */
 
 #include <cctype>
@@ -247,6 +247,7 @@ void MakeFt1::run() {
 
          dataSubselector::Gti gti;
          gti.insertInterval(tstart, tstop);
+         ft1.setObsTimes(tstart, tstop);
 
          my_cuts.addGtiCut(gti);
          my_cuts.writeDssKeywords(ft1.header());
