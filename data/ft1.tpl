@@ -1,5 +1,5 @@
 # Definition of LAT Event Summary File (FT1)
-# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/ft1.tpl,v 1.18 2006/07/25 16:04:43 jchiang Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/ft1.tpl,v 1.19 2006/09/25 17:30:10 jchiang Exp $
 SIMPLE      = T                              / file does conform to FITS standard
 BITPIX      = 8                              / number of bits per data pixel
 NAXIS       = 0                              / number of data axes
@@ -16,7 +16,7 @@ TSTART      =                                / mission time of the start of the 
 TSTOP       =                                / mission time of the end of the observation
 TIMEUNIT    = 's'                            / units for the time related keywords
 TIMESYS     = 'TT'                           / type of time system that is used
-GPS_OUT     = F                                         / whether GPS time was unavailable at any time during this interval
+GPS_OUT     = F                              / whether GPS time was unavailable at any time during this interval
 MJDREFI     = 51910.                         / Integer part of MJD corresponding to SC clock start
 MJDREFF     = 7.428703703703703D-4           / Fractional part of MJD corresponding to SC clock start
 OBSERVER    = 'Peter Michelson'              / GLAST/LAT PI
@@ -59,6 +59,7 @@ TIMESYS     = 'TT'                                      / type of time system th
 TIMEREF     = 'LOCAL'                                   / reference frame used for times
 CLOCKAPP    = F                                         / whether a clock drift correction has been applied
 GPS_OUT     = F                                         / whether GPS time was unavailable at any time during this interval
+EVCLSVER    = 0                                         / version of event class definition for IRF handling
 NDSKEYS     = 0                                         / number of data subspace keywords in header
 TTYPE1      = 'ENERGY'                                  / energy of event
 TFORM1      = 'E'                                       / data format of field: 4-byte REAL
@@ -124,7 +125,7 @@ TLMIN13     = 0                                         / minimum value
 TLMAX13     = 32767                                     / maximum value
 TTYPE14     = 'CALIB_VERSION'                           / versions of calibration tables for the ACD, CAL, TKR
 TFORM14     = '3I'                                      / data format of field: 2-byte signed INTEGER
-TTYPE15     = 'EVENT_CLASS'                             / event class: 0=Front converting class A, 1=Back A, 2=Front B, 3=Back B
+TTYPE15     = 'EVENT_CLASS'                             / event class: 0, 1, 2,...
 TFORM15     = 'I'                                       / data format of field: 2-byte signed INTEGER
 TLMIN15     =  0                                        / minimum value
 TLMAX15     =  32767                                    / maximum value
