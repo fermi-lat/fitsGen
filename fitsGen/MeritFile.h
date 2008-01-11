@@ -3,7 +3,7 @@
  * @brief Declaration for MeritTuple abstraction.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/MeritFile.h,v 1.6 2007/06/22 18:40:09 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/MeritFile.h,v 1.7 2007/07/06 22:01:45 jchiang Exp $
  */
 
 #ifndef fitsGen_MeritFile_h
@@ -65,9 +65,6 @@ public:
    /// filter string.
    void setStartStop(double tstart, double tstop);
    
-//    /// @return Event type of current row.
-//    short int eventType() const;
-
    /// @return Conversion type (e.g., front=0, back=1) of current row.
    short int conversionType() const;
 
@@ -81,9 +78,6 @@ private:
    bool m_haveTime;
 
    dataSubselector::Gti * m_gti;
-
-//    dataSubselector::Cuts * m_goodEvent1;
-//    dataSubselector::Cuts * m_goodEvent3;
 };
 
 } // namespace fitsGen

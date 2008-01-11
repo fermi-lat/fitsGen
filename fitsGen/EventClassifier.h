@@ -5,7 +5,7 @@
  * partitioning and event class number assignment.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/EventClassifier.h,v 1.3 2006/12/11 07:14:35 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/EventClassifier.h,v 1.4 2006/12/12 01:22:31 jchiang Exp $
  */
 
 #ifndef fitsGen_EventClassifier_h
@@ -28,7 +28,6 @@ namespace fitsGen {
  * embed_python and a Python class to do the TCut parsing and event
  * partitioning and event class number assignment.
  *
- * @author J. Chiang
  */
 
 class EventClassifier {

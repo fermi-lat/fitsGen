@@ -1,7 +1,7 @@
 # @brief This is a translation table for the merit to FT1 conversion
 # @author J. Chiang
 #
-# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/FT1variables,v 1.7 2007/07/09 17:24:26 jchiang Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/FT1variables,v 1.8 2007/09/20 21:17:58 jchiang Exp $
 #
 # FT1 name              MeritTuple name       FT1 data type
 #
@@ -20,7 +20,7 @@ EVENT_ID                EvtEventId
 RUN_ID                  EvtRun
 #RECON_VERSION
 #CALIB_VERSION
-#EVENT_CLASS            set using MeritFile::eventType()
+#EVENT_CLASS            set using EventClassifier class and python script
 #CONVERSION_TYPE        set using MeritFile::conversionType()
 LIVETIME                EvtLiveTime
 #
