@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Mon Feb  4 15:52:30 PST 2008
+fitsGen/data
+
+Modified Files:
+	ft1.tpl 
+Log Message:
+write TLMIN, TLMAX for appended fields
+    *
+------------------------------------------------------------
 TAG
 Tag name: v3r8p3, operation: add
 Package: fitsGen
