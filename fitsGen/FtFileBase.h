@@ -3,7 +3,7 @@
  * @brief Declaration of FT1/2 file base class
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/FtFileBase.h,v 1.5 2006/07/13 20:05:57 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/FtFileBase.h,v 1.6 2006/07/18 14:40:43 jchiang Exp $
  */
 
 #ifndef fitsGen_FtFileBase_h
@@ -65,6 +65,10 @@ public:
 
    /// @return The EVENTS or SC_DATA extension FITS header.
    tip::Header & header();
+
+   int fieldIndex(const std::string & colname) const {
+      return m_table->getFieldIndex(colname) + 1;
+   }
 
    template<class Type>
    void setPhduKeyword(const std::string & keyword,

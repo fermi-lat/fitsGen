@@ -5,7 +5,7 @@ http://confluence.slac.stanford.edu/display/DC2/Summary+of+response+function+set
 @author J. Chiang <jchiang@slac.stanford.edu>
 """
 #
-# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/python/Pass5_Classifier.py,v 1.1 2007/09/20 21:17:59 jchiang Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/python/Pass5_Classifier.py,v 1.2 2007/10/04 20:41:04 jchiang Exp $
 #
 from EventClassifier import EventClassifier
 
@@ -31,5 +31,6 @@ commonCuts = '&&'.join(('1',))
 #
 eventClassCuts = ['&&'.join((commonCuts, '(Tkr1FirstLayer>5.5)')),
                   '&&'.join((commonCuts, '(Tkr1FirstLayer<5.5)'))]
+#eventClassCuts = ['&&'.join(('1',))]
 
 eventClassifier = EventClassifier(eventClassCuts)
