@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Mon Feb  4 15:52:30 PST 2008
+fitsGen/fitsGen
+
+Modified Files:
+	FtFileBase.h 
+Log Message:
+write TLMIN, TLMAX for appended fields
+    *
+------------------------------------------------------------
+User: jchiang  Mon Feb  4 15:52:30 PST 2008
 fitsGen/data
 
 Modified Files:
