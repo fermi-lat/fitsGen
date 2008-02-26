@@ -1,17 +1,15 @@
 # -*- python -*-
 #
-# $Id$
-
-import glob, os, platform
-
+# $Id: SConscript,v 1.2 2007/12/11 19:10:54 jchiang Exp $
 Import('baseEnv')
 Import('listFiles')
 progEnv = baseEnv.Clone()
 libEnv = baseEnv.Clone()
 
-if platform.system() == 'Linux':
-    progEnv.Append(CPPDEFINES = 'TRAP_FPE')
+if baseEnv['PLATFORM'] != "win32":
+    progEnv.Append(CPPDEFINES = ['TRAP_FPE'])
 
+libEnv.Tool('fitsGenLib', depsOnly = 1)
 fitsGenLib = libEnv.StaticLibrary('fitsGen', listFiles(['src/*.cxx']))
 
 progEnv.Tool('fitsGenLib')
