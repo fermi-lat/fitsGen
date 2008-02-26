@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: glastrm  Mon Feb 25 19:18:10 PST 2008
+ScienceTools-scons/fitsGen
+
+Modified Files:
+	fitsGenLib.py SConscript 
+Log Message:
+Set lib dependencies up for when building libraries
+    *
+------------------------------------------------------------
 TAG
 Tag name: fitsGen-03-08-04, operation: add
 Package: fitsGen
