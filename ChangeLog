@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Sat Mar  1 07:32:07 PST 2008
+fitsGen/data
+
+Modified Files:
+	pass5_cuts 
+Log Message:
+use OBFGamStatus instead of FilterStatus_HI
+    *
+------------------------------------------------------------
 TAG
 Tag name: fitsGen-03-08-04, operation: mov
 Package: fitsGen
