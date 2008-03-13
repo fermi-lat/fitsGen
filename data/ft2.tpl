@@ -1,5 +1,5 @@
 # Definition of LAT Pointing & Livetime History File (FT2)
-# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/ft2.tpl,v 1.14 2007/05/16 14:27:38 jchiang Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/ft2.tpl,v 1.15 2007/05/16 14:33:14 jchiang Exp $
 SIMPLE      = T                           / file does conform to FITS standard
 BITPIX      = 8                           / number of bits per data pixel
 NAXIS       = 0                           / number of data axes
@@ -143,4 +143,12 @@ TFORM18      = 'D'                         / data format of field: 8-byte DOUBLE
 TUNIT18      = 's'                         / physical unit of field
 TLMIN18      = 0.0                         / minimum value
 TLMAX18      = 1.0D+10                     / maximum value
+TTYPE19      = 'QSJ_1'                     / First component of SC attitude quaternion
+TFORM19      = 'D'                         / 8-byte DOUBLE
+TTYPE20      = 'QSJ_2'                     / Second component of SC attitude quaternion
+TFORM20      = 'D'                         / 8-byte DOUBLE
+TTYPE21      = 'QSJ_3'                     / Third component of SC attitude quaternion
+TFORM21      = 'D'                         / 8-byte DOUBLE
+TTYPE22      = 'QSJ_4'                     / Fourth component of SC attitude quaternion
+TFORM22      = 'D'                         / 8-byte DOUBLE
 END
