@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Thu Mar 13 15:57:57 PDT 2008
+fitsGen/src/makeFT2a
+
+Modified Files:
+	makeFT2a.cxx 
+Log Message:
+add method to set quaternions
+    *
+------------------------------------------------------------
+User: jchiang  Thu Mar 13 15:57:57 PDT 2008
 fitsGen/src/makeFT2
 
 Modified Files:
