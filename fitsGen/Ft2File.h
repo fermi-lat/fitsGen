@@ -3,7 +3,7 @@
  * @brief Declaration of FT1 file abstraction
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/Ft2File.h,v 1.1 2005/12/13 05:16:09 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/Ft2File.h,v 1.2 2005/12/23 19:51:50 jchiang Exp $
  */
 
 #ifndef fitsGen_Ft2File_h
@@ -32,6 +32,11 @@ public:
       : FtFileBase(outfile, nrows) {
       init(templateFile, extname);
    }
+
+   /// Fill the RA_SCZ, DEC_SCZ, RA_SCX, DEC_SCX values and the
+   /// quaternions, QSJ_1, QSJ_2, QSJ_3, QSJ_4
+   void setScAxes(double ra_scz, double dec_scz,
+                  double ra_scx, double dec_scx);
 
 };
 
