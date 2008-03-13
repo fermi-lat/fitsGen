@@ -3,7 +3,7 @@
  * @brief Convert Root D2 data from Gleam to FT2 format.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2/makeFT2.cxx,v 1.10 2007/05/16 15:58:57 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2/makeFT2.cxx,v 1.11 2007/06/22 18:40:10 jchiang Exp $
  */
 
 #include <iostream>
@@ -55,7 +55,7 @@ private:
    double geomag_lat(const std::vector<float> & sc_pos, double met) const;
 };
 
-std::string MakeFt2::s_cvs_id("$Name:  $");
+std::string MakeFt2::s_cvs_id("$Name: v3r8p1 $");
 
 st_app::StAppFactory<MakeFt2> myAppFactory("makeFT2");
 
@@ -96,10 +96,8 @@ void MakeFt2::run() {
       double met((pointing["start"] + pointing["stop"])/2.);
       ft2["geomag_lat"].set(geomag_lat(scPosition, met));
       ft2["in_saa"].set(static_cast<bool>(pointing["in_saa"]));
-      ft2["ra_scz"].set(pointing["ra_scz"]);
-      ft2["dec_scz"].set(pointing["dec_scz"]);
-      ft2["ra_scx"].set(pointing["ra_scx"]);
-      ft2["dec_scx"].set(pointing["dec_scx"]);
+      ft2.setScAxes(pointing["ra_scz"], pointing["dec_scz"], 
+                    pointing["ra_scx"], pointing["dec_scx"]);
       ft2["livetime"].set(pointing["livetime"]);
    }
    ft2.itor() = ft2.begin();

@@ -3,7 +3,7 @@
  * @brief Convert ascii D2 data from Gleam to FT2.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2a/makeFT2a.cxx,v 1.13 2007/06/27 16:54:59 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2a/makeFT2a.cxx,v 1.14 2007/10/23 23:24:41 jchiang Exp $
  */
 
 #include <cmath>
@@ -105,10 +105,11 @@ int main(int iargc, char * argv[]) {
          scPosition[1] = std::atof(dataFields[2].c_str())*1e3;
          scPosition[2] = std::atof(dataFields[3].c_str())*1e3;
          ft2["sc_position"].set(scPosition);
-         ft2["ra_scz"].set(std::atof(dataFields[4].c_str()));
-         ft2["dec_scz"].set(std::atof(dataFields[5].c_str()));
-         ft2["ra_scx"].set(std::atof(dataFields[6].c_str()));
-         ft2["dec_scx"].set(std::atof(dataFields[7].c_str()));
+         double ra_scz(std::atof(dataFields[4].c_str()));
+         double dec_scz(std::atof(dataFields[5].c_str()));
+         double ra_scx(std::atof(dataFields[6].c_str()));
+         double dec_scx(std::atof(dataFields[7].c_str()));
+         ft2.setScAxes(ra_scz, dec_scz, ra_scx, dec_scx);
          ft2["ra_zenith"].set(std::atof(dataFields[8].c_str()));
          ft2["dec_zenith"].set(std::atof(dataFields[9].c_str()));
          double lonGeo = std::atof(dataFields[10].c_str());
