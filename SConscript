@@ -1,6 +1,6 @@
 # -*- python -*-
 #
-# $Id: SConscript,v 1.2 2007/12/11 19:10:54 jchiang Exp $
+# $Id: SConscript,v 1.3 2008/02/26 03:18:10 glastrm Exp $
 Import('baseEnv')
 Import('listFiles')
 progEnv = baseEnv.Clone()
@@ -30,4 +30,5 @@ progEnv.Tool('registerObjects', package = 'fitsGen',
                          convertFT1Bin, partitionBin, irfTupleBin,
                          test_classifierBin],
              includes = listFiles(['fitsGen/*.h']), 
-             pfiles = listFiles(['pfiles/*.par']))
+             pfiles = listFiles(['pfiles/*.par']),
+             data = listFiles(['data/*'], recursive = True))
