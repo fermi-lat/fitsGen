@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Thu Apr 10 18:04:14 PDT 2008
+fitsGen/src/makeFT1
+
+Modified Files:
+	makeFT1.cxx 
+Log Message:
+correct variable name in pass5_cuts; comment out TLMINTLMAX writing
+    *
+------------------------------------------------------------
+User: jchiang  Thu Apr 10 18:04:14 PDT 2008
 fitsGen/data
 
 Modified Files:
