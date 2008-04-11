@@ -3,7 +3,7 @@
  * @brief Convert merit ntuple to FT1 format.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.34 2008/01/16 18:54:18 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.35 2008/02/04 23:52:30 jchiang Exp $
  */
 
 #include <cctype>
@@ -128,7 +128,7 @@ namespace {
          if (std::find(validFields.begin(), validFields.end(), 
                        candidate) == validFields.end()) {
             ft1.appendField(ft1_entry->first, ft1_entry->second.ft1Type());
-            ft1_entry->second.write_TLMIN_TLMAX(ft1);
+//            ft1_entry->second.write_TLMIN_TLMAX(ft1);
          }
       }
    }
