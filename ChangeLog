@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Thu Apr 10 18:04:14 PDT 2008
+fitsGen/data
+
+Modified Files:
+	pass5_cuts 
+Log Message:
+correct variable name in pass5_cuts; comment out TLMINTLMAX writing
+    *
+------------------------------------------------------------
 TAG
 Tag name: fitsGen-03-09-00, operation: mov
 Package: fitsGen
