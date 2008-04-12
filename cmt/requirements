@@ -3,7 +3,7 @@ version v3r9p1
 
 author James Chiang <jchiang@slac.stanford.edu>
 
-# $Id: requirements,v 1.79 2008/03/14 00:16:40 jchiang Exp $
+# $Id: requirements,v 1.80 2008/04/11 01:05:29 jchiang Exp $
 
 use GlastPolicy v*
 use facilities v*
@@ -18,6 +18,9 @@ use embed_python v*
 apply_pattern package_include
 apply_pattern package_linkopts
 apply_pattern package_stamps
+
+path_remove PYTHONPATH fitsGen
+path_append PYTHONPATH $(FITSGENROOT)/python
 
 macro_append cppflags "" Linux " -I../src -DTRAP_FPE " 
 macro source *.cxx WIN32 "*.h *.cxx"

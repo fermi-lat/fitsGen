@@ -5,7 +5,7 @@
  * partitioning and event class number assignment.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/EventClassifier.cxx,v 1.6 2006/12/12 01:22:31 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/EventClassifier.cxx,v 1.7 2007/10/01 18:57:14 golpa Exp $
  */
 
 #include <iostream>
@@ -61,7 +61,7 @@ long EventClassifier::value() const {
 }
 
 std::string EventClassifier::pythonPath() const {
-   std::string root_path = facilities::commonUtilities::getPackagePath("fitsGen");
+   std::string root_path(facilities::commonUtilities::getPackagePath("fitsGen"));
    if (root_path == "") {
       throw std::runtime_error("Unable to determine path to fitsGen");
    }
