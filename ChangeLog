@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Sat Apr 12 16:08:21 PDT 2008
+fitsGen/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+disable default for TCuts param in makeFT1; allow for || in EventClassifier.py; add FITSGENROOT/python to PYTHYONPATH
+    *
+------------------------------------------------------------
 TAG
 Tag name: fitsGen-03-09-01, operation: add
 Package: fitsGen
