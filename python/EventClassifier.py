@@ -9,13 +9,13 @@ class.
 @author J. Chiang <jchiang@slac.stanford.edu>
 """
 #
-# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/python/EventClassifier.py,v 1.3 2006/12/11 19:09:51 jchiang Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/python/EventClassifier.py,v 1.4 2006/12/11 19:46:16 jchiang Exp $
 #
 
 class EventClassifier(object):
     def __init__(self, eventClassCuts):
-        self.event_classes = [cut.replace('&&', 'and') for cut
-                              in eventClassCuts]
+        self.event_classes = [cut.replace('&&', 'and').replace('||', 'or')
+                              for cut in eventClassCuts]
     def __call__(self, row):
         for key in row:
             exec("%s = row['%s']" % (key, key))
