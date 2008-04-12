@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Sat Apr 12 16:08:21 PDT 2008
+fitsGen/src
+
+Modified Files:
+	EventClassifier.cxx 
+Log Message:
+disable default for TCuts param in makeFT1; allow for || in EventClassifier.py; add FITSGENROOT/python to PYTHYONPATH
+    *
+------------------------------------------------------------
+User: jchiang  Sat Apr 12 16:08:21 PDT 2008
 fitsGen/python
 
 Modified Files:
