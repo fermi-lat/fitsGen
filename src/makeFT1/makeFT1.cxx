@@ -3,7 +3,7 @@
  * @brief Convert merit ntuple to FT1 format.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.36 2008/04/11 01:04:14 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.37 2008/04/12 23:08:21 jchiang Exp $
  */
 
 #include <cctype>
@@ -212,9 +212,10 @@ void MakeFt1::run() {
    formatter.info() << "applying TCut: " << filter << std::endl;
 
    std::string dictFile = m_pars["dict_file"];
-   if (dictFile == "DEFAULT") {
-      dictFile = facilities::commonUtilities::joinPath(dataDir,"FT1variables");
-   }
+// Disable the default, force users to specify
+//    if (dictFile == "DEFAULT") {
+//       dictFile = facilities::commonUtilities::joinPath(dataDir,"FT1variables");
+//    }
 
    ::Ft1Map_t ft1Dict;
    ::getFT1Dict(dictFile, ft1Dict);
