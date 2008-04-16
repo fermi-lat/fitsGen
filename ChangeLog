@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: jchiang  Wed Apr 16 14:43:55 PDT 2008
+fitsGen/python
+
+Added Files:
+	Pass5_Classifier_old.py 
+Removed Files:
+	Pass5_Classifier.py 
+Log Message:
+mv Pass5_Classifier.py to Pass5_Classifier_old.py to avoid conflicts with evtClassDefs
+    *
+------------------------------------------------------------
 User: jchiang  Wed Apr 16 14:41:02 PDT 2008
 fitsGen/src/makeFT1
 
