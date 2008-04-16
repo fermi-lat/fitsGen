@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Wed Apr 16 14:41:02 PDT 2008
+fitsGen/src/makeFT1
+
+Modified Files:
+	makeFT1.cxx 
+Log Message:
+disable all defaults in makeFT1
+    *
+------------------------------------------------------------
+User: jchiang  Wed Apr 16 14:41:02 PDT 2008
 fitsGen/pfiles
 
 Modified Files:
