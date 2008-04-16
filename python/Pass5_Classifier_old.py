@@ -5,7 +5,7 @@ http://confluence.slac.stanford.edu/display/DC2/Summary+of+response+function+set
 @author J. Chiang <jchiang@slac.stanford.edu>
 """
 #
-# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/python/Pass5_Classifier.py,v 1.2 2007/10/04 20:41:04 jchiang Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/python/Pass5_Classifier.py,v 1.3 2008/02/04 23:52:30 jchiang Exp $
 #
 from EventClassifier import EventClassifier
 
