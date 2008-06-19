@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 TAG
+Tag name: v4, operation: mov
+Package: fitsGen
+User: glastrm  Thu Jun 19 15:34:30 2008
+Files:
+  fitsGen/SConscript  1.5
+
+    *
+------------------------------------------------------------
+TAG
 Tag name: fitsGen-04-00-00, operation: mov
 Package: fitsGen
 User: glastrm  Thu Jun 19 15:34:23 2008
