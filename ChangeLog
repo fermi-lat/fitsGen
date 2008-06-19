@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: glastrm  Thu Jun 19 15:34:10 PDT 2008
+ScienceTools-scons/fitsGen
+
+Modified Files:
+	SConscript 
+Log Message:
+Added Author and Version fields
+    *
+------------------------------------------------------------
 TAG
 Tag name: fitsGen-04-00-00, operation: add
 Package: fitsGen
