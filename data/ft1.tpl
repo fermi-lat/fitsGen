@@ -1,5 +1,5 @@
 # Definition of LAT Event Summary File (FT1)
-# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/ft1.tpl,v 1.20 2008/01/11 23:06:32 jchiang Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/ft1.tpl,v 1.21 2008/02/04 23:52:30 jchiang Exp $
 SIMPLE      = T                              / file does conform to FITS standard
 BITPIX      = 8                              / number of bits per data pixel
 NAXIS       = 0                              / number of data axes
@@ -138,6 +138,8 @@ TFORM17     = 'D'                                       / data format of field: 
 TUNIT17     = 's'                                       / physical unit of field
 TLMIN17     = 0.0                                       / minimum value
 TLMAX17     = 1.0D+10                                   / maximum value
+TTYPE18     = 'CTBCLASSLEVEL'                           / event class (temporary)
+TFORM18     = 'J'                                       / data format 
 END
 
 XTENSION    = 'BINTABLE'                  / binary table extension
