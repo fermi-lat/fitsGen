@@ -1,5 +1,16 @@
 ------------------------------------------------------------
 User: jchiang  Fri Jul 11 15:43:38 PDT 2008
+fitsGen/python
+
+Added Files:
+	Pass6_kluge_Classifier.py 
+Removed Files:
+	Pass6_kluge_classifier.py 
+Log Message:
+set app name in code for makeFT1_kluge
+    *
+------------------------------------------------------------
+User: jchiang  Fri Jul 11 15:43:38 PDT 2008
 fitsGen/cmt
 
 Modified Files:
