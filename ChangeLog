@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Fri Jul 11 15:07:11 PDT 2008
+fitsGen/src/makeFT1_kluge
+
+Added Files:
+	makeFT1_kluge.cxx 
+Log Message:
+add makeFT1_kluge
+    *
+------------------------------------------------------------
 User: jchiang  Fri Jul 11 15:04:36 PDT 2008
 fitsGen/src/makeFT1_kluge
 
