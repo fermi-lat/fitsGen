@@ -3,7 +3,7 @@
  * @brief Convert merit ntuple to FT1 format.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.38 2008/04/16 21:41:02 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.39 2008/07/10 16:00:01 jchiang Exp $
  */
 
 #include <cctype>
@@ -243,7 +243,7 @@ void MakeFt1::run() {
 // diffuse classes from the FT1 data (this requires a correct
 // implementation in evtClassDefs/Pass6_Classifier.py.
 // 
-            ft1["ctbclasslevel"].set(eventClass(merit.row()));
+            ft1["ctbclasslevel"].set(eventClass(merit.row()) + 1);
             ft1["event_class"].set(merit.conversionType());
             ft1["conversion_type"].set(merit.conversionType());
             ncount++;
