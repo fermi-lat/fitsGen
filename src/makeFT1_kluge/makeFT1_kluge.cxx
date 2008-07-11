@@ -3,7 +3,7 @@
  * @brief Convert merit ntuple to FT1 format.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1/makeFT1.cxx,v 1.40 2008/07/11 21:58:36 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1_kluge/makeFT1_kluge.cxx,v 1.1 2008/07/11 22:07:10 jchiang Exp $
  */
 
 #include <cctype>
@@ -137,7 +137,7 @@ namespace {
 class MakeFt1 : public st_app::StApp {
 public:
    MakeFt1() : st_app::StApp(),
-               m_pars(st_app::StApp::getParGroup("makeFT1")) {
+               m_pars(st_app::StApp::getParGroup("makeFT1_kluge")) {
       try {
          setVersion(s_cvs_id);
       } catch (std::exception & eObj) {
@@ -165,7 +165,7 @@ private:
 
 std::string MakeFt1::s_cvs_id("$Name:  $");
 
-st_app::StAppFactory<MakeFt1> myAppFactory("makeFT1");
+st_app::StAppFactory<MakeFt1> myAppFactory("makeFT1_kluge");
 
 void MakeFt1::banner() const {
    int verbosity = m_pars["chatter"];
@@ -275,7 +275,7 @@ void MakeFt1::run() {
       }
    }
    std::ostringstream creator;
-   creator << "makeFT1 " << getVersion();
+   creator << "makeFT1_kluge " << getVersion();
    ft1.setPhduKeyword("CREATOR", creator.str());
    std::string version = m_pars["file_version"];
    ft1.setPhduKeyword("VERSION", version);
