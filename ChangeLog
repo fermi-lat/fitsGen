@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Fri Jul 11 15:43:38 PDT 2008
+fitsGen/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+set app name in code for makeFT1_kluge
+    *
+------------------------------------------------------------
 User: jchiang  Fri Jul 11 15:07:11 PDT 2008
 fitsGen/src/makeFT1_kluge
 
