@@ -1,9 +1,10 @@
 /** @file release.notes
     @brief package fitsGen
     @brief Package coordinators: J. Chiang <jchiang@slac.stanford.edu>
-    $Id: release.notes,v 1.65 2008/04/16 21:45:37 jchiang Exp $
+    $Id: release.notes,v 1.66 2008/07/11 22:58:50 jchiang Exp $
 
     @verbatim
+    v4r1p1 13-Jul-08   JC   makeFT1 parfile fix; add makeFT1_kluge.par
     v4r1   11-Jul-08   JC   add makeFT1_kluge which will put the desired
                             class definitions (with the CTBCORE and 
                             CTBBestEnergyProb selections) into the 
