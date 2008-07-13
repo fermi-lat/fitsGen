@@ -5,7 +5,7 @@ http://www-glast.stanford.edu/protected/mail/irf/0157.html
 These definitions partition the events into three classes.
 """
 #
-# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/python/Pass6_kluge_classifier.py,v 1.1 2008/07/10 16:00:01 jchiang Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/python/Pass6_kluge_Classifier.py,v 1.1 2008/07/11 22:43:38 jchiang Exp $
 #
 from EventClassifier import EventClassifier
 
@@ -23,7 +23,7 @@ Tkr1FirstLayer
 #
 # In Pass6_kluge, these event class defs will go into CTBCLASSLEVEL
 #
-eventClassCuts = ["(CTBClassLevel==1) || ((CTBCORE<0.1) || (CTBBestEnergyProb<0.1))",
+eventClassCuts = ["(CTBClassLevel==1) || ((CTBCORE<=0.1) || (CTBBestEnergyProb<=0.1))",
                   "(CTBClassLevel==2) && (CTBCORE>0.1) && (CTBBestEnergyProb>0.1)",
                   "(CTBClassLevel==3) && (CTBCORE>0.1) && (CTBBestEnergyProb>0.1)"]
 
