@@ -1,5 +1,5 @@
 # Definition of LAT Event Summary File (FT1)
-# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/ft1.tpl,v 1.21 2008/02/04 23:52:30 jchiang Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/ft1.tpl,v 1.22 2008/07/10 16:00:01 jchiang Exp $
 SIMPLE      = T                              / file does conform to FITS standard
 BITPIX      = 8                              / number of bits per data pixel
 NAXIS       = 0                              / number of data axes
@@ -15,7 +15,10 @@ DATE-END    =                                / end date and time of the observat
 TSTART      =                                / mission time of the start of the observation
 TSTOP       =                                / mission time of the end of the observation
 TIMEUNIT    = 's'                            / units for the time related keywords
+TIMEZERO    = 0.0                            / clock correction
 TIMESYS     = 'TT'                           / type of time system that is used
+TIMEREF     = 'LOCAL                         / reference frame used for times
+CLOCKAPP    = F                              / whether a clock drift correction has been applied
 GPS_OUT     = F                              / whether GPS time was unavailable at any time during this interval
 MJDREFI     = 51910.                         / Integer part of MJD corresponding to SC clock start
 MJDREFF     = 7.428703703703703D-4           / Fractional part of MJD corresponding to SC clock start
@@ -176,7 +179,7 @@ TIMEREF     = 'LOCAL'                     / reference frame used for times
 CLOCKAPP    = F                           / whether a clock drift correction has been applied
 GPS_OUT     = F                           / whether GPS time was unavailable at any time during this interval
 ONTIME      =                             / sum of GTI lengths
-TELAPSE     =                             / time between START of the first GTI and STOP of the last
+TELAPSE     =                             / TSTOP - TSTART
 TTYPE1      = 'START'                     / start time of good time intervals
 TFORM1      = 'D'                         / data format of field: 8-byte DOUBLE
 TUNIT1      = 's'                         / physical unit of field
