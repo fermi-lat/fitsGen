@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jchiang  Thu Oct  2 16:22:35 PDT 2008
+fitsGen/data
+
+Modified Files:
+	ft1.tpl 
+Log Message:
+add time correctiona and time reference keywords to FT1 primary header at Masa's recommendation
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-09-06-00, operation: del
 Package: fitsGen
