@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Thu Nov 27 08:31:09 PST 2008
+fitsGen/data
+
+Modified Files:
+	ft1.tpl 
+Log Message:
+delete commented out columns and keywords
+    *
+------------------------------------------------------------
 User: jchiang  Wed Nov 26 15:35:59 PST 2008
 fitsGen/data
 
