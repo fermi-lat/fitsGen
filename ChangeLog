@@ -1,4 +1,12 @@
 ------------------------------------------------------------
+User: glastrm  Fri Nov 28 22:30:48 PST 2008
+fitsGen
+
+Modified Files:
+	SConscript 
+Log Message:
+    *
+------------------------------------------------------------
 TAG
 Tag name: v4r2, operation: add
 Package: fitsGen
