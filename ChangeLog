@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Wed Dec  3 10:19:51 PST 2008
+fitsGen/src
+
+Modified Files:
+	FtFileBase.cxx 
+Log Message:
+use tip::Index_t; tagging v4r2p1
+    *
+------------------------------------------------------------
+User: jchiang  Wed Dec  3 10:19:51 PST 2008
 fitsGen/fitsGen
 
 Modified Files:
