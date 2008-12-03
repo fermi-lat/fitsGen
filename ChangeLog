@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Wed Dec  3 10:19:51 PST 2008
+fitsGen/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+use tip::Index_t; tagging v4r2p1
+    *
+------------------------------------------------------------
 TAG
 Tag name: fitsGen-04-02-00, operation: add
 Package: fitsGen
