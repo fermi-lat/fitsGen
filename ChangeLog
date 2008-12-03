@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Wed Dec  3 10:19:51 PST 2008
+fitsGen/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+use tip::Index_t; tagging v4r2p1
+    *
+------------------------------------------------------------
+User: jchiang  Wed Dec  3 10:19:51 PST 2008
 fitsGen/cmt
 
 Modified Files:
