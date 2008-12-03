@@ -3,7 +3,7 @@
  * @brief Declaration for MeritTuple abstraction.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/MeritFile.h,v 1.7 2007/07/06 22:01:45 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/MeritFile.h,v 1.8 2008/01/11 23:06:32 jchiang Exp $
  */
 
 #ifndef fitsGen_MeritFile_h
@@ -46,7 +46,7 @@ public:
       return m_row;
    }
 
-   long nrows() const {
+   tip::Index_t nrows() const {
       return m_nrows;
    }
 
@@ -73,7 +73,7 @@ private:
    const tip::Table * m_table;
    tip::Table::ConstIterator m_it;
    tip::ConstTableRecord & m_row;
-   long m_nrows;
+   tip::Index_t m_nrows;
 
    bool m_haveTime;
 

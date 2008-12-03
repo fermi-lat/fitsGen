@@ -3,7 +3,7 @@
  * @brief Declaration of FT1/2 file base class
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/FtFileBase.h,v 1.6 2006/07/18 14:40:43 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/FtFileBase.h,v 1.7 2008/02/04 23:52:30 jchiang Exp $
  */
 
 #ifndef fitsGen_FtFileBase_h
@@ -33,7 +33,7 @@ class FtFileBase {
 
 public:
 
-   FtFileBase(const std::string & outfile, long nrows=0);
+   FtFileBase(const std::string & outfile, tip::Index_t nrows=0);
 
    virtual ~FtFileBase();
 
@@ -47,7 +47,7 @@ public:
       return (*m_it)[fieldname];
    }
 
-   long nrows() const {
+   tip::Index_t nrows() const {
       return m_nrows;
    }
 
@@ -96,7 +96,7 @@ protected:
    std::string m_outfile;
    tip::Table * m_table;
    tip::Table::Iterator m_it;
-   long m_nrows;
+   tip::Index_t m_nrows;
 
    double m_startTime;
    double m_stopTime;

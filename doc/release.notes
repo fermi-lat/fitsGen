@@ -1,9 +1,11 @@
 /** @file release.notes
     @brief package fitsGen
     @brief Package coordinators: J. Chiang <jchiang@slac.stanford.edu>
-    $Id: release.notes,v 1.67 2008/07/13 14:29:32 jchiang Exp $
+    $Id: release.notes,v 1.68 2008/11/29 05:52:46 jchiang Exp $
 
     @verbatim
+    v4r2p1 03-Dec-08   JC   use tip::Index_t instead of long for references to
+                            tip::Table numRecords
     v4r2   28-Nov-08   JC   ft1.tpl mods (new diffuse response column 
                             conventions); ft2.tpl mods (new columns)
     v4r1p1 13-Jul-08   JC   makeFT1 parfile fix; add makeFT1_kluge.par

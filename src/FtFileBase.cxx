@@ -3,7 +3,7 @@
  * @brief Implementation of FT1/2 file base class.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/FtFileBase.cxx,v 1.11 2007/06/27 16:29:12 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/FtFileBase.cxx,v 1.12 2007/10/01 18:57:14 golpa Exp $
  */
 
 #include <iostream>
@@ -28,7 +28,7 @@ void FtFileBase::setMissionStart(int year, int month, int day, int sec) {
    s_missionStart = astro::JulianDate(year, month, day, sec);
 }
 
-FtFileBase::FtFileBase(const std::string & outfile, long nrows) : 
+FtFileBase::FtFileBase(const std::string & outfile, tip::Index_t nrows) : 
    m_outfile(outfile), m_table(0), m_nrows(nrows),
    m_startTime(-1), m_stopTime(-1) {
 }
