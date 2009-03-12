@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Wed Mar 11 21:12:09 PDT 2009
+fitsGen/src/makeFT1_kluge
+
+Modified Files:
+	makeFT1_kluge.cxx 
+Log Message:
+round tstart and tstop downwards and upwards to nearest seconds in make_FT1[kluge]
+    *
+------------------------------------------------------------
 User: jchiang  Wed Mar 11 21:12:08 PDT 2009
 fitsGen/src/makeFT1
 
