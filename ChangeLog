@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+TAG
+Tag name: v4r3, operation: mov
+Package: fitsGen
+User: glastrm  Wed Mar 11 21:30:50 2009
+Files:
+  fitsGen/SConscript  1.10
+
+    *
+------------------------------------------------------------
 User: glastrm  Wed Mar 11 21:30:44 PDT 2009
 fitsGen
 
