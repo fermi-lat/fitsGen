@@ -3,7 +3,7 @@
  * @brief Convert merit ntuple to FT1 format.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1_kluge/makeFT1_kluge.cxx,v 1.1 2008/07/11 22:07:10 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT1_kluge/makeFT1_kluge.cxx,v 1.2 2008/07/11 22:43:38 jchiang Exp $
  */
 
 #include <cctype>
@@ -196,6 +196,9 @@ void MakeFt1::run() {
 
    if (tstart != 0 || tstop != 0) {
       std::ostringstream time_cut;
+// Round lower bound down, upper bound upwards.
+      tstart = static_cast<double>(static_cast<long>(tstart));
+      tstop = static_cast<double>(static_cast<long>(tstop)) + 1.;
       time_cut << std::setprecision(10);
       time_cut << " && (EvtElapsedTime >= " << tstart << ") "
                << " && (EvtElapsedTime <= " << tstop << ")";
