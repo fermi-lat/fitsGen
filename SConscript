@@ -1,15 +1,12 @@
 # -*- python -*-
 #
-# $Id: SConscript,v 1.9 2008/12/03 18:30:47 glastrm Exp $
+# $Id: SConscript,v 1.10 2009/03/12 04:30:44 glastrm Exp $
 # Authors: James Chiang <jchiang@slac.stanford.edu>
 # Version: fitsGen-04-03-00
 Import('baseEnv')
 Import('listFiles')
 progEnv = baseEnv.Clone()
 libEnv = baseEnv.Clone()
-
-if baseEnv['PLATFORM'] != "win32":
-    progEnv.Append(CPPDEFINES = ['TRAP_FPE'])
 
 libEnv.Tool('fitsGenLib', depsOnly = 1)
 fitsGenLib = libEnv.StaticLibrary('fitsGen', listFiles(['src/*.cxx']))
