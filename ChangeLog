@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Sat Apr 11 14:42:39 PDT 2009
+fitsGen/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+add missing quote; tagging v4r3p1
+    *
+------------------------------------------------------------
 TAG
 Tag name: v4r3, operation: mov
 Package: fitsGen
