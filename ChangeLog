@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jchiang  Fri May 29 12:27:01 PDT 2009
+fitsGen/data
+
+Modified Files:
+	ft1.tpl 
+Log Message:
+remove CTBCLASSLEVEL
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-09-13-00, operation: add
 Package: fitsGen
