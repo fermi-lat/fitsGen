@@ -1,6 +1,6 @@
 # -*- python -*-
 #
-# $Id: SConscript,v 1.17 2010/02/04 03:38:02 jchiang Exp $
+# $Id: SConscript,v 1.18 2010/02/04 03:39:29 jchiang Exp $
 # Authors: James Chiang <jchiang@slac.stanford.edu>
 # Version: fitsGen-04-05-03
 Import('baseEnv')
@@ -8,11 +8,10 @@ Import('listFiles')
 progEnv = baseEnv.Clone()
 libEnv = baseEnv.Clone()
 
-libEnv.Tool('fitsGenLib', depsOnly = 1)
 fitsGenLib = libEnv.StaticLibrary('fitsGen', listFiles(['src/*.cxx']))
 
 progEnv.Tool('fitsGenLib')
-
+progEnv.Append(CPPDEFINES = 'TRAP_FPE')
 makeFT1Bin = progEnv.Program('makeFT1', 'src/makeFT1/makeFT1.cxx')
 makeFT2Bin = progEnv.Program('makeFT2', 'src/makeFT2/makeFT2.cxx')
 makeFT2aBin = progEnv.Program('makeFT2a', 'src/makeFT2a/makeFT2a.cxx')
