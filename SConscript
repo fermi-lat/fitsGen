@@ -1,6 +1,6 @@
 # -*- python -*-
 #
-# $Id: SConscript,v 1.19 2010/02/18 01:11:18 jrb Exp $
+# $Id: SConscript,v 1.20 2010/02/22 23:12:23 jrb Exp $
 # Authors: James Chiang <jchiang@slac.stanford.edu>
 # Version: fitsGen-04-05-04
 Import('baseEnv')
@@ -11,7 +11,8 @@ libEnv = baseEnv.Clone()
 fitsGenLib = libEnv.StaticLibrary('fitsGen', listFiles(['src/*.cxx']))
 
 progEnv.Tool('fitsGenLib')
-progEnv.Append(CPPDEFINES = 'TRAP_FPE')
+if baseEnv['PLATFORM'] == "posix":
+    progEnv.Append(CPPDEFINES = 'TRAP_FPE')
 makeFT1Bin = progEnv.Program('makeFT1', 'src/makeFT1/makeFT1.cxx')
 makeFT2Bin = progEnv.Program('makeFT2', 'src/makeFT2/makeFT2.cxx')
 makeFT2aBin = progEnv.Program('makeFT2a', 'src/makeFT2a/makeFT2a.cxx')
