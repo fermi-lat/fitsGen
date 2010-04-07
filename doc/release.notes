@@ -1,11 +1,12 @@
 /** @file release.notes
     @brief package fitsGen
     @brief Package coordinators: J. Chiang <jchiang@slac.stanford.edu>
-    $Id: release.notes,v 1.77 2010/02/22 23:12:23 jrb Exp $
+    $Id: release.notes,v 1.78 2010/02/25 00:39:54 jrb Exp $
 
     @verbatim
     EOH
 
+ fitsGen-04-05-06 07-Apr-2010 jchiang change comments for RA_SCZ, etc in ft2.tpl
  fitsGen-04-05-05 24-Feb-2010    jrb TRAP_FPE is for Linux only
  fitsGen-04-05-04 22-Feb-2010    jrb correct use of xxLib for libEnv
  fitsGen-04-05-03 03-Feb-2010 jchiang change comments in ft2.tpl for DATA_QUAL and LAT_CONFIG columns
