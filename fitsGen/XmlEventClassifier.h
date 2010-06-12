@@ -3,7 +3,9 @@
  * @brief Wrap EvtUtils code to read in xml event class definitions and
  * apply them to a merit file.
  *
- * $Header$
+ * @author J. Chiang
+ *
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/XmlEventClassifier.h,v 1.1 2010/06/12 07:12:23 jchiang Exp $
  */
 
 #ifndef fitsGen_XmlEventClassifier_h
@@ -21,6 +23,11 @@ namespace EvtUtils {
 
 namespace fitsGen {
 
+/**
+ * @class XmlEventClassifier
+ *
+ */
+
 class XmlEventClassifier {
 
 public:
@@ -28,8 +35,15 @@ public:
    XmlEventClassifier(const std::string & xmlFile,
                       const std::string & meritFile);
 
+   ~XmlEventClassifier() throw();
+
    unsigned int operator()(unsigned int run,
                            unsigned int eventId) const;
+
+   bool is_class_member(unsigned int run, 
+                        unsigned int eventId, 
+                        unsigned int evtclass) const;
+
 private:
 
    EvtUtils::EventClass * m_evtClass;
@@ -38,7 +52,7 @@ private:
    typedef std::map<std::pair<unsigned int, unsigned int>,
                     unsigned int> EventClassMap_t;
    
-   EventClassMap_t m_eventClasses;
+   EventClassMap_t m_bitMaps;
 };
 
 } // namespace fitsGen
