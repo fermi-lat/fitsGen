@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Sat Jun 12 08:16:34 PDT 2010
+fitsGen/src
+
+Modified Files:
+	XmlEventClassifier.cxx 
+Log Message:
+more refinements, add is_class_member function
+    *
+------------------------------------------------------------
+User: jchiang  Sat Jun 12 08:16:34 PDT 2010
 fitsGen/fitsGen
 
 Modified Files:
