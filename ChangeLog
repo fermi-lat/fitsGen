@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Sat Jun 12 08:16:34 PDT 2010
+fitsGen/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+more refinements, add is_class_member function
+    *
+------------------------------------------------------------
 User: jchiang  Sat Jun 12 00:12:23 PDT 2010
 fitsGen/src
 
