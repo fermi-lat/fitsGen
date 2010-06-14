@@ -1,11 +1,11 @@
 /**
  * @file XmlEventClassifier.h
- * @brief Wrap EvtUtils code to read in xml event class definitions and
+ * @brief Wrap evtUtils code to read in xml event class definitions and
  * apply them to a merit file.
  *
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/XmlEventClassifier.h,v 1.1 2010/06/12 07:12:23 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/fitsGen/XmlEventClassifier.h,v 1.2 2010/06/12 15:16:34 jchiang Exp $
  */
 
 #ifndef fitsGen_XmlEventClassifier_h
@@ -17,7 +17,7 @@
 
 class TFile;
 
-namespace EvtUtils {
+namespace evtUtils {
    class EventClass;
 }
 
@@ -46,7 +46,7 @@ public:
 
 private:
 
-   EvtUtils::EventClass * m_evtClass;
+   evtUtils::EventClass * m_evtClass;
    TFile * m_meritFile;
 
    typedef std::map<std::pair<unsigned int, unsigned int>,
