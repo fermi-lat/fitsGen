@@ -1,9 +1,9 @@
 package fitsGen
-version v4r5p6
+version v4r6p0
 
 author James Chiang <jchiang@slac.stanford.edu>
 
-# $Id: requirements,v 1.99 2010/06/12 15:16:34 jchiang Exp $
+# $Id: requirements,v 1.100 2010/06/14 23:47:19 jchiang Exp $
 
 use GlastPolicy v*
 use facilities v*
@@ -34,7 +34,6 @@ apply_pattern ST_app name=makeFT1
 apply_pattern ST_app name=makeFT1_kluge
 apply_pattern ST_app name=makeFT2
 application makeFT2a makeFT2a/makeFT2a.cxx
-#application xml_classifier xml_classifier/xml_classifier.cxx
 
 application egret2FT1 egret2FT1/*.cxx
 application convertFT1 convertFT1/convertFT1.cxx
