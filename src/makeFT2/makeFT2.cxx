@@ -3,9 +3,10 @@
  * @brief Convert Root D2 data from Gleam to FT2 format.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/makeFT2/makeFT2.cxx,v 1.11 2007/06/22 18:40:10 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/makeFT2/makeFT2.cxx,v 1.12 2008/03/13 22:57:57 jchiang Exp $
  */
 
+#include <cstdlib>
 #include <iostream>
 #include <stdexcept>
 #include <string>
@@ -55,7 +56,7 @@ private:
    double geomag_lat(const std::vector<float> & sc_pos, double met) const;
 };
 
-std::string MakeFt2::s_cvs_id("$Name: v3r8p1 $");
+std::string MakeFt2::s_cvs_id("$Name:  $");
 
 st_app::StAppFactory<MakeFt2> myAppFactory("makeFT2");
 
