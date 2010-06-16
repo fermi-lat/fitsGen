@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Wed Jun 16 15:43:43 PDT 2010
+ScienceTools-scons/fitsGen/src/egret2FT1
+
+Modified Files:
+	egret2FT1.cxx 
+Log Message:
+add includes for gcc4.4.3 build
+    *
+------------------------------------------------------------
 User: jchiang  Wed Jun 16 15:43:42 PDT 2010
 ScienceTools-scons/fitsGen
 
