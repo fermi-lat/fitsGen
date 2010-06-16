@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Wed Jun 16 15:43:42 PDT 2010
+ScienceTools-scons/fitsGen
+
+Modified Files:
+	fitsGenLib.py 
+Log Message:
+add includes for gcc4.4.3 build
+    *
+------------------------------------------------------------
 TAG
 Tag name: fitsGen-04-06-00, operation: add
 Package: fitsGen
