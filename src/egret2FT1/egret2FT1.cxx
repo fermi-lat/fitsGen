@@ -3,10 +3,11 @@
  * @brief EGRET SMDB to FT1 converter
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/egret2FT1/egret2FT1.cxx,v 1.6 2005/12/15 15:03:11 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/egret2FT1/egret2FT1.cxx,v 1.7 2005/12/18 05:51:53 jchiang Exp $
  */
 
 #include <cmath>
+#include <cstdlib>
 
 #include <iostream>
 #include <stdexcept>

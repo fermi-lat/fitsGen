@@ -4,9 +4,10 @@
  * ntuple to a FITS file
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/irfTuple/irfTuple.cxx,v 1.3 2007/10/01 18:57:14 golpa Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/irfTuple/irfTuple.cxx,v 1.4 2007/10/05 00:46:31 jchiang Exp $
  */
 
+#include <cstdio>
 #include <cstdlib>
 
 #include <iostream>
