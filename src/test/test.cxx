@@ -3,7 +3,7 @@
  * @brief Scaffolding for EventClassifier code.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/test/test.cxx,v 1.3 2007/04/08 19:49:03 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/test/test.cxx,v 1.4 2010/06/15 01:18:50 jchiang Exp $
  */
 
 #include <iostream>
@@ -32,7 +32,7 @@ void run(fitsGen::EventClassifier & eventClass,
    std::cout << eventClass(my_row) << std::endl;
 }
 
-void xml_classifier() {
+int xml_classifier() {
    std::string merit_file(datapath("xml_test_merit.root"));
    std::string xml_file(datapath("EvtClassDefs_Test.xml"));
    
