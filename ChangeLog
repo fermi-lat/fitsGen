@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jchiang  Wed Jun 30 10:10:01 PDT 2010
+ScienceTools-scons/fitsGen/src/test
+
+Modified Files:
+	test.cxx 
+Log Message:
+change return type for xml_classifier model so that it is consistent with definition.
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: fitsGen-04-06-01, operation: add
 Package: fitsGen
