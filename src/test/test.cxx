@@ -3,7 +3,7 @@
  * @brief Scaffolding for EventClassifier code.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/test/test.cxx,v 1.4 2010/06/15 01:18:50 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/test/test.cxx,v 1.5 2010/06/30 17:10:01 jchiang Exp $
  */
 
 #include <iostream>
@@ -40,6 +40,8 @@ int xml_classifier() {
 
    unsigned int run[3] = {239559565, 239559565, 239572736};
    unsigned int event_id[3] = {4851437, 10436210, 76017};
+
+   std::cout << foo.passVersion() << std::endl;
 
    for (size_t i(0); i < 3; i++) {
       unsigned int evtclass = foo(run[i], event_id[i]);
