@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Fri Jul  9 15:34:09 PDT 2010
+ScienceTools-scons/fitsGen/src/makeFT1
+
+Modified Files:
+	makeFT1.cxx 
+Log Message:
+add XmlEventClassifier to makeFT1; refactor EventClassifier interface and make it the base class
+    *
+------------------------------------------------------------
+User: jchiang  Fri Jul  9 15:34:09 PDT 2010
 ScienceTools-scons/fitsGen/src
 
 Modified Files:
