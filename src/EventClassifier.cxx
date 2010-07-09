@@ -5,7 +5,7 @@
  * partitioning and event class number assignment.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/EventClassifier.cxx,v 1.7 2007/10/01 18:57:14 golpa Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/EventClassifier.cxx,v 1.8 2008/04/12 23:08:21 jchiang Exp $
  */
 
 #include <iostream>
@@ -32,7 +32,9 @@ EventClassifier::EventClassifier(const std::string & classifierScript)
 EventClassifier::~EventClassifier() throw() {
    try {
       delete m_meritDict;
-      Py_DECREF(m_classifier);
+      if (m_classifier) {
+         Py_DECREF(m_classifier);
+      }
       delete m_module;
    } catch (std::exception & eObj) {
       std::cout << eObj.what() << std::endl;
@@ -40,24 +42,24 @@ EventClassifier::~EventClassifier() throw() {
    }
 }
 
-long EventClassifier::operator()(tip::ConstTableRecord & row) {
-   m_meritDict->setItems(row);
+unsigned int EventClassifier::operator()(tip::ConstTableRecord & row) const {
+   const_cast<MeritDict *>(m_meritDict)->setItems(row);
    return value();
 }
 
-long EventClassifier::
-operator()(const std::map<std::string, double> & row) {
-   m_meritDict->setItems(row);
+unsigned int EventClassifier::
+operator()(const std::map<std::string, double> & row) const {
+   const_cast<MeritDict *>(m_meritDict)->setItems(row);
    return value();
 }
 
-long EventClassifier::value() const {
+unsigned int EventClassifier::value() const {
    PyObject * args(Py_BuildValue("(O)", m_meritDict->pyDict()));
    PyObject * result = m_module->call(m_classifier, args);
    long ret(PyInt_AsLong(result));
    Py_DECREF(result);
    Py_DECREF(args);
-   return ret;
+   return static_cast<unsigned int>(ret);
 }
 
 std::string EventClassifier::pythonPath() const {

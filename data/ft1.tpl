@@ -1,5 +1,5 @@
 # Definition of LAT Event Summary File (FT1)
-# $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/data/ft1.tpl,v 1.26 2009/04/11 21:42:39 jchiang Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/data/ft1.tpl,v 1.27 2009/05/29 19:27:00 jchiang Exp $
 SIMPLE      = T                              / file does conform to FITS standard
 BITPIX      = 8                              / number of bits per data pixel
 NAXIS       = 0                              / number of data axes
@@ -27,6 +27,7 @@ FILENAME    =                                / name of this file
 ORIGIN      = 'LISOC'                        / name of organization making file
 CREATOR     =                                / software and version creating file
 VERSION     = 1                              / release version of the file
+PROC_VER    = 1                              / processing version of this file 
 END
 
 XTENSION    = 'BINTABLE'                                / binary table extension
@@ -63,6 +64,7 @@ TIMEREF     = 'LOCAL'                                   / reference frame used f
 CLOCKAPP    = F                                         / whether a clock drift correction has been applied
 GPS_OUT     = F                                         / whether GPS time was unavailable at any time during this interval
 #EVCLSVER    = 1                                         / version of event class definition for IRF handling
+PASS_VER    = 'NONE'                                   / IRF pass version corresponding to a specific set of event class definitions
 NDIFRSP     = 5                                         / Number of diffuse response labels
 DIFRSP0    = 'NONE'                                    / Diffuse response label for component 0
 DIFRSP1    = 'NONE'                                    / Diffuse response label for component 1
