@@ -1,11 +1,12 @@
 /** @file release.notes
     @brief package fitsGen
     @brief Package coordinators: J. Chiang <jchiang@slac.stanford.edu>
-    $Id: release.notes,v 1.81 2010/06/23 19:18:03 jchiang Exp $
+    $Id: release.notes,v 1.82 2010/06/30 17:12:37 jchiang Exp $
 
     @verbatim
     EOH
 
+ fitsGen-05-00-00 09-Jul-2010 jchiang add XmlEventClassifier to makeFT1; refactor EventClassifier interface and make it the base class
  fitsGen-04-06-02 30-Jun-2010 jchiang bug-fix for test_classifier application
  fitsGen-04-06-01 23-Jun-2010 jchiang tag to include updated fitsGenLib.py
  fitsGen-04-06-00 14-Jun-2010 jchiang XmlEventClassifier added; using evtUtils package
