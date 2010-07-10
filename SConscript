@@ -1,8 +1,9 @@
 # -*- python -*-
 #
-# $Id: SConscript,v 1.26 2010/06/30 17:12:37 jchiang Exp $
+# $Id: SConscript,v 1.27 2010/07/09 22:35:48 jchiang Exp $
 # Authors: James Chiang <jchiang@slac.stanford.edu>
 # Version: fitsGen-05-00-00
+import os
 Import('baseEnv')
 Import('listFiles')
 progEnv = baseEnv.Clone()
@@ -23,6 +24,9 @@ irfTupleBin = progEnv.Program('irfTuple', listFiles(['src/irfTuple/*.cxx']))
 test_classifierBin = progEnv.Program('test_classifier', 
                                      listFiles(['src/test/*.cxx']))
 
+dataFiles = [os.path.join("data", x) for x in ("xml_test_merit.root",
+                                               "EvtClassDefs_Test.xml")]
+
 progEnv.Tool('registerTargets', package = 'fitsGen', 
              staticLibraryCxts = [[fitsGenLib, libEnv]], 
              binaryCxts = [[makeFT1Bin,progEnv], [makeFT2Bin,progEnv],
@@ -30,6 +34,6 @@ progEnv.Tool('registerTargets', package = 'fitsGen',
                            [convertFT1Bin,progEnv], [partitionBin,progEnv],
                            [irfTupleBin,progEnv], [test_classifierBin,progEnv]],
              includes = listFiles(['fitsGen/*.h']), 
-             pfiles = listFiles(['pfiles/*.par']),
-             data = listFiles(['data/*'], recursive = True))
+             pfiles = listFiles(['pfiles/*.par']), recursive = True,
+             data = dataFiles)
 

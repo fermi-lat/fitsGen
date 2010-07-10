@@ -3,7 +3,7 @@
  * @brief Convert merit ntuple to FT1 format.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/makeFT1/makeFT1.cxx,v 1.44 2010/06/16 22:43:43 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/makeFT1/makeFT1.cxx,v 1.45 2010/07/09 22:34:09 jchiang Exp $
  */
 
 #include <cctype>
@@ -260,6 +260,7 @@ void MakeFt1::run() {
       formatter.info() << "number of rows processed: " << ncount << std::endl;
       
       ft1.setNumRows(ncount);
+      ft1.header()["PASS_VER"].set(m_classifier->passVersion());
       my_cuts.addGtiCut(merit.gti());
       my_cuts.writeDssKeywords(ft1.header());
    } catch (tip::TipException & eObj) {
