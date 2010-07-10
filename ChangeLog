@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Fri Jul  9 17:24:09 PDT 2010
+ScienceTools-scons/fitsGen
+
+Modified Files:
+	SConscript 
+Log Message:
+set pass version in ft1 header; install data files for test program; tagging v5r0p1
+    *
+------------------------------------------------------------
 TAG
 Tag name: fitsGen-05-00-00, operation: add
 Package: fitsGen
