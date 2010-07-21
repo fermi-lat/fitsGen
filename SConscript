@@ -1,6 +1,6 @@
 # -*- python -*-
 #
-# $Id: SConscript,v 1.32 2010/07/21 04:43:12 jchiang Exp $
+# $Id: SConscript,v 1.33 2010/07/21 04:58:32 jchiang Exp $
 # Authors: James Chiang <jchiang@slac.stanford.edu>
 # Version: fitsGen-06-00-00
 
@@ -26,6 +26,6 @@ progEnv.Tool('registerTargets', package = 'fitsGen',
              staticLibraryCxts = [[fitsGenLib, libEnv]], 
              binaryCxts = [[test_classifierBin,progEnv]],
              includes = listFiles(['fitsGen/*.h']), 
-             pfiles = listFiles(['pfiles/*.par']), recursive = True,
+             recursive = True,
              data = dataFiles)
 
