@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Tue Jul 20 18:08:44 PDT 2010
+ScienceTools-scons/fitsGen/src
+
+Modified Files:
+	Ft1File.cxx FtFileBase.cxx MeritFile.cxx 
+Log Message:
+begin refactoring of fitsGen into two packages
+    *
+------------------------------------------------------------
+User: jchiang  Tue Jul 20 18:08:44 PDT 2010
 ScienceTools-scons/fitsGen/fitsGen
 
 Modified Files:
