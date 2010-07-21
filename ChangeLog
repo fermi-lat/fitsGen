@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Tue Jul 20 18:08:44 PDT 2010
+ScienceTools-scons/fitsGen/src/makeFT1
+
+Modified Files:
+	makeFT1.cxx 
+Log Message:
+begin refactoring of fitsGen into two packages
+    *
+------------------------------------------------------------
+User: jchiang  Tue Jul 20 18:08:44 PDT 2010
 ScienceTools-scons/fitsGen/src
 
 Modified Files:
