@@ -3,14 +3,14 @@
  * @brief Implementation for merit tuple file abstraction using tip.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/MeritFile.cxx,v 1.8 2007/07/06 22:01:46 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/MeritFile.cxx,v 1.9 2008/01/11 23:06:32 jchiang Exp $
  */
 
 #include <algorithm>
 
 #include "tip/IFileSvc.h"
 
-#include "dataSubselector/Cuts.h"
+//#include "dataSubselector/Cuts.h"
 #include "dataSubselector/Gti.h"
 
 #include "fitsGen/MeritFile.h"
