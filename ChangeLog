@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Tue Jul 20 18:08:44 PDT 2010
+ScienceTools-scons/fitsGen/fitsGen
+
+Modified Files:
+	FtFileBase.h MeritFile.h 
+Log Message:
+begin refactoring of fitsGen into two packages
+    *
+------------------------------------------------------------
 TAG
 Tag name: fitsGen-05-00-02, operation: add
 Package: fitsGen
