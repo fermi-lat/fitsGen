@@ -3,15 +3,11 @@
  * @brief Declaration for MeritTuple abstraction.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/fitsGen/MeritFile.h,v 1.9 2008/12/03 18:19:51 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/fitsGen/MeritFile.h,v 1.10 2010/07/21 01:08:44 jchiang Exp $
  */
 
 #ifndef fitsGen_MeritFile_h
 #define fitsGen_MeritFile_h
-
-namespace dataSubselector {
-   class Gti;
-}
 
 #include "tip/Table.h"
 
@@ -55,9 +51,13 @@ public:
 
    tip::Table::ConstIterator & itor();
 
-   /// @return A Gti object containing the GTIs for this merit file.
-   /// This comprises just the beginning and end times for the data.
-   const dataSubselector::Gti & gti() const;
+   double tstart() const {
+      return m_tstart;
+   }
+
+   double tstop() const {
+      return m_tstop;
+   }
 
    /// @brief Set the start and stop times of the GTI by hand.
    /// This filter will be applied to the data in addition to the 
@@ -75,8 +75,8 @@ private:
    tip::Index_t m_nrows;
 
    bool m_haveTime;
-
-   dataSubselector::Gti * m_gti;
+   double m_tstart;
+   double m_tstop;
 };
 
 } // namespace fitsGen
