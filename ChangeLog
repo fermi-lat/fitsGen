@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Tue Jul 20 21:43:14 PDT 2010
+ScienceTools-scons/fitsGen/src
+
+Modified Files:
+	MeritFile.cxx 
+Log Message:
+remove applications and any dependence on st_app, st_graph, hoops, etc.
+    *
+------------------------------------------------------------
 User: jchiang  Tue Jul 20 21:43:13 PDT 2010
 ScienceTools-scons/fitsGen/fitsGen
 
