@@ -3,7 +3,7 @@
  * @brief Implementation of FT1 file abstraction.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/Ft1File.cxx,v 1.12 2007/07/06 22:01:46 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/Ft1File.cxx,v 1.13 2010/07/21 01:08:44 jchiang Exp $
  */
 
 #include <iostream>
@@ -12,8 +12,6 @@
 
 #include "tip/IFileSvc.h"
 #include "tip/Image.h"
-
-#include "st_facilities/Util.h"
 
 #include "fitsGen/Ft1File.h"
 
