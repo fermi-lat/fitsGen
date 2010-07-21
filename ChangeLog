@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jchiang  Tue Jul 20 21:50:10 PDT 2010
+ScienceTools-scons/fitsGen/src
+
+Modified Files:
+	Ft1File.cxx 
+Log Message:
+delete include st_facilities/Util.h
+
+    *
+------------------------------------------------------------
 User: jchiang  Tue Jul 20 21:43:14 PDT 2010
 ScienceTools-scons/fitsGen/src
 
