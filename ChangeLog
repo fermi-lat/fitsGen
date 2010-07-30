@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Fri Jul 30 10:42:25 PDT 2010
+ScienceTools-scons/fitsGen/fitsGen
+
+Modified Files:
+	XmlEventClassifier.h 
+Log Message:
+read event class map from par file; apply filter to data read in by XmlClassifier; bug-fix for setting EVENT_CLASS using an unsigned int
+    *
+------------------------------------------------------------
+User: jchiang  Fri Jul 30 10:42:25 PDT 2010
 ScienceTools-scons/fitsGen/data
 
 Modified Files:
