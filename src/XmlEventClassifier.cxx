@@ -5,10 +5,10 @@
  *
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/XmlEventClassifier.cxx,v 1.4 2010/07/09 22:34:08 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/XmlEventClassifier.cxx,v 1.5 2010/07/30 17:42:25 jchiang Exp $
  */
 
-#include <cstdlib>
+#include <cstdio>
 #include <iostream>
 #include <map>
 #include <stdexcept>
@@ -59,7 +59,8 @@ XmlEventClassifier::XmlEventClassifier(const std::string & xmlFile,
 
    UInt_t * photonMap = m_evtClass->getShortMapPtr(evtClassMap);
    if (photonMap == 0) {
-      throw std::runtime_error("ShortMapPtr to" + evtClassMap + "not found.");
+      std::remove(tempfile.c_str());
+      throw std::runtime_error("ShortMapPtr to " + evtClassMap + " not found.");
    }
 
    Long64_t nevents = meritTree->GetEntries();
@@ -67,6 +68,7 @@ XmlEventClassifier::XmlEventClassifier(const std::string & xmlFile,
    for (Long64_t ievt(0); ievt < nevents; ievt++) {
       meritTree->LoadTree(ievt);
       if (!m_evtClass->fillShortCutMaps()) {
+         std::remove(tempfile.c_str());
          throw std::runtime_error("error evaluating cuts");
       }
       meritTree->GetEvent(ievt);
