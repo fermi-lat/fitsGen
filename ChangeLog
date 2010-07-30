@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Fri Jul 30 10:42:25 PDT 2010
+ScienceTools-scons/fitsGen/data
+
+Modified Files:
+	ft1.tpl 
+Log Message:
+read event class map from par file; apply filter to data read in by XmlClassifier; bug-fix for setting EVENT_CLASS using an unsigned int
+    *
+------------------------------------------------------------
 TAG
 Tag name: fitsGen-06-00-01, operation: add
 Package: fitsGen
