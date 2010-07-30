@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Fri Jul 30 10:43:27 PDT 2010
+ScienceTools-scons/fitsGen/data
+
+Modified Files:
+	ft1.tpl 
+Log Message:
+remove TNULL15 keyword
+    *
+------------------------------------------------------------
 User: jchiang  Fri Jul 30 10:42:25 PDT 2010
 ScienceTools-scons/fitsGen/src
 
