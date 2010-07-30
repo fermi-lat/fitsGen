@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Fri Jul 30 12:13:56 PDT 2010
+ScienceTools-scons/fitsGen/data
+
+Modified Files:
+	EvtClassDefs_Test.xml 
+Log Message:
+clean up temp file before throwing exceptions; add different event class map in test xml def file
+    *
+------------------------------------------------------------
 User: jchiang  Fri Jul 30 10:43:27 PDT 2010
 ScienceTools-scons/fitsGen/data
 
