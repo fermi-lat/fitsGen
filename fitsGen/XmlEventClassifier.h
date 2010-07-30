@@ -5,7 +5,7 @@
  *
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/fitsGen/XmlEventClassifier.h,v 1.3 2010/06/14 23:47:20 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/fitsGen/XmlEventClassifier.h,v 1.4 2010/07/09 22:34:08 jchiang Exp $
  */
 
 #ifndef fitsGen_XmlEventClassifier_h
@@ -35,7 +35,10 @@ class XmlEventClassifier : public EventClassifier {
 public:
 
    XmlEventClassifier(const std::string & xmlFile,
-                      const std::string & meritFile);
+                      const std::string & meritFile,
+                      const std::string & filter,
+                      const std::string & evtClassMap="FT1EventClass",
+                      const std::string & tempfile="xmlClassifier_temp.root");
 
    virtual ~XmlEventClassifier() throw();
 

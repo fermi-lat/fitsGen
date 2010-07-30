@@ -5,9 +5,10 @@
  *
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/XmlEventClassifier.cxx,v 1.3 2010/06/14 23:47:20 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/XmlEventClassifier.cxx,v 1.4 2010/07/09 22:34:08 jchiang Exp $
  */
 
+#include <cstdlib>
 #include <iostream>
 #include <map>
 #include <stdexcept>
@@ -25,7 +26,10 @@
 namespace fitsGen {
 
 XmlEventClassifier::XmlEventClassifier(const std::string & xmlFile, 
-                                       const std::string & meritFile) 
+                                       const std::string & meritFile,
+                                       const std::string & filter,
+                                       const std::string & evtClassMap,
+                                       const std::string & tempfile)
    : EventClassifier(),
      m_evtClass(evtUtils::EventClass::loadFromXml(xmlFile.c_str())),
      m_meritFile(TFile::Open(meritFile.c_str())) {
@@ -38,7 +42,10 @@ XmlEventClassifier::XmlEventClassifier(const std::string & xmlFile,
       throw std::runtime_error("Failed to load " + meritFile);
    }
 
-   TTree * meritTree = dynamic_cast<TTree *>(m_meritFile->Get("MeritTuple"));
+//   TTree * meritTree = dynamic_cast<TTree *>(m_meritFile->Get("MeritTuple"));
+   TTree * fullTree = dynamic_cast<TTree *>(m_meritFile->Get("MeritTuple"));
+   TFile * dummyFile = new TFile(tempfile.c_str(), "recreate");
+   TTree * meritTree = fullTree->CopyTree(filter.c_str());
 
    if (!m_evtClass->initializeShortCuts(*meritTree)) {
       throw std::runtime_error("error initializing cuts");
@@ -50,9 +57,9 @@ XmlEventClassifier::XmlEventClassifier(const std::string & xmlFile,
    meritTree->SetBranchAddress("EvtRun", &EvtRun);
    meritTree->SetBranchAddress("EvtEventId", &EvtEventId);
 
-   UInt_t * photonMap = m_evtClass->getShortMapPtr("FT1EventClass");
+   UInt_t * photonMap = m_evtClass->getShortMapPtr(evtClassMap);
    if (photonMap == 0) {
-      throw std::runtime_error("ShortMapPtr to FT1EventClass not found.");
+      throw std::runtime_error("ShortMapPtr to" + evtClassMap + "not found.");
    }
 
    Long64_t nevents = meritTree->GetEntries();
@@ -67,6 +74,10 @@ XmlEventClassifier::XmlEventClassifier(const std::string & xmlFile,
       unsigned int event_id = static_cast<unsigned int>(EvtEventId);
       m_bitMaps[std::make_pair(run, event_id)] = *photonMap;
    }
+   delete fullTree;
+   delete meritTree;
+   delete dummyFile;
+   std::remove(tempfile.c_str());
 }
 
 XmlEventClassifier::~XmlEventClassifier() throw() {
