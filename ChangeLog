@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Mon Oct  4 16:39:36 PDT 2010
+ScienceTools-scons/fitsGen/src
+
+Modified Files:
+	XmlEventClassifier.cxx 
+Log Message:
+use TEventList so that we can avoid the temporary file in XmlClassifier
+    *
+------------------------------------------------------------
+User: jchiang  Mon Oct  4 16:39:36 PDT 2010
 ScienceTools-scons/fitsGen/fitsGen
 
 Modified Files:
