@@ -1,8 +1,8 @@
 # -*- python -*-
 #
-# $Id: SConscript,v 1.38 2010/07/30 21:08:04 jchiang Exp $
+# $Id: SConscript,v 1.39 2010/10/04 23:41:26 jchiang Exp $
 # Authors: James Chiang <jchiang@slac.stanford.edu>
-# Version: fitsGen-06-01-02
+# Version: fitsGen-06-01-03
 
 import os
 Import('baseEnv')
