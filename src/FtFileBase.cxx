@@ -3,7 +3,7 @@
  * @brief Implementation of FT1/2 file base class.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/FtFileBase.cxx,v 1.13 2008/12/03 18:19:51 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/FtFileBase.cxx,v 1.14 2010/07/21 01:08:44 jchiang Exp $
  */
 
 #include <iostream>
@@ -33,7 +33,9 @@ FtFileBase::FtFileBase(const std::string & outfile, tip::Index_t nrows) :
 void FtFileBase::init(const std::string & templateFile, 
                       const std::string & extname) {
    std::string ft_template(templateFile);
-   if (templateFile == "ft1.tpl" || templateFile == "ft2.tpl") {
+   if (templateFile == "ft1.tpl" || 
+       templateFile == "ft2.tpl" ||
+       templateFile == "lle.tpl") {
       ft_template = facilities::commonUtilities::joinPath(
          facilities::commonUtilities::getDataPath("fitsGen"), templateFile);
    } 

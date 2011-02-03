@@ -1,6 +1,6 @@
 # -*- python -*-
 #
-# $Id: SConscript,v 1.39 2010/10/04 23:41:26 jchiang Exp $
+# $Id: SConscript,v 1.40 2010/10/06 04:55:19 jchiang Exp $
 # Authors: James Chiang <jchiang@slac.stanford.edu>
 # Version: fitsGen-06-01-03
 
@@ -20,7 +20,7 @@ test_classifierBin = progEnv.Program('test_fitsGen',
 
 dataFiles = [os.path.join("data", x) for x in ("xml_test_merit.root",
                                                "EvtClassDefs_Test.xml",
-                                               "ft1.tpl", "ft2.tpl")]
+                                               "ft1.tpl", "ft2.tpl", "lle.tpl")]
 
 progEnv.Tool('registerTargets', package = 'fitsGen', 
              staticLibraryCxts = [[fitsGenLib, libEnv]], 
