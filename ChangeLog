@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Wed Feb  2 20:11:55 PST 2011
+ScienceTools-scons/fitsGen/src
+
+Modified Files:
+	FtFileBase.cxx 
+Log Message:
+add LLE template
+    *
+------------------------------------------------------------
+User: jchiang  Wed Feb  2 20:11:55 PST 2011
 ScienceTools-scons/fitsGen/data
 
 Added Files:
