@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Tue Feb 15 11:19:16 PST 2011
+ScienceTools-scons/fitsGen/src/test
+
+Modified Files:
+	test.cxx 
+Log Message:
+enable a few more features in MeritFile2; add member functions to classifiers to use MeritFile2
+    *
+------------------------------------------------------------
+User: jchiang  Tue Feb 15 11:19:16 PST 2011
 ScienceTools-scons/fitsGen/src
 
 Modified Files:
