@@ -5,7 +5,7 @@
  * having to generate a temporary file.
  * @author J. Chiang
  *
- * $Header$
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/fitsGen/MeritFile2.h,v 1.1 2011/02/15 07:32:43 jchiang Exp $
  */
 
 #ifndef fitsGen_MeritFile2_h
@@ -44,6 +44,10 @@ public:
 
    /// Move to first row of filtered data. Returns 0.
    Long64_t rewind();
+
+   Long64_t index() const {
+      return m_index;
+   }
    
    /// Value of named column for current row.
    double operator[](const std::string & fieldname);
