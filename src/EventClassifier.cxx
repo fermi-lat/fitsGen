@@ -5,7 +5,7 @@
  * partitioning and event class number assignment.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/EventClassifier.cxx,v 1.8 2008/04/12 23:08:21 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/EventClassifier.cxx,v 1.9 2010/07/09 22:34:08 jchiang Exp $
  */
 
 #include <iostream>
@@ -15,9 +15,10 @@
 
 #include "tip/Table.h"
 
-#include "fitsGen/EventClassifier.h"
-
 #include "facilities/commonUtilities.h"
+
+#include "fitsGen/EventClassifier.h"
+#include "fitsGen/MeritFile2.h"
 
 namespace fitsGen {
 
@@ -44,6 +45,11 @@ EventClassifier::~EventClassifier() throw() {
 
 unsigned int EventClassifier::operator()(tip::ConstTableRecord & row) const {
    const_cast<MeritDict *>(m_meritDict)->setItems(row);
+   return value();
+}
+
+unsigned int EventClassifier::operator()(MeritFile2 & merit) const {
+   const_cast<MeritDict *>(m_meritDict)->setItems(merit);
    return value();
 }
 
@@ -98,6 +104,13 @@ void EventClassifier::
 MeritDict::setItems(tip::ConstTableRecord & row) {
    for (size_t i = 0; i < m_keys.size(); i++) {
       setItem(m_keys.at(i), row[m_keys.at(i)].get());
+   }
+}
+
+void EventClassifier::
+MeritDict::setItems(MeritFile2 & merit) {
+   for (size_t i = 0; i < m_keys.size(); i++) {
+      setItem(m_keys.at(i), merit[m_keys.at(i)]);
    }
 }
 
