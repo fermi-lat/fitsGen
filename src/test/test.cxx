@@ -3,9 +3,10 @@
  * @brief Scaffolding for EventClassifier code.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/test/test.cxx,v 1.5 2010/06/30 17:10:01 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/test/test.cxx,v 1.6 2010/07/09 22:34:09 jchiang Exp $
  */
 
+#include <cassert>
 #include <iostream>
 #include <stdexcept>
 
@@ -14,6 +15,8 @@
 #include "embed_python/Module.h"
 
 #include "fitsGen/EventClassifier.h"
+#include "fitsGen/MeritFile.h"
+#include "fitsGen/MeritFile2.h"
 #include "fitsGen/XmlEventClassifier.h"
 
 std::string datapath(const std::string & basename) {
@@ -54,6 +57,27 @@ int xml_classifier() {
    return 0;
 }
 
+int test_MeritFile2() {
+   std::string infile(datapath("xml_test_merit.root"));
+   std::string treename("MeritTuple");
+   std::string filter("EvtEnergyCorr>1e5");
+   fitsGen::MeritFile merit(infile, treename, filter);
+   fitsGen::MeritFile2 merit2(infile, treename, filter);
+   assert(merit.nrows() == merit2.nrows());
+   for ( ; merit2.index() != merit2.nrows(); merit.next(), merit2.next()) {
+      assert(merit["EvtElapsedTime"] == merit2["EvtElapsedTime"]);
+      assert(merit["EvtEnergyCorr"] == merit2["EvtEnergyCorr"]);
+      assert(merit["TkrNumTracks"] == merit2["TkrNumTracks"]);
+      assert(merit["EvtEventId"] == merit2["EvtEventId"]);
+//      std::cout << merit["EvtEnergyCorr"] << std::endl;
+   }
+   try {
+      merit2["EvtEnrgyCore"];
+   } catch(std::runtime_error & eObj) {
+//      std::cout << eObj.what() << std::endl;
+   }
+}
+
 int main() {
    try {
       fitsGen::EventClassifier foo("Pass4_Classifier");
@@ -69,4 +93,5 @@ int main() {
    } catch (std::exception & eObj) {
       std::cout << eObj.what() << std::endl;
    }
+   test_MeritFile2();
 }

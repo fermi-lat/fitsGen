@@ -3,7 +3,7 @@
  * @brief Interface to merit files that uses ROOT directly.
  * @author J. Chiang
  *
- * $Header$
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/MeritFile2.cxx,v 1.1 2011/02/15 07:32:43 jchiang Exp $
  */
 
 #include <stdexcept>
@@ -27,6 +27,10 @@ MeritFile2::MeritFile2(const std::string & meritfile,
    }
 
    m_tree = dynamic_cast<TTree *>(m_file->Get(tree.c_str()));
+   if (m_tree == 0) {
+      throw std::runtime_error("Failed to load tree '" 
+                               + tree + "' from file " + meritfile);
+   }
    
 // Use TTree::Draw function to apply the filter string and get a
 // TEventList.
@@ -78,6 +82,7 @@ double MeritFile2::operator[](const std::string & fieldname) {
       BranchData_t branch_data(get_branch_pointer(fieldname));
       m_tree->SetBranchAddress(fieldname.c_str(), branch_data.first);
       m_branches[fieldname] = branch_data;
+      setEntry();
       return recast_as_double(branch_data);
    }
    return recast_as_double(it->second);
