@@ -3,11 +3,12 @@
  * @brief Scaffolding for EventClassifier code.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/test/test.cxx,v 1.6 2010/07/09 22:34:09 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/test/test.cxx,v 1.7 2011/02/15 18:00:09 jchiang Exp $
  */
 
 #include <cassert>
 #include <iostream>
+#include <iomanip>
 #include <stdexcept>
 
 #include "facilities/commonUtilities.h"
@@ -64,11 +65,17 @@ int test_MeritFile2() {
    fitsGen::MeritFile merit(infile, treename, filter);
    fitsGen::MeritFile2 merit2(infile, treename, filter);
    assert(merit.nrows() == merit2.nrows());
+   assert(merit.tstart() == merit2.tstart());
+   assert(merit.tstop() == merit2.tstop());
+   std::cout << std::setprecision(13);
+   std::cout << merit.tstart() << "  " << merit2.tstart() << std::endl;
+   std::cout << merit.tstop() << "  " << merit2.tstop() << std::endl;
    for ( ; merit2.index() != merit2.nrows(); merit.next(), merit2.next()) {
       assert(merit["EvtElapsedTime"] == merit2["EvtElapsedTime"]);
       assert(merit["EvtEnergyCorr"] == merit2["EvtEnergyCorr"]);
       assert(merit["TkrNumTracks"] == merit2["TkrNumTracks"]);
       assert(merit["EvtEventId"] == merit2["EvtEventId"]);
+      assert(merit.conversionType() == merit2.conversionType());
 //      std::cout << merit["EvtEnergyCorr"] << std::endl;
    }
    try {

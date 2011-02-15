@@ -5,7 +5,7 @@
  * partitioning and event class number assignment.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/fitsGen/EventClassifier.h,v 1.5 2008/01/11 23:06:32 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/fitsGen/EventClassifier.h,v 1.6 2010/07/09 22:34:08 jchiang Exp $
  */
 
 #ifndef fitsGen_EventClassifier_h
@@ -21,6 +21,8 @@ namespace tip {
 }
 
 namespace fitsGen {
+
+class MeritFile2;
 
 /**
  * @class EventClassifier
@@ -46,6 +48,11 @@ public:
    /// event does not fit into any class.
    /// @param row A row from a merit file, typically
    virtual unsigned int operator()(tip::ConstTableRecord & row) const;
+
+   /// @return The event class id number.  This is -1 if the
+   /// event does not fit into any class.
+   /// @param merit MeritFile2 interface to merit data
+   virtual unsigned int operator()(MeritFile2 & merit) const;
 
    /// @return The event class id number.  This is -1 if the
    /// event does not fit into any class.
@@ -83,6 +90,8 @@ private:
                    double value);
 
       void setItems(tip::ConstTableRecord & row);
+
+      void setItems(MeritFile2 & merit);
 
       void setItems(const std::map<std::string, double> & row);
 

@@ -5,7 +5,7 @@
  *
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/fitsGen/XmlEventClassifier.h,v 1.6 2010/07/30 21:07:06 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/fitsGen/XmlEventClassifier.h,v 1.7 2010/10/04 23:39:36 jchiang Exp $
  */
 
 #ifndef fitsGen_XmlEventClassifier_h
@@ -25,6 +25,8 @@ namespace evtUtils {
 
 namespace fitsGen {
 
+class MeritFile2;
+
 /**
  * @class XmlEventClassifier
  *
@@ -42,6 +44,8 @@ public:
    virtual ~XmlEventClassifier() throw();
 
    virtual unsigned int operator()(tip::ConstTableRecord & row) const;
+
+   virtual unsigned int operator()(MeritFile2 & merit) const;
 
    virtual unsigned int 
    operator()(const std::map<std::string, double> & row) const;
