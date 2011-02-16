@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Tue Feb 15 22:32:31 PST 2011
+fitsGen
+
+Modified Files:
+	SConscript 
+Log Message:
+stag/GoGui_auto-tag
+    *
+------------------------------------------------------------
 User: jchiang  Tue Feb 15 22:30:37 PST 2011
 ScienceTools-scons/fitsGen/cmt
 
