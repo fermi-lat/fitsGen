@@ -3,7 +3,7 @@
  * @brief Interface to merit files that uses ROOT directly.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/MeritFile2.cxx,v 1.2 2011/02/15 18:00:08 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/MeritFile2.cxx,v 1.3 2011/02/15 19:19:16 jchiang Exp $
  */
 
 #include <stdexcept>
@@ -156,17 +156,17 @@ double MeritFile2::recast_as_double(const BranchData_t & branch_data) const {
 
 void MeritFile2::delete_branch_pointer(const BranchData_t & branch_data) const {
    if (branch_data.second == "Double_t") {
-      return delete reinterpret_cast<Double_t *>(branch_data.first);
+      delete reinterpret_cast<Double_t *>(branch_data.first);
    } else if (branch_data.second == "Float_t") {
-      return delete reinterpret_cast<Float_t *>(branch_data.first);
+      delete reinterpret_cast<Float_t *>(branch_data.first);
    } else if (branch_data.second == "Int_t") {
-      return delete reinterpret_cast<Int_t *>(branch_data.first);
+      delete reinterpret_cast<Int_t *>(branch_data.first);
    } else if (branch_data.second == "UInt_t") {
-      return delete reinterpret_cast<UInt_t *>(branch_data.first);
+      delete reinterpret_cast<UInt_t *>(branch_data.first);
    } else if (branch_data.second == "Long_t") {
-      return delete reinterpret_cast<Long_t *>(branch_data.first);
+      delete reinterpret_cast<Long_t *>(branch_data.first);
    } else if (branch_data.second == "ULong_t") {
-      return delete reinterpret_cast<ULong_t *>(branch_data.first);
+      delete reinterpret_cast<ULong_t *>(branch_data.first);
    }
 }
 
