@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Fri Mar 11 13:05:21 PST 2011
+fitsGen
+
+Modified Files:
+	SConscript 
+Log Message:
+insert return 0 for windows
+    *
+------------------------------------------------------------
 TAG
 Tag name: fitsGen-06-02-01, operation: add
 Package: fitsGen
