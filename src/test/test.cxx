@@ -3,7 +3,7 @@
  * @brief Scaffolding for EventClassifier code.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/test/test.cxx,v 1.7 2011/02/15 18:00:09 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/test/test.cxx,v 1.8 2011/02/15 19:19:16 jchiang Exp $
  */
 
 #include <cassert>
@@ -83,6 +83,7 @@ int test_MeritFile2() {
    } catch(std::runtime_error & eObj) {
 //      std::cout << eObj.what() << std::endl;
    }
+   return 0;
 }
 
 int main() {
