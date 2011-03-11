@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: heather  Fri Mar 11 13:05:21 PST 2011
+fitsGen/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+insert return 0 for windows
+    *
+------------------------------------------------------------
+User: heather  Fri Mar 11 13:05:21 PST 2011
 fitsGen
 
 Modified Files:
