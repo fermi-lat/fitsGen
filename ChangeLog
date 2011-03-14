@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: heather  Mon Mar 14 12:22:53 PDT 2011
+fitsGen/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+comment out more Py_DECREF for win
+    *
+------------------------------------------------------------
+User: heather  Mon Mar 14 12:22:53 PDT 2011
 fitsGen/cmt
 
 Modified Files:
