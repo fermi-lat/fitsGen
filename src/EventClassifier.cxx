@@ -5,7 +5,7 @@
  * partitioning and event class number assignment.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/EventClassifier.cxx,v 1.10 2011/02/15 19:19:16 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/EventClassifier.cxx,v 1.11 2011/03/14 04:39:05 jchiang Exp $
  */
 
 #include <iostream>
@@ -68,8 +68,10 @@ unsigned int EventClassifier::value() const {
    PyObject * args(Py_BuildValue("(O)", m_meritDict->pyDict()));
    PyObject * result = m_module->call(m_classifier, args);
    long ret(PyInt_AsLong(result));
+#ifndef WIN32
    Py_DECREF(result);
    Py_DECREF(args);
+#endif
    return static_cast<unsigned int>(ret);
 }
 
@@ -92,7 +94,9 @@ EventClassifier::MeritDict::MeritDict(embed_python::Module * module)
 
 EventClassifier::MeritDict::~MeritDict() throw() {
    if (m_dict) {
+#ifndef WIN32
       Py_DECREF(m_dict);
+#endif
    }
 }
 
@@ -101,8 +105,10 @@ MeritDict::setItem(const std::string & key, double value) {
    PyObject * py_key(PyString_FromString(const_cast<char *>(key.c_str())));
    PyObject * py_value(PyFloat_FromDouble(value));
    PyDict_SetItem(m_dict, py_key, py_value);
+#ifndef WIN32
    Py_DECREF(py_key);
    Py_DECREF(py_value);
+#endif
 }
 
 void EventClassifier::
