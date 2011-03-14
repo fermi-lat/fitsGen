@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: heather  Mon Mar 14 12:22:53 PDT 2011
+fitsGen
+
+Modified Files:
+	SConscript 
+Log Message:
+comment out more Py_DECREF for win
+    *
+------------------------------------------------------------
 TAG
 Tag name: fitsGen-06-02-03, operation: add
 Package: fitsGen
