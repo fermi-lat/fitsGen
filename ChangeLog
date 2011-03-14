@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jchiang  Sun Mar 13 21:39:06 PDT 2011
+ScienceTools-scons/fitsGen/src
+
+Modified Files:
+	EventClassifier.cxx 
+Log Message:
+exclude the Py_DECREF in the EventClassifier destructor for Windows
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: fitsGen-06-02-02, operation: add
 Package: fitsGen
