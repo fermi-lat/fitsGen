@@ -5,7 +5,7 @@
  * partitioning and event class number assignment.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/EventClassifier.cxx,v 1.9 2010/07/09 22:34:08 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/EventClassifier.cxx,v 1.10 2011/02/15 19:19:16 jchiang Exp $
  */
 
 #include <iostream>
@@ -34,7 +34,12 @@ EventClassifier::~EventClassifier() throw() {
    try {
       delete m_meritDict;
       if (m_classifier) {
+// Omit this from the Windows builds since it seems to require the
+// package to be linked against the debug version of python.
+// See http://www.scipy.org/Cookbook/C_Extensions
+#ifndef WIN32
          Py_DECREF(m_classifier);
+#endif
       }
       delete m_module;
    } catch (std::exception & eObj) {
