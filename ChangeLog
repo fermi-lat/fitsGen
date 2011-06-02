@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Thu Jun  2 09:35:16 PDT 2011
+ScienceTools-scons/fitsGen/fitsGen
+
+Modified Files:
+	MeritFile2.h 
+Log Message:
+add MeritFile2 constructor that takes a list of input merit files
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-09-23-01, operation: add
 Package: fitsGen
