@@ -5,7 +5,7 @@
  * having to generate a temporary file.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/fitsGen/MeritFile2.h,v 1.1 2011/02/15 07:32:43 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/fitsGen/MeritFile2.h,v 1.2 2011/02/15 18:00:08 jchiang Exp $
  */
 
 #ifndef fitsGen_MeritFile2_h
@@ -17,8 +17,8 @@
 
 #include "TTree.h"
 
-class TFile;
 class TEventList;
+class TFile;
 
 namespace fitsGen {
 
@@ -27,6 +27,10 @@ class MeritFile2 {
 public:
    
    MeritFile2(const std::string & meritfile,
+              const std::string & tree="MeritTuple",
+              const std::string & filter="");
+
+   MeritFile2(const std::vector<std::string> & meritFiles,
               const std::string & tree="MeritTuple",
               const std::string & filter="");
 
