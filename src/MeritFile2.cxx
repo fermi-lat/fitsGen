@@ -3,7 +3,7 @@
  * @brief Interface to merit files that uses ROOT directly.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/MeritFile2.cxx,v 1.4 2011/02/16 06:29:25 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/MeritFile2.cxx,v 1.5 2011/06/02 16:35:17 jchiang Exp $
  */
 
 #include <stdexcept>
@@ -86,10 +86,10 @@ MeritFile2::~MeritFile2() {
    for ( ; it != m_branches.end(); ++it) {
       delete_branch_pointer(it->second);
    }
-   delete m_file;
    if (dynamic_cast<TChain *>(m_tree)) {
       delete m_tree;
    }
+   delete m_file;
 }
 
 Long64_t MeritFile2::next() {
