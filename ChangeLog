@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jchiang  Tue Sep 27 07:46:44 PDT 2011
+ScienceTools-scons/fitsGen/fitsGen
+
+Modified Files:
+	MeritFile2.h 
+Log Message:
+add #include <vector>
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastRelease-17-35-24-gr07, operation: add
 Package: fitsGen
