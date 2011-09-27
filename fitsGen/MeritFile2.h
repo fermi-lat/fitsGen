@@ -5,7 +5,7 @@
  * having to generate a temporary file.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/fitsGen/MeritFile2.h,v 1.2 2011/02/15 18:00:08 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/fitsGen/MeritFile2.h,v 1.3 2011/06/02 16:35:16 jchiang Exp $
  */
 
 #ifndef fitsGen_MeritFile2_h
@@ -14,6 +14,7 @@
 #include <map>
 #include <string>
 #include <utility>
+#include <vector>
 
 #include "TTree.h"
 
