@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Mon Oct 31 08:52:07 PDT 2011
+ScienceTools-scons/fitsGen/data
+
+Modified Files:
+	ft2.tpl 
+Log Message:
+add PROC_VER header keyword to ft2.tpl
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastRelease-17-35-24-gr12, operation: add
 Package: fitsGen
