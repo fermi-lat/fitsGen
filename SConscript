@@ -1,6 +1,6 @@
 # -*- python -*-
 #
-# $Id: SConscript,v 1.50 2011/09/27 14:49:45 jchiang Exp $
+# $Id: SConscript,v 1.51 2011/10/31 16:38:13 jchiang Exp $
 # Authors: James Chiang <jchiang@slac.stanford.edu>
 # Version: fitsGen-06-04-03
 
@@ -10,6 +10,7 @@ Import('listFiles')
 progEnv = baseEnv.Clone()
 libEnv = baseEnv.Clone()
 
+libEnv.Tool('addLinkDeps', package = 'fitsGen', toBuild='static')
 fitsGenLib = libEnv.StaticLibrary('fitsGen', listFiles(['src/*.cxx']))
 
 progEnv.Tool('fitsGenLib')
