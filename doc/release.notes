@@ -1,11 +1,12 @@
 /** @file release.notes
     @brief package fitsGen
     @brief Package coordinators: J. Chiang <jchiang@slac.stanford.edu>
-    $Id: release.notes,v 1.100 2011/09/27 14:49:45 jchiang Exp $
+    $Id: release.notes,v 1.101 2011/10/31 16:38:13 jchiang Exp $
 
     @verbatim
     EOH
 
+ fitsGen-06-05-00 20-Aug-2012    jrb for Windows no-install-headers
  fitsGen-06-04-03 31-Oct-2011 jchiang add PROC_VER keyword to ft2.tpl PHDU
  fitsGen-06-04-02 27-Sep-2011 jchiang add #include <vector> to MeritFile2.h for gcc4.4.3/Ubuntu
  fitsGen-06-04-01 02-Jun-2011 jchiang bug-fix in ~MeritFile2 for handling m_tree when using it as a TChain
