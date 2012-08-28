@@ -2,6 +2,16 @@
 TAG
 Tag name: GlastRelease-20-04-02-gr01, operation: add
 Package: fitsGen
+User: heather  Mon Aug 27 22:25:51 2012
+Files:
+  fitsGen/src/irfTuple/irfTuple.cxx  1.5
+  fitsGen/src/makeFT1/makeFT1.cxx  1.47
+
+    *
+------------------------------------------------------------
+TAG
+Tag name: GlastRelease-20-04-02-gr01, operation: add
+Package: fitsGen
 User: heather  Mon Aug 27 22:25:29 2012
 Files:
   fitsGen/.cvsignore  1.2
