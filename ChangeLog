@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jchiang  Mon Oct  1 19:15:41 PDT 2012
+ScienceTools-scons/fitsGen/data
+
+Modified Files:
+	ft2.tpl 
+Log Message:
+change range of GEOMAG_LAT to indicate it is unsigned; add note to LAMBDA associating sign to N/S hemisphere
+
+    *
+------------------------------------------------------------
 User: jchiang  Mon Oct  1 16:00:24 PDT 2012
 ScienceTools-scons/fitsGen/data
 
