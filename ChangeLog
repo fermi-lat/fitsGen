@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Tue Oct  2 16:08:46 PDT 2012
+ScienceTools-scons/fitsGen/data
+
+Modified Files:
+	ft2.tpl 
+Log Message:
+fix TTYPE# for LIVETIME column
+    *
+------------------------------------------------------------
 User: jchiang  Mon Oct  1 19:15:41 PDT 2012
 ScienceTools-scons/fitsGen/data
 
