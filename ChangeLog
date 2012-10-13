@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Sat Oct 13 11:39:04 PDT 2012
+ScienceTools-scons/fitsGen/src
+
+Modified Files:
+	MeritFile2.cxx 
+Log Message:
+throw exception if TTree->GetEvent() == -1
+    *
+------------------------------------------------------------
+User: jchiang  Sat Oct 13 11:39:04 PDT 2012
 ScienceTools-scons/fitsGen/fitsGen
 
 Modified Files:
