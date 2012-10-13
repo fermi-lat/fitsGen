@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Sat Oct 13 08:59:22 PDT 2012
+ScienceTools-scons/fitsGen/data
+
+Modified Files:
+	ft2.tpl 
+Log Message:
+fix typo in LAMBDA description
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastRelease-20-06-02, operation: add
 Package: fitsGen
