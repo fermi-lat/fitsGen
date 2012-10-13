@@ -5,7 +5,7 @@
  * having to generate a temporary file.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/fitsGen/MeritFile2.h,v 1.3 2011/06/02 16:35:16 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/fitsGen/MeritFile2.h,v 1.4 2011/09/27 14:46:44 jchiang Exp $
  */
 
 #ifndef fitsGen_MeritFile2_h
@@ -75,6 +75,8 @@ public:
    /// @return Conversion type (e.g., front=0, back=1) of current row.
    short int conversionType() const;
 
+   static bool resetSigHandlers();
+
 private:
 
    TFile * m_file;
@@ -92,6 +94,7 @@ private:
    double m_tstop;
 
    void setEntry();
+   void setEntry(Long64_t index);
    
    BranchData_t get_branch_pointer(const std::string & fieldname) const;
    double recast_as_double(const BranchData_t & branch_data) const;
