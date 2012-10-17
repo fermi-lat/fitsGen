@@ -2,6 +2,14 @@
 TAG
 Tag name: GlastRelease-17-35-24-lp39, operation: add
 Package: fitsGen
+User: heather  Wed Oct 17 05:56:41 2012
+Files:
+
+    *
+------------------------------------------------------------
+TAG
+Tag name: GlastRelease-17-35-24-lp39, operation: add
+Package: fitsGen
 User: heather  Wed Oct 17 05:44:41 2012
 Files:
   fitsGen/.cvsignore  1.2
