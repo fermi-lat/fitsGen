@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Sun Oct 28 22:23:17 PDT 2012
+ScienceTools-scons/fitsGen/src
+
+Modified Files:
+	MeritFile2.cxx 
+Log Message:
+remove st_stream dependence
+    *
+------------------------------------------------------------
+User: jchiang  Sun Oct 28 22:23:17 PDT 2012
 ScienceTools-scons/fitsGen
 
 Modified Files:
