@@ -1,4 +1,4 @@
-#$Id: fitsGenLib.py,v 1.5 2012/08/18 00:26:21 jrb Exp $
+#$Id: fitsGenLib.py,v 1.6 2012/10/25 01:18:38 jchiang Exp $
 def generate(env, **kw):
     if not kw.get('depsOnly',0):
         env.Tool('addLibrary', library = ['fitsGen'])
@@ -13,7 +13,6 @@ def generate(env, **kw):
     env.Tool('astroLib')
     env.Tool('embed_pythonLib')
     env.Tool('evtUtilsLib')
-    env.Tool('st_streamLib')
     env.Tool('addLibrary', library = env['rootGuiLibs'])
     if kw.get('incsOnly', 0) == 1: 
         env.Tool('findPkgPath', package = 'embed_python') 
