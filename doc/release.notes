@@ -1,11 +1,12 @@
 /** @file release.notes
     @brief package fitsGen
     @brief Package coordinators: J. Chiang <jchiang@slac.stanford.edu>
-    $Id: release.notes,v 1.105 2012/10/25 01:19:19 jchiang Exp $
+    $Id: release.notes,v 1.106 2012/10/29 05:27:57 jchiang Exp $
 
     @verbatim
     EOH
 
+ fitsGen-06-06-04 09-Nov-2012 jchiang call facilities::commonUtilities::setupEnvironment() (again and again) so that getPackagePath doesn't crash because of a null pointer
  fitsGen-06-06-03 28-Oct-2012 jchiang remove st_stream dependence
  fitsGen-06-06-02 24-Oct-2012 jchiang check TTree->GetEvent return code
  fitsGen-06-06-01 03-Oct-2012 jchiang patch tag since ft2.tpl was missed somehow by the fitsGen-06-06-00 tag
