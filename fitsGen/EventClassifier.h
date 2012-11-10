@@ -5,7 +5,7 @@
  * partitioning and event class number assignment.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/fitsGen/EventClassifier.h,v 1.6 2010/07/09 22:34:08 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/fitsGen/EventClassifier.h,v 1.7 2011/02/15 19:19:16 jchiang Exp $
  */
 
 #ifndef fitsGen_EventClassifier_h
@@ -36,7 +36,7 @@ class EventClassifier {
 
 public:
 
-   EventClassifier() : m_module(0), m_classifier(0), m_meritDict(0) {}
+   EventClassifier();
 
    /// @param classifierScript Module name of a Python script that 
    /// takes TCuts for defining event classes.
