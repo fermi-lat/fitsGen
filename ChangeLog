@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Fri Nov  9 23:18:03 PST 2012
+ScienceTools-scons/fitsGen/src
+
+Modified Files:
+	EventClassifier.cxx 
+Log Message:
+call facilities::commonUtilities::setupEnvironment() (again and again)
+    *
+------------------------------------------------------------
+User: jchiang  Fri Nov  9 23:18:03 PST 2012
 ScienceTools-scons/fitsGen/fitsGen
 
 Modified Files:
