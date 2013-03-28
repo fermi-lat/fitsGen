@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Wed Mar 27 22:41:15 PDT 2013
+ScienceTools-scons/fitsGen/src
+
+Modified Files:
+	MeritFile2.cxx 
+Log Message:
+ensure that setEntry is not called for m_index >= m_nrows
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastRelease-20-08-11, operation: add
 Package: fitsGen
