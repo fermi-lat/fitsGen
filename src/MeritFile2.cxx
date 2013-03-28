@@ -3,7 +3,7 @@
  * @brief Interface to merit files that uses ROOT directly.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/MeritFile2.cxx,v 1.8 2012/10/13 18:48:32 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/MeritFile2.cxx,v 1.9 2012/10/29 05:23:17 jchiang Exp $
  */
 
 #include <iostream>
@@ -98,6 +98,8 @@ MeritFile2::~MeritFile2() {
 Long64_t MeritFile2::next() {
    if (m_index < m_nrows) {
       m_index++;
+   }
+   if (m_index < m_nrows) {
       setEntry();
    }
    return m_index;
@@ -106,6 +108,8 @@ Long64_t MeritFile2::next() {
 Long64_t MeritFile2::prev() {
    if (m_index > 0) {
       m_index--;
+   }
+   if (m_index >= 0) {
       setEntry();
    }
    return m_index;
@@ -130,7 +134,8 @@ void MeritFile2::setEntry(Long64_t index) {
    Int_t status = m_tree->GetEvent(entry_value);
    if (status == -1) {
       std::ostringstream message;
-      message << "TTree::GetEvent == -1 for index " << index << "\n";
+      message << "MeritFile2::setEntry: " 
+              << "TTree::GetEvent == -1 for index " << index << "\n";
       throw std::runtime_error(message.str());
    }
 }
