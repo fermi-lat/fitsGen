@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Sun Feb 16 22:44:40 PST 2014
+ScienceTools-scons/fitsGen/data
+
+Modified Files:
+	ft1.tpl 
+Log Message:
+add EVENT_TYPE column
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastRelease-20-09-06, operation: add
 Package: fitsGen
