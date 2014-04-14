@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Mon Apr 14 09:17:55 PDT 2014
+ScienceTools-scons/fitsGen
+
+Modified Files:
+	SConscript 
+Log Message:
+bit array columns for event_class and event_type
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastRelease-20-09-09, operation: add
 Package: fitsGen
