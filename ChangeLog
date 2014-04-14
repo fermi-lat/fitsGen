@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: jchiang  Mon Apr 14 09:17:56 PDT 2014
+ScienceTools-scons/fitsGen/data
+
+Modified Files:
+	ft1.tpl 
+Added Files:
+	ft1_p7.tpl 
+Log Message:
+bit array columns for event_class and event_type
+    *
+------------------------------------------------------------
 User: jchiang  Mon Apr 14 09:17:55 PDT 2014
 ScienceTools-scons/fitsGen
 
