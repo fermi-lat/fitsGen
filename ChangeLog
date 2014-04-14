@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Mon Apr 14 09:17:56 PDT 2014
+ScienceTools-scons/fitsGen/src
+
+Modified Files:
+	FtFileBase.cxx 
+Log Message:
+bit array columns for event_class and event_type
+    *
+------------------------------------------------------------
+User: jchiang  Mon Apr 14 09:17:56 PDT 2014
 ScienceTools-scons/fitsGen/data
 
 Modified Files:
