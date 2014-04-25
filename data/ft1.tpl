@@ -1,5 +1,5 @@
 # Definition of LAT Event Summary File (FT1)
-# $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/data/ft1.tpl,v 1.31 2014/02/17 06:44:40 jchiang Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/data/ft1.tpl,v 1.32 2014/04/14 16:17:55 jchiang Exp $
 SIMPLE      = T                              / file does conform to FITS standard
 BITPIX      = 8                              / number of bits per data pixel
 NAXIS       = 0                              / number of data axes
@@ -138,14 +138,12 @@ TTYPE14     = 'CALIB_VERSION'                           / versions of calibratio
 TFORM14     = '3I'                                      / data format of field: 2-byte signed INTEGER
 TTYPE15     = 'EVENT_CLASS'                             / event class: 0, 1, 2,...
 TFORM15     = '32X'                                     / data format of field: 32 bit array
-TNULL15     =  0                                        / NULL value 
 TLMIN15     =  0                                        / minimum value
 TLMAX15     =  32767                                    / maximum value
 TTYPE16     = 'EVENT_TYPE'                              / event types encoded as bit array
 TFORM16     = '32X'                                     / data format of field: 32 bit array
 TLMIN16     =  0                                        / minimum value                        
 TLMAX16     =  32767                                    / maximum value                        
-TNULL16     =  0                                        / NULL value 
 TTYPE17     = 'CONVERSION_TYPE'                         / type of conversion: 0=Front converting, 1=Back   
 TFORM17     = 'I'                                       / data format of field: 2-byte signed INTEGER      
 TLMIN17     =  0                                        / minimum value                                    
