@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Thu Apr 24 22:29:13 PDT 2014
+ScienceTools-scons/fitsGen/data
+
+Modified Files:
+	ft1.tpl ft1_p7.tpl 
+Log Message:
+remove now unnecessary TNULL1[56] kewyords
+    *
+------------------------------------------------------------
 TAG
 Tag name: fitsGen-07-00-00, operation: add
 Package: fitsGen
