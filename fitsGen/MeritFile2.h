@@ -5,7 +5,7 @@
  * having to generate a temporary file.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/fitsGen/MeritFile2.h,v 1.4 2011/09/27 14:46:44 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/fitsGen/MeritFile2.h,v 1.5 2012/10/13 18:39:04 jchiang Exp $
  */
 
 #ifndef fitsGen_MeritFile2_h
@@ -90,6 +90,8 @@ private:
    typedef std::map<std::string, BranchData_t > BranchMap_t;
    BranchMap_t m_branches;
 
+   std::map<std::string, std::string> m_branchNames;
+
    double m_tstart;
    double m_tstop;
 
@@ -97,8 +99,11 @@ private:
    void setEntry(Long64_t index);
    
    BranchData_t get_branch_pointer(const std::string & fieldname) const;
-   double recast_as_double(const BranchData_t & branch_data) const;
+   double recast_as_double(const BranchData_t & branch_data,
+                           int offset=0) const;
    void delete_branch_pointer(const BranchData_t & branch_data) const;
+
+   const std::string & branchName(const std::string & truncated_fieldname);
 
 };
 
