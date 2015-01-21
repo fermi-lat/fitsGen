@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Wed Jan 21 12:43:28 PST 2015
+ScienceTools-scons/fitsGen/fitsGen
+
+Modified Files:
+	MeritFile2.h 
+Log Message:
+enable array values in the merit tuple to be accessed by index
+    *
+------------------------------------------------------------
 TAG
 Tag name: GlastRelease-17-35-24-lr04, operation: add
 Package: fitsGen
