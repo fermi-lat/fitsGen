@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Wed Jan 21 16:56:20 PST 2015
+ScienceTools-scons/fitsGen/src
+
+Modified Files:
+	MeritFile2.cxx 
+Log Message:
+increase allocation for long TCuts
+    *
+------------------------------------------------------------
 TAG
 Tag name: fitsGen-07-01-00, operation: add
 Package: fitsGen
