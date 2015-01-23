@@ -3,7 +3,7 @@
  * @brief Interface to merit files that uses ROOT directly.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/MeritFile2.cxx,v 1.11 2015/01/21 20:43:29 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/MeritFile2.cxx,v 1.12 2015/01/22 00:56:20 jchiang Exp $
  */
 
 #include <cstdlib>
@@ -53,7 +53,12 @@ MeritFile2::MeritFile2(const std::string & meritfile,
 // TEventList.
    Long64_t first(0);
    Long64_t nmax(m_tree->GetEntries());
-   m_tree->Draw(">>merit_event_list", filter.c_str(), "", nmax, first);
+   Long64_t retcode = m_tree->Draw(">>merit_event_list", filter.c_str(), 
+                                   "", nmax, first);
+   if (retcode == -1) {
+      throw std::runtime_error("ROOT failed to create a TEventList from " +
+                               meritfile + " using the TTree::Draw function.");
+   }
    m_eventList = (TEventList *)gDirectory->Get("merit_event_list");
 
    m_nrows = m_eventList->GetN();
