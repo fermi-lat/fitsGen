@@ -1,9 +1,9 @@
 package fitsGen
-version v7r1p2
+version v7r1p3
 
 author James Chiang <jchiang@slac.stanford.edu>
 
-# $Id: requirements,v 1.136 2015/01/22 00:57:02 jchiang Exp $
+# $Id: requirements,v 1.137 2015/01/23 21:52:36 jchiang Exp $
 
 use GlastPolicy v*
 use facilities v*
