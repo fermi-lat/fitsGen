@@ -1,10 +1,11 @@
 # Definition of LAT Event Summary File (FT1)
-# $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/data/ft1_p7.tpl,v 1.1 2014/04/14 16:17:56 jchiang Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/data/ft1_p7.tpl,v 1.2 2014/04/25 05:29:12 jchiang Exp $
 SIMPLE      = T                              / file does conform to FITS standard
 BITPIX      = 8                              / number of bits per data pixel
 NAXIS       = 0                              / number of data axes
 EXTEND      = T                              / FITS dataset may contain extensions
-CHECKSUM    =                                / checksum for entire HDU
+CHECKSUM    = ''                             / checksum for entire HDU
+DATASUM     = '0'                            / checksum for image data
 TELESCOP    = 'GLAST'                        / name of telescope generating data
 INSTRUME    = 'LAT'                          / name of instrument generating data
 EQUINOX     = 2000.0                         / equinox for ra and dec
@@ -38,8 +39,8 @@ NAXIS2      =                                           / number of rows in tabl
 PCOUNT      =                                           / size of special data area
 GCOUNT      = 1                                         / one data group (required keyword)
 TFIELDS     =                                           / number of fields in each row
-CHECKSUM    =                                           / checksum for entire HDU
-DATASUM     =                                           / checksum for data table
+CHECKSUM    = ''                                        / checksum for entire HDU
+DATASUM     = ''                                        / checksum for data table
 TELESCOP    = 'GLAST'                                   / name of telescope generating data
 INSTRUME    = 'LAT'                                     / name of instrument generating data
 EQUINOX     = 2000.0                                    / equinox for ra and dec
@@ -183,8 +184,8 @@ NAXIS2      =                             / number of rows in table
 PCOUNT      =                             / size of special data area
 GCOUNT      = 1                           / one data group (required keyword)
 TFIELDS     =                             / number of fields in each row
-CHECKSUM    =                             / checksum for entire HDU
-DATASUM     =                             / checksum for data table
+CHECKSUM    = ''                          / checksum for entire HDU
+DATASUM     = ''                          / checksum for data table
 TELESCOP    = 'GLAST'                     / name of telescope generating data
 INSTRUME    = 'LAT'                       / name of instrument generating data
 EQUINOX     = 2000.0                      / equinox for ra and dec
