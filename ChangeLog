@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Thu Sep 14 11:02:57 PDT 2017
+ScienceTools-scons/fitsGen/fitsGen
+
+Modified Files:
+	EventClassifier.h MeritFile.h MeritFile2.h 
+Log Message:
+enable ROOT-free build so that observationSim can be added to the ST_User distribution
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-11-05-03, operation: add
 Package: fitsGen
