@@ -5,7 +5,7 @@
  * partitioning and event class number assignment.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/fitsGen/EventClassifier.h,v 1.7 2011/02/15 19:19:16 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/fitsGen/EventClassifier.h,v 1.8 2012/11/10 07:18:03 jchiang Exp $
  */
 
 #ifndef fitsGen_EventClassifier_h
@@ -22,7 +22,9 @@ namespace tip {
 
 namespace fitsGen {
 
+#ifndef BUILD_WITHOUT_ROOT
 class MeritFile2;
+#endif // BUILD_WITHOUT_ROOT
 
 /**
  * @class EventClassifier
@@ -38,7 +40,7 @@ public:
 
    EventClassifier();
 
-   /// @param classifierScript Module name of a Python script that 
+   /// @param classifierScript Module name of a Python script that
    /// takes TCuts for defining event classes.
    EventClassifier(const std::string & classifierScript);
 
@@ -49,16 +51,18 @@ public:
    /// @param row A row from a merit file, typically
    virtual unsigned int operator()(tip::ConstTableRecord & row) const;
 
+#ifndef BUILD_WITHOUT_ROOT
    /// @return The event class id number.  This is -1 if the
    /// event does not fit into any class.
    /// @param merit MeritFile2 interface to merit data
    virtual unsigned int operator()(MeritFile2 & merit) const;
+#endif // BUILD_WITHOUT_ROOT
 
    /// @return The event class id number.  This is -1 if the
    /// event does not fit into any class.
    /// @param row A map containing the same relevant information as a
    /// merit file row.
-   virtual unsigned int operator()(const std::map<std::string, 
+   virtual unsigned int operator()(const std::map<std::string,
                                    double> & row) const;
 
    virtual std::string passVersion() const {
@@ -91,7 +95,9 @@ private:
 
       void setItems(tip::ConstTableRecord & row);
 
+#ifndef BUILD_WITHOUT_ROOT
       void setItems(MeritFile2 & merit);
+#endif // BUILD_WITHOUT_ROOT
 
       void setItems(const std::map<std::string, double> & row);
 

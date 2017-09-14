@@ -5,7 +5,7 @@
  * having to generate a temporary file.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/fitsGen/MeritFile2.h,v 1.5 2012/10/13 18:39:04 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/fitsGen/MeritFile2.h,v 1.6 2015/01/21 20:43:28 jchiang Exp $
  */
 
 #ifndef fitsGen_MeritFile2_h
@@ -26,7 +26,7 @@ namespace fitsGen {
 class MeritFile2 {
 
 public:
-   
+
    MeritFile2(const std::string & meritfile,
               const std::string & tree="MeritTuple",
               const std::string & filter="");
@@ -53,7 +53,7 @@ public:
    Long64_t index() const {
       return m_index;
    }
-   
+
    /// Value of named column for current row.
    double operator[](const std::string & fieldname);
 
@@ -97,7 +97,7 @@ private:
 
    void setEntry();
    void setEntry(Long64_t index);
-   
+
    BranchData_t get_branch_pointer(const std::string & fieldname) const;
    double recast_as_double(const BranchData_t & branch_data,
                            int offset=0) const;

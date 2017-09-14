@@ -5,8 +5,10 @@
  *
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/XmlEventClassifier.cxx,v 1.8 2010/10/06 04:47:14 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/XmlEventClassifier.cxx,v 1.9 2011/02/15 19:19:16 jchiang Exp $
  */
+
+#ifndef BUILD_WITHOUT_ROOT
 
 #include <cstdio>
 
@@ -144,3 +146,5 @@ std::string XmlEventClassifier::passVersion() const {
 }
 
 } // namespace fitsGen
+
+#endif // BUILD_WITHOUT_ROOT

@@ -5,7 +5,7 @@
  * partitioning and event class number assignment.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/EventClassifier.cxx,v 1.12 2011/03/14 19:22:53 heather Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/EventClassifier.cxx,v 1.13 2012/11/10 07:18:03 jchiang Exp $
  */
 
 #include <iostream>
@@ -18,11 +18,13 @@
 #include "facilities/commonUtilities.h"
 
 #include "fitsGen/EventClassifier.h"
+#ifndef BUILD_WITHOUT_ROOT
 #include "fitsGen/MeritFile2.h"
+#endif // BUILD_WITHOUT_ROOT
 
 namespace fitsGen {
 
-EventClassifier::EventClassifier() 
+EventClassifier::EventClassifier()
   : m_module(0), m_classifier(0), m_meritDict(0) {
    /// Sadly, this is required.  Would be nice if commonUtilities were
    /// implemented so that clients wouldn't need to do this.
@@ -64,10 +66,12 @@ unsigned int EventClassifier::operator()(tip::ConstTableRecord & row) const {
    return value();
 }
 
+#ifndef BUILD_WITHOUT_ROOT
 unsigned int EventClassifier::operator()(MeritFile2 & merit) const {
    const_cast<MeritDict *>(m_meritDict)->setItems(merit);
    return value();
 }
+#endif // BUILD_WITHOUT_ROOT
 
 unsigned int EventClassifier::
 operator()(const std::map<std::string, double> & row) const {
@@ -129,12 +133,14 @@ MeritDict::setItems(tip::ConstTableRecord & row) {
    }
 }
 
+#ifndef BUILD_WITHOUT_ROOT
 void EventClassifier::
 MeritDict::setItems(MeritFile2 & merit) {
    for (size_t i = 0; i < m_keys.size(); i++) {
       setItem(m_keys.at(i), merit[m_keys.at(i)]);
    }
 }
+#endif // BUILD_WITHOUT_ROOT
 
 void EventClassifier::
 MeritDict::setItems(const std::map<std::string, double> & row) {

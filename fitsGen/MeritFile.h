@@ -3,7 +3,7 @@
  * @brief Declaration for MeritTuple abstraction.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/fitsGen/MeritFile.h,v 1.10 2010/07/21 01:08:44 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/fitsGen/MeritFile.h,v 1.11 2010/07/21 04:43:13 jchiang Exp $
  */
 
 #ifndef fitsGen_MeritFile_h
@@ -63,7 +63,7 @@ public:
    /// This filter will be applied to the data in addition to the 
    /// filter string.
    void setStartStop(double tstart, double tstop);
-   
+
    /// @return Conversion type (e.g., front=0, back=1) of current row.
    short int conversionType() const;
 
