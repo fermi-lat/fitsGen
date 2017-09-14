@@ -3,9 +3,10 @@
  * @brief Interface to merit files that uses ROOT directly.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/MeritFile2.cxx,v 1.12 2015/01/22 00:56:20 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/MeritFile2.cxx,v 1.13 2015/01/23 21:51:35 jchiang Exp $
  */
 
+#ifndef BUILD_WITHOUT_ROOT
 #include <cstdlib>
 
 #include <iostream>
@@ -303,3 +304,5 @@ bool MeritFile2::resetSigHandlers() {
 }
 
 } //namespace fitsGen
+
+#endif // BUILD_WITHOUT_ROOT

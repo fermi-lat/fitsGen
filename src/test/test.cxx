@@ -3,7 +3,7 @@
  * @brief Scaffolding for EventClassifier code.
  * @author J. Chiang
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/fitsGen/src/test/test.cxx,v 1.8 2011/02/15 19:19:16 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/fitsGen/src/test/test.cxx,v 1.9 2011/03/11 21:05:21 heather Exp $
  */
 
 #include <cassert>
@@ -17,8 +17,10 @@
 
 #include "fitsGen/EventClassifier.h"
 #include "fitsGen/MeritFile.h"
+#ifndef BUILD_WITHOUT_ROOT
 #include "fitsGen/MeritFile2.h"
 #include "fitsGen/XmlEventClassifier.h"
+#endif // BUILD_WITHOUT_ROOT
 
 std::string datapath(const std::string & basename) {
    return facilities::commonUtilities::joinPath(
@@ -36,10 +38,11 @@ void run(fitsGen::EventClassifier & eventClass,
    std::cout << eventClass(my_row) << std::endl;
 }
 
+#ifndef BUILD_WITHOUT_ROOT
 int xml_classifier() {
    std::string merit_file(datapath("xml_test_merit.root"));
    std::string xml_file(datapath("EvtClassDefs_Test.xml"));
-   
+
    fitsGen::XmlEventClassifier foo(xml_file, merit_file);
 
    unsigned int run[3] = {239559565, 239559565, 239572736};
@@ -85,6 +88,7 @@ int test_MeritFile2() {
    }
    return 0;
 }
+#endif // BUILD_WITHOUT_ROOT
 
 int main() {
    try {
@@ -96,10 +100,12 @@ int main() {
    } catch (std::exception & eObj) {
       std::cout << eObj.what() << std::endl;
    }
+#ifndef BUILD_WITHOUT_ROOT
    try {
       xml_classifier();
    } catch (std::exception & eObj) {
       std::cout << eObj.what() << std::endl;
    }
    test_MeritFile2();
+#endif // BUILD_WITHOUT_ROOT
 }
