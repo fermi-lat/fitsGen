@@ -181,3 +181,6 @@ TFORM30      = 'E'                         / 4-byte REAL
 TUNIT30      = 'deg'                       / physical unit of field: degrees
 TLMIN30      = -90.0                       / minimum value
 TLMAX30      = 90.0                        / maximum value
+TTYPE31      = 'SC_VELOCITY'               / S/C velocity at START of interval
+TFORM31      = '3E'                        / data format of field: 4-byte REAL
+TUNIT31      = 'm/s'                       / physical unit of field
