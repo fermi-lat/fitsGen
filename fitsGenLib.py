@@ -2,9 +2,9 @@
 def generate(env, **kw):
     if not kw.get('depsOnly',0):
         env.Tool('addLibrary', library = ['fitsGen'])
-	if env['PLATFORM'] == 'win32' and env.get('CONTAINERNAME','')=='GlastRelease':
-	    env.Tool('findPkgPath', package = 'fitsGen') 
-	    env.Tool('findPkgPath', package = 'embed_python') 
+        if env['PLATFORM'] == 'win32' and env.get('CONTAINERNAME','')=='GlastRelease':
+            env.Tool('findPkgPath', package = 'fitsGen') 
+            env.Tool('findPkgPath', package = 'embed_python') 
             env.Tool('findPkgPath', package = 'tip') 
             env.Tool('findPkgPath', package = 'astro') 
             env.Tool('findPkgPath', package = 'facilities') 
