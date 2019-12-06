@@ -82,7 +82,7 @@ operator()(const std::map<std::string, double> & row) const {
 unsigned int EventClassifier::value() const {
    PyObject * args(Py_BuildValue("(O)", m_meritDict->pyDict()));
    PyObject * result = m_module->call(m_classifier, args);
-   long ret(PyInt_AsLong(result));
+   long ret(PyLong_AsLong(result));
 #ifndef WIN32
    Py_DECREF(result);
    Py_DECREF(args);
@@ -117,7 +117,7 @@ EventClassifier::MeritDict::~MeritDict() throw() {
 
 void EventClassifier::
 MeritDict::setItem(const std::string & key, double value) {
-   PyObject * py_key(PyString_FromString(const_cast<char *>(key.c_str())));
+   PyObject * py_key(PyUnicode_FromString(const_cast<char *>(key.c_str())));
    PyObject * py_value(PyFloat_FromDouble(value));
    PyDict_SetItem(m_dict, py_key, py_value);
 #ifndef WIN32
