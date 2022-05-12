@@ -7,7 +7,7 @@ add_library(
 
 target_link_libraries(
   fitsGen
-  PUBLIC facilities tip astro embed_python evtUtils
+  PUBLIC facilities tip astro embed_python
 )
 
 target_include_directories(
@@ -40,7 +40,7 @@ install(
   FILES
   data/xml_test_merit.root data/EvtClassDefs_Test.xml data/ft1.tpl data/ft1_p7.tpl
   data/ft2.tpl data/lle.tpl
-  DESTINATION ${FERMI_INSTALL_DATADIR}/fitsGen
+  DESTINATION ${FERMI_INSTALL_REFDATADIR}/fitsGen
 )
 
 install(
