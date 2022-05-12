@@ -1,6 +1,6 @@
 ##### Library ######
 add_library(
-  fitsGen SHARED
+  fitsGen STATIC
   src/EventClassifier.cxx src/Ft1File.cxx src/Ft2File.cxx src/FtFileBase.cxx
   src/MeritFile.cxx src/MeritFile2.cxx src/XmlEventClassifier.cxx
 )
@@ -35,9 +35,13 @@ endif()
 # Installation
 ###############################################################
 install(DIRECTORY fitsGen DESTINATION ${FERMI_INSTALL_INCLUDEDIR})
-install(DIRECTORY data DESTINATION ${FERMI_INSTALL_DATADIR}/fitsGen)
 install(DIRECTORY pfiles/ DESTINATION ${FERMI_INSTALL_PFILESDIR})
-install(DIRECTORY python/ DESTINATION ${FERMI_INSTALL_PYTHON})
+install(
+  FILES
+  data/xml_test_merit.root data/EvtClassDefs_Test.xml data/ft1.tpl data/ft1_p7.tpl
+  data/ft2.tpl data/lle.tpl
+  DESTINATION ${FERMI_INSTALL_DATADIR}/fitsGen
+)
 
 install(
   TARGETS fitsGen test_fitsGen
