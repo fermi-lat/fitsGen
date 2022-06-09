@@ -1,6 +1,6 @@
 ##### Library ######
 add_library(
-  fitsGen STATIC
+  fitsGen 
   src/EventClassifier.cxx src/Ft1File.cxx src/Ft2File.cxx src/FtFileBase.cxx
   src/MeritFile.cxx src/MeritFile2.cxx src/XmlEventClassifier.cxx
 )
