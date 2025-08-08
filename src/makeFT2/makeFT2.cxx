@@ -23,6 +23,7 @@
 
 #include "fitsGen/Ft2File.h"
 #include "fitsGen/MeritFile.h"
+#include "general_util/generic_utils.h"
 
 using namespace fitsGen;
 
@@ -108,9 +109,10 @@ void MakeFt2::run() {
    double stop_time(ft2["stop"].get());
    ft2.setObsTimes(start_time, stop_time);
 
-   std::ostringstream creator;
-   creator << "makeFT2 " << getVersion();
-   ft2.setPhduKeyword("CREATOR", creator.str());
+   // Update CREATOR value with: Tool name/Group/Version
+   std::string creator_version =  GenericUtils::creator_banner("makeFT2");
+
+   ft2.setPhduKeyword("CREATOR", creator_version);
    std::string version = m_pars["file_version"];
    ft2.setPhduKeyword("VERSION", version);
    std::string filename(facilities::Util::basename(fitsFile));

@@ -7,7 +7,7 @@ add_library(
 
 target_link_libraries(
   fitsGen
-  PUBLIC facilities tip astro embed_python
+  PUBLIC facilities tip astro embed_python general_util
 )
 
 target_include_directories(

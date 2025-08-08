@@ -22,6 +22,7 @@
 #include "astro/EarthCoordinate.h"
 
 #include "fitsGen/Ft2File.h"
+#include "general_util/generic_utils.h"
 
 using namespace fitsGen;
 
@@ -168,7 +169,10 @@ int main(int iargc, char * argv[]) {
       double stop(ft2["stop"].get());
       ft2.setObsTimes(start, stop);
 
-      ft2.setPhduKeyword("CREATOR", "makeFT2a");
+      // Update CREATOR value with: Tool name/Group/Version
+      std::string creator_version =  GenericUtils::creator_banner("makeFT2a");
+      ft2.setPhduKeyword("CREATOR", creator_version );
+
    } catch (std::exception & eObj) {
       std::cout << eObj.what() << std::endl;
       std::exit(1);

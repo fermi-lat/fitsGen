@@ -39,6 +39,7 @@
 #include "fitsGen/Ft1File.h"
 #include "fitsGen/MeritFile.h"
 #include "fitsGen/EventClassifier.h"
+#include "general_util/generic_utils.h"
 
 using namespace fitsGen;
 
@@ -278,9 +279,10 @@ void MakeFt1::run() {
          throw;
       }
    }
-   std::ostringstream creator;
-   creator << "makeFT1_kluge " << getVersion();
-   ft1.setPhduKeyword("CREATOR", creator.str());
+   // Update CREATOR value with: Tool name/Group/Version
+   std::string creator_version =  GenericUtils::creator_banner("makeFT1_kluge");
+
+   ft1.setPhduKeyword("CREATOR", creator_version);
    std::string version = m_pars["file_version"];
    ft1.setPhduKeyword("VERSION", version);
    std::string filename(facilities::Util::basename(fitsFile));
