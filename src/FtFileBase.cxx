@@ -87,23 +87,23 @@ void FtFileBase::appendField(const std::string & colname,
    m_table->appendField(colname, format);
 }
 
-const std::vector<std::string> & FtFileBase::getFieldNames() const {
+auto FtFileBase::getFieldNames() const -> const std::vector<std::string> & {
    return m_table->getValidFields();
 }
 
-tip::Table::Iterator FtFileBase::begin() {
+auto FtFileBase::begin() -> tip::Table::Iterator {
    return m_table->begin();
 }
 
-tip::Table::Iterator FtFileBase::end() {
+auto FtFileBase::end() -> tip::Table::Iterator {
    return m_table->end();
 }
 
-tip::Table::Iterator & FtFileBase::itor() {
+auto FtFileBase::itor() -> tip::Table::Iterator & {
    return m_it;
 }
 
-tip::Header & FtFileBase::header() {
+auto FtFileBase::header() -> tip::Header & {
    return m_table->getHeader();
 }
 
@@ -144,7 +144,7 @@ void FtFileBase::writeDateKeywords(tip::Extension * table, double start_time,
    }
 }
 
-astro::JulianDate FtFileBase::currentTime() {
+auto FtFileBase::currentTime() -> astro::JulianDate {
    std::time_t my_time = std::time(0);
    std::tm * now = std::gmtime(&my_time);
    if (now != 0) {

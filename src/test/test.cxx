@@ -22,7 +22,7 @@
 #include "fitsGen/XmlEventClassifier.h"
 #endif // BUILD_WITHOUT_ROOT
 
-std::string datapath(const std::string & basename) {
+auto datapath(const std::string & basename) -> std::string {
    return facilities::commonUtilities::joinPath(
       facilities::commonUtilities::getDataPath("fitsGen"), 
       basename);
@@ -90,7 +90,7 @@ int test_MeritFile2() {
 }
 #endif // BUILD_WITHOUT_ROOT
 
-int main() {
+auto main() -> int {
    try {
       fitsGen::EventClassifier foo("Pass4_Classifier");
       run(foo, 0.6, 0.8, 10);

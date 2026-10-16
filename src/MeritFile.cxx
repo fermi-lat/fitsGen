@@ -47,22 +47,22 @@ void MeritFile::prev() {
    --m_it;
 }
 
-double MeritFile::operator[](const std::string & fieldname) const {
+auto MeritFile::operator[](const std::string & fieldname) const -> double {
    if (fieldname == "EvtElapsedTime" && !m_haveTime) {
       return 0;
    }
    return m_row[fieldname].get();
 }
 
-tip::Table::ConstIterator MeritFile::begin() const {
+auto MeritFile::begin() const -> tip::Table::ConstIterator {
    return m_table->begin();
 }
 
-tip::Table::ConstIterator MeritFile::end() const {
+auto MeritFile::end() const -> tip::Table::ConstIterator {
    return m_table->end();
 }
 
-tip::Table::ConstIterator & MeritFile::itor() {
+auto MeritFile::itor() -> tip::Table::ConstIterator & {
    return m_it;
 }
 
@@ -71,7 +71,7 @@ void MeritFile::setStartStop(double tstart, double tstop) {
    m_tstop = tstop;
 }
 
-short int MeritFile::conversionType() const {
+auto MeritFile::conversionType() const -> short int {
    if (17 - m_row["Tkr1FirstLayer"].get() < 11.5) { // Front converting
       return 0;
    } else { // Back converting

@@ -61,7 +61,7 @@ EventClassifier::~EventClassifier() throw() {
    }
 }
 
-unsigned int EventClassifier::operator()(tip::ConstTableRecord & row) const {
+auto EventClassifier::operator()(tip::ConstTableRecord & row) const -> unsigned int {
    const_cast<MeritDict *>(m_meritDict)->setItems(row);
    return value();
 }
@@ -73,13 +73,13 @@ unsigned int EventClassifier::operator()(MeritFile2 & merit) const {
 }
 #endif // BUILD_WITHOUT_ROOT
 
-unsigned int EventClassifier::
-operator()(const std::map<std::string, double> & row) const {
+auto EventClassifier::
+operator()(const std::map<std::string, double> & row) const -> unsigned int {
    const_cast<MeritDict *>(m_meritDict)->setItems(row);
    return value();
 }
 
-unsigned int EventClassifier::value() const {
+auto EventClassifier::value() const -> unsigned int {
    PyObject * args(Py_BuildValue("(O)", m_meritDict->pyDict()));
    PyObject * result = m_module->call(m_classifier, args);
    long ret(PyLong_AsLong(result));
@@ -90,7 +90,7 @@ unsigned int EventClassifier::value() const {
    return static_cast<unsigned int>(ret);
 }
 
-std::string EventClassifier::pythonPath() const {
+auto EventClassifier::pythonPath() const -> std::string {
    std::string root_path(facilities::commonUtilities::getPackagePath("fitsGen"));
    if (root_path == "") {
       throw std::runtime_error("Unable to determine path to fitsGen");
