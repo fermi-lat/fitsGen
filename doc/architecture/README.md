@@ -215,6 +215,12 @@ ScienceTools' `docs/architecture/README.md`.
   - It writes no files.
   - `Ft1File`, `Ft2File` and `FtFileBase` have **no test here**. They are
     exercised only through `test_observationSim` and `gtobssim`.
+- **ST-unit-test:** the default run of ScienceTools'
+  `recipe/tests/ST-unit-test` (`unitTestsWithoutRoot`) does **not** run
+  `test_fitsGen`. Only the ROOT list (`--with-root`) has it, with no output
+  check; since `main` returns 0 even when the import fails, it would pass
+  regardless. No fitsGen reference data exists in `fermitools-data`. See
+  "Testing" in ScienceTools' `docs/architecture/README.md`.
 - **Legacy:** `SConscript`, `fitsGenLib.py` and `azure-pipelines.yml`
   belong to the old SCons/Azure build.
 
