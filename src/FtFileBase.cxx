@@ -26,7 +26,7 @@ void FtFileBase::setMissionStart(int year, int month, int day, int sec) {
 }
 
 FtFileBase::FtFileBase(const std::string & outfile, tip::Index_t nrows) : 
-   m_outfile(outfile), m_table(0), m_nrows(nrows),
+   m_outfile(outfile), m_table(nullptr), m_nrows(nrows),
    m_startTime(-1), m_stopTime(-1) {
 }
 
@@ -60,7 +60,7 @@ void FtFileBase::close() {
       writeDateKeywords(m_table, m_startTime, m_stopTime,
                         true, s_missionStart);
       delete m_table;
-      m_table = 0;
+      m_table = nullptr;
 
       tip::Image * phdu(tip::IFileSvc::instance().editImage(m_outfile, ""));
       writeDateKeywords(phdu, m_startTime, m_stopTime, 
@@ -145,9 +145,9 @@ void FtFileBase::writeDateKeywords(tip::Extension * table, double start_time,
 }
 
 auto FtFileBase::currentTime() -> astro::JulianDate {
-   std::time_t my_time = std::time(0);
+   std::time_t my_time = std::time(nullptr);
    std::tm * now = std::gmtime(&my_time);
-   if (now != 0) {
+   if (now != nullptr) {
       double hours = now->tm_hour + now->tm_min/60. + now->tm_sec/3600.;
       astro::JulianDate current_time(now->tm_year + 1900, now->tm_mon + 1,
                                      now->tm_mday, hours);

@@ -35,7 +35,7 @@ void Ft1File::close() {
       writeDateKeywords(m_table, m_startTime, m_stopTime,
                         true, s_missionStart);
       delete m_table;
-      m_table = 0;
+      m_table = nullptr;
 
       tip::IFileSvc & fileSvc(tip::IFileSvc::instance());
 

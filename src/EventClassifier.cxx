@@ -25,14 +25,14 @@
 namespace fitsGen {
 
 EventClassifier::EventClassifier()
-  : m_module(0), m_classifier(0), m_meritDict(0) {
+  : m_module(nullptr), m_classifier(nullptr), m_meritDict(nullptr) {
    /// Sadly, this is required.  Would be nice if commonUtilities were
    /// implemented so that clients wouldn't need to do this.
    facilities::commonUtilities::setupEnvironment();
 }
 
 EventClassifier::EventClassifier(const std::string & classifierScript) 
-   : m_module(0), m_classifier(0), m_meritDict(0) {
+   : m_module(nullptr), m_classifier(nullptr), m_meritDict(nullptr) {
    /// Sadly, this is required.  Would be nice if commonUtilities were
    /// implemented so that clients wouldn't need to do this.
    facilities::commonUtilities::setupEnvironment();
@@ -99,7 +99,7 @@ auto EventClassifier::pythonPath() const -> std::string {
 }
 
 EventClassifier::MeritDict::MeritDict(embed_python::Module * module) 
-   : m_dict(0) {
+   : m_dict(nullptr) {
    m_dict = PyDict_New();
    module->getList("meritVariables", m_keys);
    for (size_t i = 0; i < m_keys.size(); i++) {
@@ -144,7 +144,7 @@ MeritDict::setItems(MeritFile2 & merit) {
 
 void EventClassifier::
 MeritDict::setItems(const std::map<std::string, double> & row) {
-   std::map<std::string, double>::const_iterator variable(row.begin());
+   auto variable(row.begin());
    for ( ; variable != row.end(); ++variable) {
       setItem(variable->first, variable->second);
    }
